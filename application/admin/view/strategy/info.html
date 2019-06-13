@@ -1,0 +1,224 @@
+{extend name="layout:home" /}
+
+{block name="container"}
+<form class="layui-form" method="post" enctype="multipart/form-data">
+    <div class="layui-tab layui-tab-card">
+        {include file="strategy/info_title" /}
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show ">
+                <div class="layui-collapse">
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">基本设置</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class="my_black">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">策略名称：</label>
+                                    <div class="layui-input-block">
+                                        <span class="my_label">{$strategy_info.strategy_name}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my_black">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">审核状态：</label>
+                                    <div class="layui-input-block">
+                                        <span class="my_label">
+                                            {switch name="$strategy_info.review_status" }
+                                                {case value="1"}<font color="#deb887">待审核</font>{/case}
+                                                {case value="0"}<font color="green">通过</font>{/case}
+                                                {case value="2"}<font color="#dc143c">驳回</font>{/case}
+                                            {/switch}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my_black">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">策略ID：</label>
+                                    <div class="layui-input-block">
+                                        <span class="my_label">{$strategy_info.strategy_id}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my_black">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">更新时间：</label>
+                                    <div class="layui-input-block">
+                                        <span class="my_label">{$strategy_info.update_time}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item"></div>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">策略详情</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class="my_black_two">
+                                <p class="p1">实盘收益率</p>
+                                <p class="p2">{$strategy_info.real_ratio}%</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">年化收益率</p>
+                                <p class="p2">{$strategy_info.annualized_ratio}%</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">年化波动率</p>
+                                <p class="p2">{$strategy_info.annualized_volatility}%</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">月度利润率</p>
+                                <p class="p2">{$strategy_info.profit_ratio_monthly}%</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">年化超额收益率</p>
+                                <p class="p2">{$strategy_info.sharpe_ratio}%</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">策略状态</p>
+                                <p class="p2">{$strategy_info.strategy_status}</p>
+                            </div>
+                            <div class="layui-form-item"></div>
+
+                            <div class="my_black_two">
+                                <p class="p1">当日收益率</p>
+                                <p class="p2">{$strategy_info.daily_ratio}%</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">当日净值</p>
+                                <p class="p2">{$strategy_info.net_value}</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">标的指数</p>
+                                <p class="p2">{$strategy_info.sub_index}</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">调仓周期</p>
+                                <p class="p2">{$strategy_info.adjust_cycle|default = '--'}</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">持仓证券数量</p>
+                                <p class="p2">{$strategy_info.hold_secu_num|default = '--'}</p>
+                            </div>
+                            <div class="my_black_two">
+                                <p class="p1">最新净值日期</p>
+                                <p class="p2">{$strategy_info.net_value_date|default = '--'}</p>
+                            </div>
+                            <div class="layui-form-item"></div>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">策略简介</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class="my_black_three">
+                                <p>
+                                    {$strategy_info.strategy_describe|default = '--'}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="layui-form-item"></div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">调整持仓</h2>
+                        <div class="layui-colla-content layui-show">
+                            <table class="layui-hide" id="test"></table>
+                        </div>
+                        <div class="layui-form-item"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use('element', function () {
+        var element = layui.element;
+    });
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+<script>
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#news_addtime' //指定元素
+        });
+    });
+</script>
+
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+    });
+    layui.use('element', function () {
+        var element = layui.element;
+    });
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#news_addtime'
+        });
+    });
+
+
+    /**
+     * 插入编辑器
+     */
+    function insert_editor(file_path){
+        ue.execCommand('insertimage', {src:file_path});
+    }
+
+    function del_newspic(file_id)
+    {
+        layer.open({
+            content: '{$Think.lang.ds_confirm_cancel}',
+            yes: function(index, layero){
+                $.getJSON("{:url('pic/del')}",{file_id: + file_id,pic_type:'news'}, function(result){
+                    if(result){
+                        $('#' + file_id).remove();
+                        layer.msg('{$Think.lang.del_succ}');
+                        layer.close(index);
+                        return;
+                    }else{
+                        layer.msg('{$Think.lang.del_fail}');
+                        layer.close(index);
+                        return;
+                    }
+                });
+            }
+        });
+    }
+</script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        table.render({
+            elem: '#test'
+            ,url:"{:url('strategy/getStrategyHold', ['strategy_id'=>$strategy_info.strategy_id])}"
+            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,cols: [[
+                {field:'id', width:80, title: 'ID', sort: true}
+                ,{field:'secu_name', width:150, title: '证券名称'}
+                ,{field:'secu_code', width:150, title: '证券代码', sort: true}
+                ,{field:'adjust_num', width:150, title: '当期调整手数'}
+                ,{field:'adjust_hold', width:150, title: '调整后持仓'}
+                ,{field:'trade_direction', width:150, title: '买卖方向'}
+                ,{field:'periods_date', width:177, title: '当前期数'}
+            ]]
+        });
+    });
+</script>
+
+{/block}
+
+
+

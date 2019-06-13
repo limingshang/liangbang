@@ -1,0 +1,38 @@
+{extend name="layout:home" /}
+
+{block name="container"}
+<form class="layui-form layui-form-pane" method="post">
+    <div class="layui-tab layui-tab-card">
+        <div class="layui-tab-content page-tab-content">
+                <div class="layui-tab-item layui-show ">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">审核结果：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="reviewStatus" value="0" title="审核通过" checked="">
+                            <input type="radio" name="reviewStatus" value="2" title="驳回">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="review_describe"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="submit" class="layui-btn layui-btn-normal" lay-submit value="{:lang('ds_submit')}" />
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use('form', function() {
+        var form = layui.form;
+    });
+</script>
+{/block}
+
+
+

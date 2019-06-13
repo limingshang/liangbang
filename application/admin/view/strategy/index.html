@@ -1,0 +1,61 @@
+{extend name="layout:home" /}
+{block name="container"}
+<div class="layui-tab layui-tab-card">
+    {include file="strategy/index_title" /}
+    <div>
+
+    </div>
+    <div class="layui-tab-content page-tab-content">
+        <table class="layui-table lay-even">
+            <colgroup>
+                <col width="150">
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>{$Think.lang.policy_id}</th>
+                <th>{$Think.lang.policy_title}</th>
+                <th>{$Think.lang.policy_period}</th>
+                <th>{$Think.lang.policy_type}</th>
+                <th>{$Think.lang.adjustment_instruction}</th>
+                <th>{$Think.lang.policy_status}</th>
+                <th>{$Think.lang.policy_handle}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="strategy_list" id="strategy"}
+            <tr>
+                <td>{$strategy.id}</td>
+                <td>{$strategy.strategy_name}</td>
+                <td>{$strategy.update_time|default = '--'}</td>
+                <td>{$strategy.strategy_type|default = '--'}</td>
+                <td>{$strategy.strategy_describe}</td>
+                <td>
+                    {switch name="$strategy.review_status" }
+                    {case value="1"}<font color="#deb887">待审核</font>{/case}
+                    {case value="0"}<font color="green">通过</font>{/case}
+                    {case value="2"}<font color="#dc143c">驳回</font>{/case}
+                    {/switch}
+                <td><!--
+                    {switch name="$strategy.review_status" }
+                    {case value="1"}
+                        <a href="javascript:dsLayerOpen('{:url('strategy/controstrategy',['id'=>$strategy.id,'status'=>'2'])}')" class="layui-btn layui-btn-xs">驳回</a>
+                        <a href="javascript:dsLayerConfirm('{:url('strategy/controstrategy',['id'=>$strategy.id,'status'=>'2'])}')" class="layui-btn layui-btn-xs">驳回</a>
+                        <a href="javascript:dsLayerConfirm('{:url('strategy/controstrategy',['id'=>$strategy.id,'status'=>'0'])}')" class="layui-btn layui-btn-xs layui-btn-danger">通过</a>
+                    {/case}
+                    {case value="2"}已处理{/case}
+                    {case value="0"}已处理{/case}
+                    {/switch}
+                    -->
+                <a href="{:url('strategy/info',['id'=>$strategy.id])}">查看</a>
+                </td>
+
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+        {$show_page}
+    </div>
+</div>
+<script type="text/javascript" src="{$Think.ADMIN_SITE_ROOT}/js/jquery.edit.js"></script>
+{/block}
