@@ -182,6 +182,9 @@ class Strategy extends BaseMall
         $condition = ['strategy_id' => input('strategy_id')];
         $strategyInfoModel = model('strategyInfo');
         $strategyInfo = $strategyInfoModel->getOneStrategyInfo($condition);
+        if(!input('strategy_id')) {
+            ds_json_encode(404, '失败');
+        }
         if($strategyInfo) {
             $data = json_decode($data, true);
             if (is_array($data) && $strategyInfo) {
@@ -194,6 +197,7 @@ class Strategy extends BaseMall
                     }
                     foreach ($data as $key => $value) {
                         $value['strategy_id'] = input('strategy_id');
+                        $value['strategy_name'] = $strategyInfo['strategy_name'];
                         $strategyHold = model('strategyHold');
                         $strategyHold->addStrategyHold($value);
                     }
