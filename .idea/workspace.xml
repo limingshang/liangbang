@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1073">
-              <caret line="120" column="37" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="37" />
+            <state relative-caret-position="231">
+              <caret line="202" column="62" selection-start-line="202" selection-start-column="49" selection-end-line="202" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -33,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="438">
               <caret line="215" column="14" lean-forward="true" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="14" />
             </state>
           </provider>
@@ -169,12 +169,12 @@
       <workItem from="1560410812770" duration="1107000" />
       <workItem from="1560417996090" duration="1568000" />
       <workItem from="1560422420766" duration="353000" />
-      <workItem from="1560475265427" duration="488000" />
+      <workItem from="1560475265427" duration="687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4787000" />
+    <option name="totallyTimeSpent" value="4986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -230,13 +230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1073">
-          <caret line="120" column="37" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/StrategyHold.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -249,8 +242,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="438">
           <caret line="215" column="14" lean-forward="true" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="202" column="62" selection-start-line="202" selection-start-column="49" selection-end-line="202" selection-end-column="62" />
         </state>
       </provider>
     </entry>

@@ -200,6 +200,7 @@ class Strategy extends BaseMall
                     }
                     foreach ($data as $key => $value) {
                         $value['strategy_id'] = input('strategy_id');
+                        $value['periods_date'] = $periods_date;
                         // $value['strategy_name'] = $strategyInfo['strategy_name'];
                         $strategyHold = model('strategyHold');
                         $strategyHold->addStrategyHold($value);
