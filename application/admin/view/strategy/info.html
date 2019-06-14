@@ -178,10 +178,12 @@
 
                         <div class="layui-colla-content layui-show">
                             <table class="layui-hide" id="test"></table>
-                            <script type="text/html" id="test">
+                            <script type="text/html" id="trade_direction">
                                 {{#  if(d.trade_direction == '买入'){ }}
-                                <span style="color: #F581B1;">{{ d.trade_direction }}</span>
-                                {{#  } else { }}
+                                <span style="color: red;">{{ d.trade_direction }}</span>
+                                {{#  } else if(d.trade_direction == '卖出') { }}
+                                <span style="color: green;">{{ d.trade_direction }}</span>
+                                {{#  } else{ }}
                                 {{ d.trade_direction }}
                                 {{#  } }}
                             </script>
@@ -207,7 +209,7 @@
                 , {field: 'secu_code', width: 150, title: '证券代码'}
                 , {field: 'adjust_num', width: 150, title: '当期调整手数', sort: true}
                 , {field: 'adjust_hold', width: 150, title: '调整后持仓', sort: true}
-                , {field: 'trade_direction', width: 150, title: '买卖方向', sort: true}
+                , {field: 'trade_direction', width: 150, title: '买卖方向', sort: true, templet: '#trade_direction'}
                 , {field: 'periods_date', width: 177, title: '当前期数'}
             ]]
             ,id: 'test'
