@@ -59,6 +59,20 @@ class Strategy extends AdminControl {
         $model_strategy = model('strategyInfo');
         $condition = array('id' => $id);
         $strategy_info = $model_strategy->getOneStrategyInfo($condition,'', '*');
+        $periods_date_list = model('strategyHold')
+            ->distinct('periods_date')
+            ->where('strategy_id', 'eq', $strategy_info['strategy_id'])
+            ->order('periods_date','desc')
+            ->field('periods_date')
+            ->select();
+        if ($periods_date_list) {
+            $periods_date_list = $periods_date_list->toArray();
+        } else {
+            $periods_date_list = [];
+        }
+        $periods_date_list = array_column($periods_date_list, 'periods_date');
+
+        $this->assign('periods_date_list', $periods_date_list);
         $this->assign('strategy_info', $strategy_info);
         $this->setAdminCurItem('info');
         return $this->fetch();
@@ -71,10 +85,25 @@ class Strategy extends AdminControl {
     public function getStrategyHold(){
         $model_strategy_hold = model('strategy_hold');
         $strategy_id     = input('param.strategy_id');
+        $periods_date     = input('param.periods_date');
         if(!$strategy_id) {
             return [];
         }
-        $condition = array('strategy_id' => $strategy_id);
+        if (!$periods_date) {
+            $strategyHold = model('strategyHold');
+            $strategyHoldInfo = $strategyHold
+                ->where('strategy_id', 'eq', $strategy_id)
+                ->field('periods_date')
+                ->order('periods_date', 'desc')
+                ->find();
+            if($strategyHoldInfo) {
+                $periods_date = $strategyHoldInfo['periods_date'];
+            }
+        }
+        $condition = array(
+            'strategy_id' => $strategy_id,
+            'periods_date' => $periods_date,
+        );
         $strategy_hold_list = $model_strategy_hold->getStrategyHoldList($condition,'', '*');
         $data = ['code' => 0, 'data' => $strategy_hold_list, 'count' => count($strategy_hold_list)];
         return $data;
