@@ -226,18 +226,19 @@ class Strategy extends BaseMall
      */
     public function updateStrategyNetValue(){
         $data = input('data');
+        $strategy_id = input('strategy_id');
         $data = json_decode($data, true);
-        if (is_array($data)) {
+        if (is_array($data) && $strategy_id) {
             Db::startTrans();
             try {
                 $strategyNetValue = model('strategyNetValue');
                 foreach ($data as $key => $value) {
                     $condition = [
-                        'strategy_id' => $value['strategy_id'],
+                        'strategy_id' => $strategy_id,
                         'trading_date' => $value['trading_date'],
                     ];
                     $strategyNetValue->delStrategyNetValue($condition);
-
+                    $value['strategy_id'] = $strategy_id;
                     $strategyNetValue->addStrategyNetValue($value);
                 }
                 // 提交事务
