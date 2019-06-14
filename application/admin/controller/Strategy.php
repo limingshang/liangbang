@@ -31,6 +31,19 @@ class Strategy extends AdminControl {
             $condition['strategy_info'] = $strategy_info;
         }
         $strategy_list = $model_stratesgy->getStrategyList($condition,'', '*', 10);
+        $strategyHold  = model('strategyHold');
+        foreach ($strategy_list as $key => $value) {
+            $strategyHoldInfo = $strategyHold
+                ->where('strategy_id', 'eq', $value['strategy_id'])
+                ->field('periods_date')
+                ->order('periods_date', 'desc')
+                ->find();
+            if($strategyHoldInfo) {
+                $strategy_list[$key]['periods_date'] = $strategyHoldInfo['periods_date'];
+            } else {
+                $strategy_list[$key]['periods_date'] = '';
+            }
+        }
         $this->assign('strategy_list', $strategy_list);
         $this->assign('show_page', $model_stratesgy->page_info->render());
         $this->setAdminCurItem('index');

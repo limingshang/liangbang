@@ -56,36 +56,77 @@
                         <div class="layui-colla-content layui-show">
                             <div class="my_black_two">
                                 <p class="p1">实盘收益率</p>
-                                <p class="p2">{$strategy_info.real_ratio}%</p>
+                                <p class="p2">
+                                    {if condition="strtoupper($strategy_info['real_ratio']) lt 0"}
+                                        <font color="green">{$strategy_info.real_ratio}%</font>
+                                    {else /}
+                                        <font color="#dc143c">{$strategy_info.real_ratio}%</font>
+                                    {/if}
+                                </p>
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">年化收益率</p>
-                                <p class="p2">{$strategy_info.annualized_ratio}%</p>
+                                <p class="p2">
+                                    {if condition="strtoupper($strategy_info['annualized_ratio']) lt 0"}
+                                    <font color="green">{$strategy_info.annualized_ratio}%</font>
+                                    {else /}
+                                    <font color="#dc143c">{$strategy_info.annualized_ratio}%</font>
+                                    {/if}
+                                </p>
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">年化波动率</p>
-                                <p class="p2">{$strategy_info.annualized_volatility}%</p>
+                                <p class="p2">
+                                    {if condition="strtoupper($strategy_info['annualized_volatility']) lt 0"}
+                                    <font color="green">{$strategy_info.annualized_volatility}%</font>
+                                    {else /}
+                                    <font color="#dc143c">{$strategy_info.annualized_volatility}%</font>
+                                    {/if}
+                                </p>
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">月度利润率</p>
-                                <p class="p2">{$strategy_info.profit_ratio_monthly}%</p>
+                                <p class="p2">
+                                    {if condition="strtoupper($strategy_info['profit_ratio_monthly']) lt 0"}
+                                    <font color="green">{$strategy_info.profit_ratio_monthly}%</font>
+                                    {else /}
+                                    <font color="#dc143c">{$strategy_info.profit_ratio_monthly}%</font>
+                                    {/if}
+                                </p>
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">年化超额收益率</p>
-                                <p class="p2">{$strategy_info.sharpe_ratio}%</p>
+                                <p class="p2">
+                                    {if condition="strtoupper($strategy_info['sharpe_ratio']) lt 0"}
+                                    <font color="green">{$strategy_info.sharpe_ratio}%</font>
+                                    {else /}
+                                    <font color="#dc143c">{$strategy_info.sharpe_ratio}%</font>
+                                    {/if}
+                                </p>
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">策略状态</p>
-                                <p class="p2">{$strategy_info.strategy_status}</p>
+                                <p class="p2">
+                                    {switch name="$strategy_info.strategy_status" }
+                                    {case value="0"}<font color="green">上架</font>{/case}
+                                    {case value="1"}<font color="red">下架</font>{/case}
+                                    {/switch}</p>
                             </div>
                             <div class="layui-form-item"></div>
 
                             <div class="my_black_two">
                                 <p class="p1">当日收益率</p>
-                                <p class="p2">{$strategy_info.daily_ratio}%</p>
+                                <p class="p2">
+                                    {if condition="strtoupper($strategy_info['daily_ratio']) lt 0"}
+                                    <font color="green">{$strategy_info.daily_ratio}%</font>
+                                    {else /}
+                                    <font color="#dc143c">{$strategy_info.daily_ratio}%</font>
+                                    {/if}
+                                </p>
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">当日净值</p>
+
                                 <p class="p2">{$strategy_info.net_value}</p>
                             </div>
                             <div class="my_black_two">
@@ -98,7 +139,7 @@
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">持仓证券数量</p>
-                                <p class="p2">{$strategy_info.hold_secu_num|default = '--'}</p>
+                                <p class="p2">{$strategy_info.hold_secu_num|default = '--'}只</p>
                             </div>
                             <div class="my_black_two">
                                 <p class="p1">最新净值日期</p>
@@ -119,7 +160,33 @@
                         <div class="layui-form-item"></div>
                     </div>
                     <div class="layui-colla-item">
-                        <h2 class="layui-colla-title">调整持仓</h2>
+                        <h2 class="layui-colla-title">当期调仓</h2>
+                            <label class="layui-form-label">搜索选择框</label>
+                            <div class="layui-input-inline">
+                                <select name="modules" lay-verify="required" lay-search="">
+                                    <option value="">直接选择或搜索选择</option>
+                                    <option value="1">layer</option>
+                                    <option value="2">form</option>
+                                    <option value="3">layim</option>
+                                    <option value="4">element</option>
+                                    <option value="5">laytpl</option>
+                                    <option value="6">upload</option>
+                                    <option value="7">laydate</option>
+                                    <option value="8">laypage</option>
+                                    <option value="9">flow</option>
+                                    <option value="10">util</option>
+                                    <option value="11">code</option>
+                                    <option value="12">tree</option>
+                                    <option value="13">layedit</option>
+                                    <option value="14">nav</option>
+                                    <option value="15">tab</option>
+                                    <option value="16">table</option>
+                                    <option value="17">select</option>
+                                    <option value="18">checkbox</option>
+                                    <option value="19">switch</option>
+                                    <option value="20">radio</option>
+                                </select>
+                            </div>
                         <div class="layui-colla-content layui-show">
                             <table class="layui-hide" id="test"></table>
                         </div>

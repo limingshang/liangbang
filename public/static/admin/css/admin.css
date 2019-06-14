@@ -204,9 +204,9 @@ h6 { font-size:12px;}
 .my_black{width:50%;float: left;}
 .my_black_two{width:16.6%;float: left;}
 .my_black_three{width:100%;padding: 10px 20px;font-size: 14px;}
-.my_black_two .p1{text-align: center; width: 100%; font-size: 20px; padding: 15px 0px;}
-.my_black_two .p2{text-align: center; width: 100%; font-size: 15px;  padding: 5px 0px;}
-
+.my_black_two .p1{text-align: center; width: 100%; font-size: 14px; padding: 15px 0px;}
+.my_black_two .p2{text-align: center; width: 100%; font-size: 20px;  padding: 5px 0px;}
+.myHold select {width:100px;}
 
 /*选择图片插入文章内容*/
 .selected_pic{margin:10px 0;}
@@ -227,3 +227,8 @@ h6 { font-size:12px;}
 .layui-tab-title .myInput{border-color: rgb(166, 166, 166); width: 200px;height: 22px;bottom: 5px;left: 120px; position: absolute; border:1px solid;border-radius:5px;-moz-border-radius:25px; /* Old Firefox */padding: 2px 10px;}
 .layui-tab-title .myButton{ bottom: 5px;left: 350px;position: absolute;height: 28px;line-height: 28px;}
 .tool-btnss .layui-btn{}
+.myTable tr th, .myTable tr td{width:10%;}
+.myTable tr th:nth-child(1), .myTable tr td:nth-child(1){width:5%;}
+.myTable tr th:nth-child(2), .myTable tr td:nth-child(2){width:18%;}
+.myTable tr th:nth-child(4), .myTable tr td:nth-child(4){width:8%;}
+.myTable tr th:nth-child(5), .myTable tr td:nth-child(5){width:10%;}
