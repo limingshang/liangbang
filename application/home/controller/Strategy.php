@@ -24,7 +24,7 @@ class Strategy extends BaseMall
     {
         $code = input('code');
         $review_status = input('review_status');
-        if (request()->isPost() && $code == self::CODE) {
+        if (request()->isPost()) {
             $model_strategy = model('strategyInfo');
             if ($review_status != '') {
                 $model_strategy = $model_strategy
@@ -45,7 +45,7 @@ class Strategy extends BaseMall
     {
         $code     = input('code');
         $strategy_id = input('strategy_id');      // 策略id
-        if (request()->isPost() && $code == self::CODE && $strategy_id) {
+        if (request()->isPost() && $strategy_id) {
             $model_strategy = model('strategyInfo');
             $result = $model_strategy
                 ->where('strategy_id', 'eq', $strategy_id)
@@ -70,7 +70,7 @@ class Strategy extends BaseMall
     {
         $code     = input('code');
         $strategy_id = input('strategy_id');      // 策略id
-        if (request()->isPost() && $code == self::CODE && $strategy_id) {
+        if (request()->isPost() && $strategy_id) {
             $strategyNetValue = model('strategyNetValue');
             $condition = ['strategy_id' => $strategy_id];
             $result = $strategyNetValue->getStrategyNetValueList($condition);
@@ -87,7 +87,7 @@ class Strategy extends BaseMall
         $code     = input('code');
         $strategy_id = input('strategy_id');      // 策略id
         $periods_date = input('periods_date');      // 策略调仓期数ID
-        if (request()->isPost() && $code == self::CODE && $strategy_id) {
+        if (request()->isPost() && $strategy_id) {
             $model_strategy = model('strategyInfo');
             $strategyInfo = $model_strategy
                 ->where('strategy_id', 'eq', $strategy_id)
