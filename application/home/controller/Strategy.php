@@ -238,8 +238,11 @@ class Strategy extends BaseMall
                         'trading_date' => $value['trading_date'],
                     ];
                     $strategyNetValue->delStrategyNetValue($condition);
-                    $value['strategy_id'] = $strategy_id;
-                    $strategyNetValue->addStrategyNetValue($value);
+                    $result['strategy_id']  = $strategy_id;
+                    $result['trading_date'] = $value['trading_date'];
+                    $result['net_value']    = $value['net_value'];
+                    $result['index_value']  = $value['index_value'];
+                    $strategyNetValue->addStrategyNetValue($result);
                 }
                 // 提交事务
                 Db::commit();
