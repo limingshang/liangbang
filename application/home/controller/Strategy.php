@@ -72,7 +72,8 @@ class Strategy extends BaseMall
         if (request()->isPost() && $strategy_id) {
             $strategyNetValue = model('strategyNetValue');
             $condition = ['strategy_id' => $strategy_id];
-            $result = $strategyNetValue->getStrategyNetValueList($condition);
+            $fields = 'strategy_id,trading_date,net_value,index_value';
+            $result = $strategyNetValue->getStrategyNetValueList($condition, null, $fields);
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
             ds_json_encode(404, '失败');
