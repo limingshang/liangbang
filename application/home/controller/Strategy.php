@@ -130,7 +130,31 @@ class Strategy extends BaseMall
             ds_json_encode(404, '失败');
         }
     }
-
+    /**
+     * 获取调仓日期
+     */
+    public function getAdjustDate()
+    {
+        $code     = input('code');
+        $strategy_id = input('strategy_id');      // 策略id
+        if (request()->isPost() && $strategy_id) {
+            $result = model('strategyHold')
+                ->distinct('periods_date')
+                ->where('strategy_id', 'eq', $strategy_id)
+                ->order('periods_date','desc')
+                ->field('periods_date')
+                ->select();
+            if ($result) {
+                $result = $result->toArray();
+            } else {
+                $result = [];
+            }
+            $result = array_column($result, 'periods_date');
+            ds_json_encode(10000, '数据获取成功', $result);
+        } else {
+            ds_json_encode(404, '失败');
+        }
+    }
     /**
      * 修改策略主体
      */
