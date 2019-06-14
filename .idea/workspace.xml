@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="202" column="62" selection-start-line="202" selection-start-column="49" selection-end-line="202" selection-end-column="62" />
+            <state relative-caret-position="165">
+              <caret line="51" column="149" selection-start-line="51" selection-start-column="149" selection-end-line="51" selection-end-column="149" />
             </state>
           </provider>
         </entry>
@@ -53,6 +53,7 @@
     <findStrings>
       <find>$strategyInfo</find>
       <find>&amp;&amp; $code == self::CODE</find>
+      <find>rofit_ratio_monthly</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,12 +170,12 @@
       <workItem from="1560410812770" duration="1107000" />
       <workItem from="1560417996090" duration="1568000" />
       <workItem from="1560422420766" duration="353000" />
-      <workItem from="1560475265427" duration="687000" />
+      <workItem from="1560475265427" duration="1465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4986000" />
+    <option name="totallyTimeSpent" value="5764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -249,8 +250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="202" column="62" selection-start-line="202" selection-start-column="49" selection-end-line="202" selection-end-column="62" />
+        <state relative-caret-position="165">
+          <caret line="51" column="149" selection-start-line="51" selection-start-column="149" selection-end-line="51" selection-end-column="149" />
         </state>
       </provider>
     </entry>

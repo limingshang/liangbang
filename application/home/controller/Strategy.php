@@ -49,8 +49,7 @@ class Strategy extends BaseMall
             $model_strategy = model('strategyInfo');
             $result = $model_strategy
                 ->where('strategy_id', 'eq', $strategy_id)
-                ->where('strategy_id', 'eq', $strategy_id)
-                ->field('strategy_id, strategy_name, strategy_type,real_ratio,annualized_volatility,annualized_ratio,profit_ratio_monthly,daily_ratio,rofit_ratio_monthly,daily_ratio,sharpe_ratio,net_value,net_value,net_value_date,adjust_cycle,sub_index,subIndexValue,subIndexRatio,hold_secu_num,run_num,review_status,strategy_status,strategy_describe,update_time')
+                ->field('strategy_id, strategy_name, strategy_type,real_ratio,annualized_volatility,annualized_ratio,profit_ratio_monthly,daily_ratio,daily_ratio,sharpe_ratio,net_value,net_value,net_value_date,adjust_cycle,sub_index,subIndexValue,subIndexRatio,hold_secu_num,run_num,review_status,strategy_status,strategy_describe,update_time')
                 ->find();
             if($result) {
                 $result = $result->toArray();
