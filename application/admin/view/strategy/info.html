@@ -282,12 +282,12 @@
                     ,url:"/admin/strategy/getStrategyHold/strategy_id/{$strategy_info.strategy_id}/periods_date/"+data.value
                     ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                     ,cols: [[
-                        {field:'id', width:80, title: 'ID', sort: true}
+                        {field:'id', width:80, title: 'ID'}
                         ,{field:'secu_name', width:150, title: '证券名称'}
-                        ,{field:'secu_code', width:150, title: '证券代码', sort: true}
-                        ,{field:'adjust_num', width:150, title: '当期调整手数'}
-                        ,{field:'adjust_hold', width:150, title: '调整后持仓'}
-                        ,{field:'trade_direction', width:150, title: '买卖方向'}
+                        ,{field:'secu_code', width:150, title: '证券代码'}
+                        ,{field:'adjust_num', width:150, title: '当期调整手数', sort: true}
+                        ,{field:'adjust_hold', width:150, title: '调整后持仓', sort: true}
+                        ,{field:'trade_direction', width:150, title: '买卖方向', sort: true}
                         ,{field:'periods_date', width:177, title: '当前期数'}
                     ]]
                 });
