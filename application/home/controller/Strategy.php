@@ -179,25 +179,28 @@ class Strategy extends BaseMall
     public function updateStrategyHold(){
         $data = input('data');
         $periods_date = input('periods_date');
-        $condition = ['strategy_id' => input('strategy_id')];
-        $strategyInfoModel = model('strategyInfo');
-        $strategyInfo = $strategyInfoModel->getOneStrategyInfo($condition);
+        // $condition = ['strategy_id' => input('strategy_id')];
+        // $strategyInfoModel = model('strategyInfo');
+        // $strategyInfo = $strategyInfoModel->getOneStrategyInfo($condition);
         if(!input('strategy_id')) {
             ds_json_encode(404, '失败');
         }
-        if($strategyInfo) {
+        // if($strategyInfo) {
             $data = json_decode($data, true);
-            if (is_array($data) && $strategyInfo) {
+            if (is_array($data)) {
                 Db::startTrans();
                 try {
                     $strategyHold = model('strategyHold');
                     if ($periods_date) {
-                        $condition = ['periods_date' => $periods_date];
+                        $condition = [
+                            'periods_date' => $periods_date,
+                            'strategy_id' => input('strategy_id')
+                        ];
                         $strategyHold->delStrategyHold($condition);
                     }
                     foreach ($data as $key => $value) {
                         $value['strategy_id'] = input('strategy_id');
-                        $value['strategy_name'] = $strategyInfo['strategy_name'];
+                        // $value['strategy_name'] = $strategyInfo['strategy_name'];
                         $strategyHold = model('strategyHold');
                         $strategyHold->addStrategyHold($value);
                     }
@@ -210,7 +213,7 @@ class Strategy extends BaseMall
                 }
 
             }
-        }
+        // }
 
         ds_json_encode(10000, '存储成功');
     }
