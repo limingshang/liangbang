@@ -164,20 +164,27 @@
                             <span class="dqtc">当期调仓</span>
                             <div class="layui-inline">
                                 <label class="layui-form-label">历史调仓</label>
-                                <form class="layui-form"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
-                                    <div class="layui-input-inline">
-                                        <select name="modules" lay-verify="required" lay-search=""  lay-filter="modules">
-                                            {volist name="periods_date_list" id="periods_date"}
-                                                <option value="{$periods_date}">{$periods_date}</option>
-                                            {/volist}
-                                        </select>
-                                    </div>
-                                </form>
+                                <div class="layui-input-inline">
+                                    <select name="modules" lay-verify="required" lay-search="" id = 'dataReload'  lay-filter="modules">
+                                        {volist name="periods_date_list" id="periods_date"}
+                                            <option value="{$periods_date}">{$periods_date}</option>
+                                        {/volist}
+                                    </select>
+
+                                </div>
+                                <input type="button" class="layui-btn" data-type="reload" value="搜索">
                             </div>
                         </div>
 
                         <div class="layui-colla-content layui-show">
                             <table class="layui-hide" id="test"></table>
+                            <script type="text/html" id="test">
+                                {{#  if(d.trade_direction == '买入'){ }}
+                                <span style="color: #F581B1;">{{ d.trade_direction }}</span>
+                                {{#  } else { }}
+                                {{ d.trade_direction }}
+                                {{#  } }}
+                            </script>
                         </div>
                         <div class="layui-form-item"></div>
                     </div>
@@ -186,119 +193,45 @@
         </div>
     </div>
 </form>
-<script>
-    layui.use('element', function () {
-        var element = layui.element;
-    });
-    layui.use('form', function () {
-        var form = layui.form;
 
-        //监听提交
-        form.on('submit(formDemo)', function (data) {
-            layer.msg(JSON.stringify(data.field));
-            return false;
-        });
-    });
-</script>
-<script>
-    layui.use('laydate', function () {
-        var laydate = layui.laydate;
-
-        //执行一个laydate实例
-        laydate.render({
-            elem: '#news_addtime' //指定元素
-        });
-    });
-</script>
-
-<script>
-    layui.use('form', function () {
-        var form = layui.form;
-    });
-    layui.use('element', function () {
-        var element = layui.element;
-    });
-    layui.use('laydate', function(){
-        var laydate = layui.laydate;
-        laydate.render({
-            elem: '#news_addtime'
-        });
-    });
-
-
-    /**
-     * 插入编辑器
-     */
-    function insert_editor(file_path){
-        ue.execCommand('insertimage', {src:file_path});
-    }
-
-    function del_newspic(file_id)
-    {
-        layer.open({
-            content: '{$Think.lang.ds_confirm_cancel}',
-            yes: function(index, layero){
-                $.getJSON("{:url('pic/del')}",{file_id: + file_id,pic_type:'news'}, function(result){
-                    if(result){
-                        $('#' + file_id).remove();
-                        layer.msg('{$Think.lang.del_succ}');
-                        layer.close(index);
-                        return;
-                    }else{
-                        layer.msg('{$Think.lang.del_fail}');
-                        layer.close(index);
-                        return;
-                    }
-                });
-            }
-        });
-    }
-</script>
 <script>
     layui.use('table', function(){
         var table = layui.table;
+        //方法级渲染
         table.render({
             elem: '#test'
-            ,url:"{:url('strategy/getStrategyHold', ['strategy_id'=>$strategy_info.strategy_id])}"
-            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,url: "{:url('strategy/getStrategyHold', ['strategy_id'=>$strategy_info.strategy_id])}"
             ,cols: [[
-                {field:'id', width:80, title: 'ID'}
-                ,{field:'secu_name', width:150, title: '证券名称'}
-                ,{field:'secu_code', width:150, title: '证券代码'}
-                ,{field:'adjust_num', width:150, title: '当期调整手数', sort: true}
-                ,{field:'adjust_hold', width:150, title: '调整后持仓', sort: true}
-                ,{field:'trade_direction', width:150, title: '买卖方向', sort: true}
-                ,{field:'periods_date', width:177, title: '当前期数'}
+                {field: 'id', width: 80, title: 'ID'}
+                , {field: 'secu_name', width: 150, title: '证券名称'}
+                , {field: 'secu_code', width: 150, title: '证券代码'}
+                , {field: 'adjust_num', width: 150, title: '当期调整手数', sort: true}
+                , {field: 'adjust_hold', width: 150, title: '调整后持仓', sort: true}
+                , {field: 'trade_direction', width: 150, title: '买卖方向', sort: true}
+                , {field: 'periods_date', width: 177, title: '当前期数'}
             ]]
+            ,id: 'test'
+            ,page: false
+            ,height: 310
+        });
+
+        var $ = layui.$, active = {
+            reload: function(){
+                var dataReload = $('#dataReload');
+                //执行重载
+                table.reload('test', {
+                    where: {
+                        periods_date:dataReload.val()
+                    }
+                }, 'data');
+            }
+        };
+
+        $('.layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
         });
     });
-    layui.use('form', function(){
-        var form = layui.form;
-        form.on('select(modules)', function(data){
-            layui.use('table', function(){
-                var table = layui.table;
-                table.render({
-                    elem: '#test'
-                    ,url:"/admin/strategy/getStrategyHold/strategy_id/{$strategy_info.strategy_id}/periods_date/"+data.value
-                    ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-                    ,cols: [[
-                        {field:'id', width:80, title: 'ID'}
-                        ,{field:'secu_name', width:150, title: '证券名称'}
-                        ,{field:'secu_code', width:150, title: '证券代码'}
-                        ,{field:'adjust_num', width:150, title: '当期调整手数', sort: true}
-                        ,{field:'adjust_hold', width:150, title: '调整后持仓', sort: true}
-                        ,{field:'trade_direction', width:150, title: '买卖方向', sort: true}
-                        ,{field:'periods_date', width:177, title: '当前期数'}
-                    ]]
-                });
-            });
-        });
-        //各种基于事件的操作，下面会有进一步介绍
-    });
-    function changes(){
-
-    }
-
 </script>
 
 {/block}
