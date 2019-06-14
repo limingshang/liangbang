@@ -158,6 +158,9 @@ class Strategy extends BaseMall
             'strategy_describe'     => input('strategy_describe'),
             'update_time'           => date("Y-m-d H:i:s"),
         ];
+        if (!input('strategy_id')) {
+            ds_json_encode(404, '参数错误');
+        }
         $condition = ['strategy_id' => input('strategy_id')];
         $strategyInfoModel = model('strategyInfo');
         $strategyInfo = $strategyInfoModel->getOneStrategyInfo($condition);
