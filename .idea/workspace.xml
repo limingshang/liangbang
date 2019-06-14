@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Strategy.php" afterDir="false" />
-    </list>
+    <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="151" column="60" selection-start-line="151" selection-start-column="60" selection-end-line="151" selection-end-column="60" />
+            <state relative-caret-position="169">
+              <caret line="143" column="37" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -27,8 +25,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-878">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="343">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/src/helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/src/Captcha.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime/log/201906/14.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="1671" column="20" lean-forward="true" selection-start-line="1671" selection-start-column="20" selection-end-line="1671" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -62,9 +87,10 @@
       <find>标的指数当日收益率</find>
       <find>sub_index_ratio</find>
       <find>daily_ritio</find>
-      <find>daily_ratio</find>
       <find>sub_index_value</find>
       <find>subIndexValue</find>
+      <find>daily_ratio</find>
+      <find>captcha_src</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/application</dir>
@@ -134,6 +160,24 @@
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dscms" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dscms" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dscms" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+              <item name="201906" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -181,7 +225,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8385000" />
+    <option name="totallyTimeSpent" value="8795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -251,15 +295,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-878">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="343">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="151" column="60" selection-start-line="151" selection-start-column="60" selection-end-line="151" selection-end-column="60" />
+        <state relative-caret-position="169">
+          <caret line="143" column="37" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/src/Captcha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/src/helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
         </state>
       </provider>
     </entry>
