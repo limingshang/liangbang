@@ -177,7 +177,7 @@ class Strategy extends BaseMall
             'sub_index_ratio'       => input('sub_index_ratio'),
             'hold_secu_num'         => input('hold_secu_num'),
             'run_num'               => input('run_num'),
-            'review_status'         => input('review_status'),
+            'review_status'         => input('review_status') ? input('review_status') : 0,
             'strategy_status'       => input('strategy_status'),
             'strategy_describe'     => input('strategy_describe'),
             'update_time'           => date("Y-m-d H:i:s"),
