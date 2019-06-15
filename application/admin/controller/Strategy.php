@@ -105,6 +105,9 @@ class Strategy extends AdminControl {
             'periods_date' => $periods_date,
         );
         $strategy_hold_list = $model_strategy_hold->getStrategyHoldList($condition,'', '*');
+        foreach ($strategy_hold_list as $key => $value) {
+            $strategy_hold_list[$key]['id'] = $key+1;
+        }
         $data = ['code' => 0, 'data' => $strategy_hold_list, 'count' => count($strategy_hold_list)];
         return $data;
     }
