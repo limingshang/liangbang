@@ -122,7 +122,7 @@ class Strategy extends AdminControl {
             if (!$strategyInfo) {
                 dsLayerOpenSuccess('数据不存在');
             } else {
-                $review_status     = input('param.review_status');
+                $review_status     = input('param.review_status', null);
                 $review_describe     = input('param.review_describe');
                 switch ($review_status) {
                     case 0:
@@ -130,7 +130,7 @@ class Strategy extends AdminControl {
                         break;
                     case 2:
                         $policyStatus = 2;
-                    break;
+                        break;
                     default:
                         $policyStatus = 1;
                         break;
