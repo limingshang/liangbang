@@ -30,7 +30,7 @@ class Strategy extends AdminControl {
         if(!empty($strategy_info)) {
             $condition['strategy_info'] = $strategy_info;
         }
-        $strategy_list = $model_stratesgy->getStrategyList($condition,'', '*', 10);
+        $strategy_list = $model_stratesgy->getStrategyList($condition,'', '*', 20);
         $strategyHold  = model('strategyHold');
         foreach ($strategy_list as $key => $value) {
             $strategyHoldInfo = $strategyHold
