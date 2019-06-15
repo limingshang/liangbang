@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/admin/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/admin/css/admin.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/static/admin/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -70,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1635">
-              <caret line="282" selection-start-line="282" selection-end-line="282" selection-end-column="24" />
+            <state relative-caret-position="362">
+              <caret line="279" column="51" selection-start-line="279" selection-start-column="51" selection-end-line="279" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -149,8 +148,8 @@
         <option value="$PROJECT_DIR$/application/admin/view/strategy/info_title.html" />
         <option value="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Strategy.php" />
-        <option value="$PROJECT_DIR$/application/admin/view/strategy/info.html" />
         <option value="$PROJECT_DIR$/public/static/admin/css/admin.css" />
+        <option value="$PROJECT_DIR$/application/admin/view/strategy/info.html" />
       </list>
     </option>
   </component>
@@ -286,7 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24403000" />
+    <option name="totallyTimeSpent" value="24545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -453,17 +452,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="282" selection-start-line="282" selection-end-line="282" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/static/admin/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="241" column="36" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="279" column="51" selection-start-line="279" selection-start-column="51" selection-end-line="279" selection-end-column="51" />
         </state>
       </provider>
     </entry>
