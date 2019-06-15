@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Strategy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/info.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="118" column="39" lean-forward="true" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
+            <state relative-caret-position="316">
+              <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -66,6 +65,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="871">
               <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="264" column="9" selection-start-line="264" selection-start-column="9" selection-end-line="264" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/admin/view/news/form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="211" column="9" selection-start-line="123" selection-end-line="211" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -101,9 +118,9 @@
       <find>审核</find>
       <find>$</find>
       <find>$data</find>
-      <find>reviewStatus</find>
       <find>multipart/form-data</find>
       <find>strategyid</find>
+      <find>reviewStatus</find>
     </findStrings>
     <replaceStrings>
       <replace>tests</replace>
@@ -126,13 +143,13 @@
         <option value="$PROJECT_DIR$/application/admin/view/strategy/index.html" />
         <option value="$PROJECT_DIR$/thinkphp/tpl/page_trace.tpl" />
         <option value="$PROJECT_DIR$/application/home/controller/Strategy.php" />
-        <option value="$PROJECT_DIR$/application/admin/view/strategy/info.html" />
         <option value="$PROJECT_DIR$/application/admin/view/index/index.html" />
         <option value="$PROJECT_DIR$/application/admin/view/strategy/index_title.html" />
         <option value="$PROJECT_DIR$/application/admin/view/strategy/info_title.html" />
         <option value="$PROJECT_DIR$/public/static/admin/css/admin.css" />
         <option value="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Strategy.php" />
+        <option value="$PROJECT_DIR$/application/admin/view/strategy/info.html" />
       </list>
     </option>
   </component>
@@ -184,14 +201,16 @@
               <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
               <item name="dscms" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
               <item name="dscms" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
@@ -266,7 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23987000" />
+    <option name="totallyTimeSpent" value="24027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -379,8 +398,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2843">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="494">
+          <caret line="264" column="9" selection-start-line="264" selection-start-column="9" selection-end-line="264" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -393,8 +412,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/news/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="196" column="27" lean-forward="true" selection-start-line="196" selection-start-column="27" selection-end-line="196" selection-end-column="44" />
+        <state relative-caret-position="404">
+          <caret line="211" column="9" selection-start-line="123" selection-end-line="211" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -442,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="118" column="39" lean-forward="true" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
+        <state relative-caret-position="316">
+          <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
         </state>
       </provider>
     </entry>
