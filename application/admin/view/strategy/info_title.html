@@ -3,14 +3,8 @@
       <a href="{:url('strategy/index')}">半自动信号审核</a>
       <a>策略详情</a>
     </span>
-    {switch name="$strategy_info.review_status" }
-    {case value="1"}
     <div class="tool-btnss myOpenFile">
         <a href="javascript:dsLayerOpen('{:url('strategy/strategy',['id'=>$strategy_info.id])}','审核')" class="layui-btn layui-btn-xs"><i class="layui-icon layui-icon-edit"></i>审核</a>
     </div>
-    {/case}
-    {case value="2"}{/case}
-    {case value="0"}{/case}
-    {/switch}
 
 </div>

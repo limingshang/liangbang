@@ -136,15 +136,15 @@ class Strategy extends AdminControl {
                         break;
                 }
                 $url = self::GET_URL."Grit/ReceiveVerifyStatus.ashx";
-                $data = [
+                $postData = [
                     'strategyid' => $strategyInfo['strategy_id'],
                     'touser'     => 'wk',
                     'status'     => $policyStatus,
                     'desc'       => $review_describe,
                     'curtime'    => date("Y-m-d H:i:s", time()),
                 ];
-                $result = request_post($url, $data);
-                Log::write('请求Url:'.$url.json_encode($data, JSON_UNESCAPED_UNICODE));
+                $result = request_post($url, $postData);
+                Log::write('请求Url:'.$url.json_encode($postData, JSON_UNESCAPED_UNICODE));
                 Log::write('successData:'.$result);
                 $condition = ['id' => $id];
                 $data['review_status'] = $policyStatus;
