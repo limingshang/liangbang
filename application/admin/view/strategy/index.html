@@ -23,18 +23,18 @@
             </tr>
             </thead>
             <tbody>
-            {volist name="strategy_list" id="strategy"}
+            {volist name="strategy_list" id="strategy" key='key'}
             <tr>
-                <td>{$strategy.id}</td>
+                <td>{$key}</td>
                 <td>{$strategy.strategy_name}</td>
                 <td>{$strategy.periods_date|default = '--'}</td>
                 <td>
                     {switch name="$strategy.strategy_type" }
-                    {case value="1"}
-                    指数增强
-                    {/case}
-                    {case value="2"}已处理{/case}
-                    {case value="0"}已处理{/case}
+                        {case value="1"}
+                        指数增强
+                        {/case}
+                        {case value="2"}已处理{/case}
+                        {case value="0"}已处理{/case}
                     {/switch}</td>
 
                 <td>
