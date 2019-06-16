@@ -1,14 +1,13 @@
 {extend name="layout:home" /}
 
 {block name="container"}
-<form class="layui-form" method="post" enctype="multipart/form-data">
+<form class="layui-form Myinfo" method="post" enctype="multipart/form-data">
     <div class="layui-tab layui-tab-card">
         {include file="strategy/info_title" /}
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show ">
                 <div class="layui-collapse">
                     <div class="layui-colla-item">
-                        <h2 class="layui-colla-title">基本设置</h2>
                         <div class="layui-colla-content layui-show">
                             <div class="my_black">
                                 <div class="layui-form-item">
@@ -187,6 +186,15 @@
                                 {{ d.trade_direction }}
                                 {{#  } }}
                             </script>
+                            <script type="text/html" id="adjust_num">
+                                {{#  if(d.trade_direction == '买入'){ }}
+                                <span style="color: red;">{{ d.adjust_num }}</span>
+                                {{#  } else if(d.trade_direction == '卖出') { }}
+                                <span style="color: green;">{{ d.adjust_num }}</span>
+                                {{#  } else{ }}
+                                {{ d.adjust_num }}
+                                {{#  } }}
+                            </script>
                         </div>
                         <div class="layui-form-item"></div>
                     </div>
@@ -195,20 +203,7 @@
         </div>
     </div>
 </form>
-<script>
-    layui.use('element', function () {
-        var element = layui.element;
-    });
-    layui.use('form', function () {
-        var form = layui.form;
 
-        //监听提交
-        form.on('submit(formDemo)', function (data) {
-            layer.msg(JSON.stringify(data.field));
-            return false;
-        });
-    });
-</script>
 <script>
     layui.use('laydate', function () {
         var laydate = layui.laydate;
@@ -224,9 +219,7 @@
     layui.use('form', function () {
         var form = layui.form;
     });
-    layui.use('element', function () {
-        var element = layui.element;
-    });
+
     layui.use('laydate', function(){
         var laydate = layui.laydate;
         laydate.render({
@@ -248,10 +241,9 @@
                 , {field: 'secu_name', title: '证券名称', style:'text-align: center;'}
                 , {field: 'secu_code', title: '证券代码', style:'text-align: center;'}
                 , {field: 'pre_hold', title: '调整前持仓', sort: true, style:'text-align: center;'}
-                , {field: 'adjust_num', title: '当期调整手数', sort: true, style:'text-align: center;'}
+                , {field: 'adjust_num', title: '当期调整手数', sort: true, style:'text-align: center;', templet: '#adjust_num'}
                 , {field: 'trade_direction', title: '买卖方向', sort: true, templet: '#trade_direction', style:'text-align: center;'}
                 , {field: 'adjust_hold', title: '调整后持仓', sort: true, style:'text-align: center;'}
-                , {field: 'periods_date', title: '当前期数', style:'text-align: center;'}
             ]]
             ,id: 'test'
             ,page: false
