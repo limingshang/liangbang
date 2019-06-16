@@ -235,33 +235,6 @@
     });
 
 
-    /**
-     * 插入编辑器
-     */
-    function insert_editor(file_path){
-        ue.execCommand('insertimage', {src:file_path});
-    }
-
-    function del_newspic(file_id)
-    {
-        layer.open({
-            content: '{$Think.lang.ds_confirm_cancel}',
-            yes: function(index, layero){
-                $.getJSON("{:url('pic/del')}",{file_id: + file_id,pic_type:'news'}, function(result){
-                    if(result){
-                        $('#' + file_id).remove();
-                        layer.msg('{$Think.lang.del_succ}');
-                        layer.close(index);
-                        return;
-                    }else{
-                        layer.msg('{$Think.lang.del_fail}');
-                        layer.close(index);
-                        return;
-                    }
-                });
-            }
-        });
-    }
 </script>
 <script>
     layui.use('table', function(){
