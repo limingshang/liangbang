@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/info.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="273" column="59" selection-start-line="273" selection-start-column="59" selection-end-line="273" selection-end-column="59" />
+            <state relative-caret-position="300">
+              <caret line="283" column="42" lean-forward="true" selection-start-line="283" selection-start-column="42" selection-end-line="283" selection-end-column="42" />
               <folding>
                 <element signature="e#9445#9451#0" expanded="true" />
                 <element signature="e#9451#9457#0" expanded="true" />
@@ -233,12 +234,12 @@
       <workItem from="1560417996090" duration="1568000" />
       <workItem from="1560422420766" duration="353000" />
       <workItem from="1560475265427" duration="4086000" />
-      <workItem from="1560769782509" duration="743000" />
+      <workItem from="1560769782509" duration="1505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31322000" />
+    <option name="totallyTimeSpent" value="32084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -439,8 +440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="273" column="59" selection-start-line="273" selection-start-column="59" selection-end-line="273" selection-end-column="59" />
+        <state relative-caret-position="300">
+          <caret line="283" column="42" lean-forward="true" selection-start-line="283" selection-start-column="42" selection-end-line="283" selection-end-column="42" />
           <folding>
             <element signature="e#9445#9451#0" expanded="true" />
             <element signature="e#9451#9457#0" expanded="true" />

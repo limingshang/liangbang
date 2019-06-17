@@ -253,13 +253,16 @@
         var $ = layui.$, active = {
             reload: function(){
                 var dataReload = $('#dataReload');
-                checkIsNew(dataReload.val());
-                //执行重载
-                table.reload('test', {
-                    where: {
-                        periods_date:dataReload.val()
-                    }
-                }, 'data');
+                if(dataReload.val()) {
+                    checkIsNew(dataReload.val());
+                    //执行重载
+                    table.reload('test', {
+                        where: {
+                            periods_date:dataReload.val()
+                        }
+                    }, 'data');
+                }
+
             }
         };
 
@@ -271,14 +274,17 @@
 </script>
 <script>
     function checkIsNew(nowData){
-        if(nowData == {$periods_date_list[0]|default = '无数据'}) {
+        if(nowData == {$periods_date_list[0]}) {
             $("#isNew").html('（最新持仓）');
             $("#isTC").html(nowData);
         } else {
             $("#isNew").html('');
         }
     }
-    checkIsNew("{$periods_date_list[0]}");
+    {if condition="$periods_date_list[0]"}
+        checkIsNew("{$periods_date_list[0]}");
+    {/if}
+
 </script>
 {/block}
 
