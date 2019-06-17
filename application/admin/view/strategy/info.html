@@ -160,7 +160,7 @@
                     </div>
                     <div class="layui-colla-item">
                         <div class="myDqtc">
-                            <span class="dqtc">当期调仓<i id="isNew"></i></span>
+                            <span class="dqtc">调仓信息 &nbsp;&nbsp;当期调仓<i id="isTC"></i><i id="isNew"></i></span>
                             <div class="layui-inline">
                                 <label class="layui-form-label">历史调仓</label>
                                 <div class="layui-input-inline">
@@ -253,7 +253,7 @@
         var $ = layui.$, active = {
             reload: function(){
                 var dataReload = $('#dataReload');
-                checkIsNew('"'+dataReload.val()+'"');
+                checkIsNew(dataReload.val());
                 //执行重载
                 table.reload('test', {
                     where: {
@@ -270,9 +270,10 @@
     });
 </script>
 <script>
-    function checkIsNew($nowData){
-        if($nowData == "{$periods_date_list[0]}") {
+    function checkIsNew(nowData){
+        if(nowData == {$periods_date_list[0]}) {
             $("#isNew").html('（最新持仓）');
+            $("#isTC").html(nowData);
         } else {
             $("#isNew").html('');
         }
