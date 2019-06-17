@@ -271,7 +271,7 @@
 </script>
 <script>
     function checkIsNew(nowData){
-        if(nowData == {$periods_date_list[0]}) {
+        if(nowData == {$periods_date_list[0]|default = '无数据'}) {
             $("#isNew").html('（最新持仓）');
             $("#isTC").html(nowData);
         } else {
