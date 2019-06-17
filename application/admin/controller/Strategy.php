@@ -72,7 +72,7 @@ class Strategy extends AdminControl {
         }
         $periods_date_list = array_column($periods_date_list, 'periods_date');
         if (!$periods_date_list) {
-            $periods_date_list = [];
+            $periods_date_list[0] = null;
         }
         $this->assign('periods_date_list', $periods_date_list);
         $this->assign('strategy_info', $strategy_info);
