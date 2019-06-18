@@ -165,7 +165,7 @@ h6 { font-size:12px;}
 .admincp-header .navbar li.actived>a,.admincp-header .navbar li:hover>a{color:#fff}
 .admincp-header .navbar li:hover dl{display:block}
 .admincp-header .navbar li dl dd:hover{background-color:#f2f2f2!important}
-/*.admincp-header .navbar .fr li:before{position:relative;top:17px;float:left;color:#565556;content:"|";font-size:9pt}*/
+.admincp-header .navbar .fr li:before{position:relative;top:0px;float:left;color:#565556;content:"|";font-size:9pt}
 .admincp-header .navbar .fr li>span{color:#fff;padding:0 15px;color:#fff;font-size:14px;line-height:51px}
 .admincp-header .navbar .fr li>a{color:#fff;padding:0 15px;color:#fff;font-size:14px;line-height:65px}
 .admincp-header .navbar .fr li ul{margin-top: 10px}
