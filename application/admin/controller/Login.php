@@ -71,6 +71,7 @@ class Login extends Controller
                 session('admin_name', $admin_info['admin_name']);
                 session('admin_group_id', $admin_info['admin_group_id']);
                 session('admin_is_super', $admin_info['admin_is_super']);
+                session('session_start_time', time());//记录会话开始时间！判断会话时间的重点！重点！重点！
 
                 $this->success('登录成功', 'Admin/Index/index');
             } else {

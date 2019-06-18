@@ -15,6 +15,10 @@ class AdminControl extends Controller
 
     public function _initialize()
     {
+        if (time() - session('session_start_time') > 60*60) {
+            session_destroy();//真正的销毁在这里！
+            $this->redirect('/Admin/login/index',302);
+        }
         if (in_array(cookie('ds_admin_lang'), array('zh-cn', 'en-us'))) {
             config('default_lang', cookie('ds_admin_lang'));
         }
