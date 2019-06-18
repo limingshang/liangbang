@@ -160,7 +160,7 @@
                     </div>
                     <div class="layui-colla-item">
                         <div class="myDqtc">
-                            <span class="dqtc">调仓信息 &nbsp;&nbsp;当期调仓<i id="isTC"></i><i id="isNew"></i></span>
+                            <span class="dqtc">调仓信息 &nbsp;&nbsp;<i id="isTC"></i><i id="isNew"></i></span>
                             <div class="layui-inline">
                                 <label class="layui-form-label">历史调仓</label>
                                 <div class="layui-input-inline">
@@ -279,6 +279,7 @@
             $("#isTC").html(nowData);
         } else {
             $("#isNew").html('');
+            $("#isTC").html(nowData);
         }
     }
     {if condition="$periods_date_list[0]"}

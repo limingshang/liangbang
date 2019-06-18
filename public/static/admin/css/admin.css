@@ -245,5 +245,10 @@ h6 { font-size:12px;}
 #isNew{color: red}
 .myDqtc .layui-select-title .layui-input{font-size: 18px;width: 135px;}
 
+.myTable tr th:nth-child(3), .myTable tr td:nth-child(3){text-align: center}
+.myTable tr th:nth-child(4), .myTable tr td:nth-child(4){text-align: center}
+.myTable tr th:nth-child(5), .myTable tr td:nth-child(5){text-align: center}
+.myTable tr th:nth-child(6), .myTable tr td:nth-child(6){text-align: center}
+
 
 
