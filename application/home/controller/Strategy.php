@@ -35,7 +35,7 @@ class Strategy extends BaseMall
                 ->select()->toArray();
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
-            ds_json_encode(404, '失败');
+            ds_json_encode(10000, '请求方式不正确');
         }
     }
     /**
@@ -58,7 +58,7 @@ class Strategy extends BaseMall
             }
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
-            ds_json_encode(404, '失败');
+            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
         }
     }
 
@@ -76,7 +76,7 @@ class Strategy extends BaseMall
             $result = $strategyNetValue->getStrategyNetValueList($condition, null, $fields);
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
-            ds_json_encode(404, '失败');
+            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
         }
     }
     /**
@@ -110,7 +110,7 @@ class Strategy extends BaseMall
                         $fields = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                         $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                     } else {
-                        ds_json_encode(404, '失败');
+                        ds_json_encode(10000, '未查询到任何调仓数据');
                     }
                 } else {
                     $condition = [
@@ -125,10 +125,10 @@ class Strategy extends BaseMall
 
                 ds_json_encode(10000, '数据获取成功', $strategyInfo);
             } else {
-                ds_json_encode(404, '失败');
+                ds_json_encode(10000, '未查询到此策略数据');
             }
         } else {
-            ds_json_encode(404, '失败');
+            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
         }
     }
     /**
@@ -153,7 +153,7 @@ class Strategy extends BaseMall
             $result = array_column($result, 'periods_date');
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
-            ds_json_encode(404, '失败');
+            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
         }
     }
     /**
@@ -184,7 +184,7 @@ class Strategy extends BaseMall
             'update_time'           => date("Y-m-d H:i:s"),
         ];
         if (!input('strategy_id')) {
-            ds_json_encode(404, '参数错误');
+            ds_json_encode(10000, '策略id参数错误');
         }
         $condition = ['strategy_id' => input('strategy_id')];
         $strategyInfoModel = model('strategyInfo');
@@ -210,7 +210,7 @@ class Strategy extends BaseMall
         // $strategyInfoModel = model('strategyInfo');
         // $strategyInfo = $strategyInfoModel->getOneStrategyInfo($condition);
         if(!input('strategy_id')) {
-            ds_json_encode(404, '失败');
+            ds_json_encode(10000, '策略id参数错误');
         }
         // if($strategyInfo) {
             $data = json_decode($data, true);
