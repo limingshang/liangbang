@@ -76,7 +76,7 @@ $lang['ds_admin'] = '管理员操作';
 $lang['ds_admin_group'] = '权限组操作';
 
 //内容管理
-$lang['ds_content_manage'] = '内容管理';
+$lang['ds_content_manage'] = '策略管理';
 $lang['ds_column'] = '栏目管理';
 $lang['ds_news'] = '新闻管理';
 $lang['ds_strategy'] = '半自动信号审核';
