@@ -203,7 +203,7 @@ h6 { font-size:12px;}
 .my_label{width:100%; height: 36px; line-height: 38px;color: red}
 .my_black{width:50%;float: left;font-size: 18px}
 .my_black_two{width:16.6%;float: left;}
-.my_black_three{width:100%;padding: 10px 20px;font-size: 14px;}
+.my_black_three{width:100%;font-size: 14px;}
 .my_black_two .p1{text-align: center; width: 100%; font-size: 14px; padding: 15px 0px;}
 .my_black_two .p2{text-align: center; width: 100%; font-size: 20px;  padding: 5px 0px;}
 .myHold select {width:100px;}

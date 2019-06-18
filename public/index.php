@@ -9,7 +9,8 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 // [ 应用入口文件 ]
-
+header('Access-Control-Allow-Origin:http://h5.wquant.develop');
+header('Access-Control-Allow-Origin:http://wk.yngw518.com');
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
 // 加载框架引导文件

@@ -237,13 +237,13 @@
             elem: '#test'
             ,url: "{:url('strategy/getStrategyHold', ['strategy_id'=>$strategy_info.strategy_id])}"
             ,cols: [[
-                {field: 'id', width: 80, title: '序号', style:'text-align: center;'}
+                {field: 'id', title: '序号', style:'text-align: center;'}
                 , {field: 'secu_name', title: '证券名称', style:'text-align: center;'}
                 , {field: 'secu_code', title: '证券代码', style:'text-align: center;'}
-                , {field: 'pre_hold', title: '调整前持仓', sort: true, style:'text-align: center;'}
-                , {field: 'adjust_num', title: '当期调整手数', sort: true, style:'text-align: center;', templet: '#adjust_num'}
-                , {field: 'trade_direction', title: '买卖方向', sort: true, templet: '#trade_direction', style:'text-align: center;'}
-                , {field: 'adjust_hold', title: '调整后持仓', sort: true, style:'text-align: center;'}
+                , {field: 'pre_hold', title: '调整前持仓', style:'text-align: center;'}
+                , {field: 'adjust_num', title: '当期调整手数', style:'text-align: center;', templet: '#adjust_num'}
+                , {field: 'trade_direction', title: '买卖方向', templet: '#trade_direction', style:'text-align: center;'}
+                , {field: 'adjust_hold', title: '调整后持仓', style:'text-align: center;'}
             ]]
             ,id: 'test'
             ,page: false
