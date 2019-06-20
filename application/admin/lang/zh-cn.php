@@ -81,6 +81,7 @@ $lang['ds_column'] = '栏目管理';
 $lang['ds_news'] = '新闻管理';
 $lang['ds_strategy'] = '半自动信号审核';
 $lang['ds_monitor'] = '全自动信号监控';
+$lang['ds_handellog'] = '处理日志';
 $lang['ds_product'] = '产品管理';
 $lang['ds_cases'] = '案例管理';
 $lang['ds_adv'] = '广告管理';

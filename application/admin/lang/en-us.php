@@ -73,8 +73,9 @@ $lang['ds_admin_group'] = 'Admin Group';
 $lang['ds_content_manage'] = 'Content manage';
 $lang['ds_column'] = 'Column';
 $lang['ds_news'] = 'News';
-$lang['ds_strategy'] = 'S';
+$lang['ds_strategy'] = 'Strategy';
 $lang['ds_product'] = 'Product';
+$lang['ds_handellog'] = 'handelLog';
 $lang['ds_cases'] = 'Cases';
 $lang['ds_adv'] = 'Adv';
 

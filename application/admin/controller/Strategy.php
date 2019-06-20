@@ -129,15 +129,31 @@ class Strategy extends AdminControl {
             } else {
                 $review_status     = input('param.review_status', null);
                 $review_describe     = input('param.review_describe');
+                $text = '管理员将：'.$strategyInfo['strategy_id'];
+                switch ($strategyInfo['review_status']) {
+                    case 0:
+                        $text.='，历史状态为：通过';
+                        break;
+                    case 2:
+                        $text.='，历史状态为：驳回';
+                        break;
+                    default:
+                        $text.='，历史状态为：审核中';
+                        break;
+                }
+                $text.='。处理为：';
                 switch ($review_status) {
                     case 0:
                         $policyStatus = 0;
+                        $text.='通过状态';
                         break;
                     case 2:
                         $policyStatus = 2;
+                        $text.='驳回状态';
                         break;
                     default:
                         $policyStatus = 1;
+                        $text.='审核中状态';
                         break;
                 }
                 $url = self::GET_URL."Grit/ReceiveVerifyStatus.ashx";
@@ -149,6 +165,16 @@ class Strategy extends AdminControl {
                     'curtime'    => date("Y-m-d H:i:s", time()),
                 ];
                 $result = request_post($url, $postData);
+                $handelLog = model('handelLog');
+                $handelData = [
+                    'user_name' => session('admin_name'),
+                    'content' => $text,
+                    'result' => $result,
+                    'strategy_id' => $strategyInfo['strategy_id'],
+                    'review_describe' => $review_describe,
+                ];
+                $handelLog->addHandelLogValue($handelData);
+                $strategyInfo = $model_strategy->getOneStrategyInfo($condition);
                 Log::write('请求Url:'.$url.json_encode($postData, JSON_UNESCAPED_UNICODE));
                 Log::write('successData:'.$result);
                 $condition = ['id' => $id];

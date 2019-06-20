@@ -184,6 +184,10 @@ class Admingroup extends AdminControl
                 array('name' => lang('ds_product'), 'action' => null, 'controller' => 'Product'),
                 array('name' => lang('ds_cases'), 'action' => null, 'controller' => 'Cases'),
                 array('name' => lang('ds_adv'), 'action' => null, 'controller' => 'Adv'),
+                array('name' => lang('ds_adv'), 'action' => null, 'controller' => 'Adv'),
+                array('name' => lang('ds_strategy'), 'action' => null, 'controller' => 'Strategy'),
+                array('name' => lang('ds_monitor'), 'action' => null, 'controller' => 'Strategy'),
+                array('name' => lang('ds_handellog'), 'action' => null, 'controller' => 'Handellog'),
             )),
             array('name' => lang('ds_operation_manage'), 'child' => array(
                 array('name' => lang('ds_message'), 'action' => null, 'controller' => 'Message'),

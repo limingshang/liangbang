@@ -1,0 +1,43 @@
+{extend name="layout:home" /}
+{block name="container"}
+<div class="layui-tab layui-tab-card">
+    {include file="strategy/index_title" /}
+    <div>
+
+    </div>
+    <div class="layui-tab-content page-tab-content">
+        <table class="layui-table lay-even myTable">
+            <colgroup>
+                <col width="150">
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>操作者</th>
+                <th>策略id</th>
+                <th>操作日志</th>
+                <th>操作备注</th>
+                <th>请求返回结果</th>
+                <th>操作时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="handelLogList" id="handelInfo" key='key'}
+            <tr>
+                <td>{$key}</td>
+                <td>{$handelInfo.user_name}</td>
+                <td>{$handelInfo.strategy_id}</td>
+                <td>{$handelInfo.content}</td>
+                <td>{$handelInfo.review_describe}</td>
+                <td>{$handelInfo.result}</td>
+                <td>{$handelInfo.create_time}</td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+        {$show_page}
+    </div>
+</div>
+<script type="text/javascript" src="{$Think.ADMIN_SITE_ROOT}/js/jquery.edit.js"></script>
+{/block}

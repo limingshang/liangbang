@@ -158,6 +158,10 @@ class AdminControl extends Controller
                         'text' => lang('ds_monitor'),
                         'url' => url('Strategy/index'),
                     ),
+                    'handelLog' => array(
+                        'text' => lang('ds_handellog'),
+                        'url' => url('Handellog/index'),
+                    ),
 //                    'product' => array(
 //                        'text' => lang('ds_product'),
 //                        'url' => url('Product/index'),
