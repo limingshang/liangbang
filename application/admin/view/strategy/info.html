@@ -205,6 +205,21 @@
 </form>
 
 <script>
+    /**
+     * Layer 通用ifram弹出窗口
+     */
+    function dsLayerOpen(url, title,width,height) {
+        if (!width)	width = '500px';
+        if (!height) height = '345px';
+        layer.open({
+            type: 2,
+            title: title,
+            area: [width,height],
+            fixed: false, //不固定
+            maxmin: true,
+            content: url
+        });
+    }
     layui.use('laydate', function () {
         var laydate = layui.laydate;
 

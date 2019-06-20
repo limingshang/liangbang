@@ -306,8 +306,8 @@ $(function() {
  * Layer 通用ifram弹出窗口
  */
 function dsLayerOpen(url, title,width,height) {
-    if (!width)	width = '500px';
-    if (!height) height = '345px';
+    if (!width)	width = '900px';
+    if (!height) height = '500px';
     layer.open({
         type: 2,
         title: title,
