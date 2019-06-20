@@ -252,6 +252,9 @@ h6 { font-size:12px;}
 .myTable tr th:nth-child(4), .myTable tr td:nth-child(4){text-align: center;}
 .myTable tr th:nth-child(5), .myTable tr td:nth-child(5){text-align: center}
 .myTable tr th:nth-child(6), .myTable tr td:nth-child(6){text-align: center}
+.layui-form-pane .layui-input-block{    margin-left: 0px;
+    text-align: center;
+    left: -1px;}
 
 
 
