@@ -120,6 +120,8 @@
             var that = $(this);
             if ($('iframe[src="' + that.attr('href') + '"]')[0]) {
                 tab.change(that.attr('data-id'));
+                var dataName  = that.attr('data-id');
+                $("iframe[lay-id='"+dataName+"']").attr('src', $("iframe[lay-id='"+dataName+"']").attr('src'));
                 event.stopPropagation();
                 return false;
             }
