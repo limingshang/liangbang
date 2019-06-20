@@ -186,7 +186,7 @@ class Admingroup extends AdminControl
                 array('name' => lang('ds_adv'), 'action' => null, 'controller' => 'Adv'),
                 array('name' => lang('ds_adv'), 'action' => null, 'controller' => 'Adv'),
                 array('name' => lang('ds_strategy'), 'action' => null, 'controller' => 'Strategy'),
-                array('name' => lang('ds_monitor'), 'action' => null, 'controller' => 'Strategy'),
+                array('name' => lang('ds_monitor'), 'action' => null, 'controller' => 'Monitor'),
                 array('name' => lang('ds_handellog'), 'action' => null, 'controller' => 'Handellog'),
             )),
             array('name' => lang('ds_operation_manage'), 'child' => array(
