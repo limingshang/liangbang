@@ -121,7 +121,7 @@ class Strategy extends BaseMall
                     $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                 }
                 $strategyInfo['periods_date'] = $periods_date;
-                $strategyInfo['adjustInfo'] = $strategyHoldList;
+                $strategyInfo['adjust_info'] = $strategyHoldList;
 
                 ds_json_encode(10000, '数据获取成功', $strategyInfo);
             } else {
