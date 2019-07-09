@@ -151,6 +151,7 @@ class Strategy extends BaseMall
                 $result = [];
             }
             $result = array_column($result, 'periods_date');
+            $result['strategy_id'] = $strategy_id;
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
             ds_json_encode(10000, '请求方式不正确，或策略id未传递');
