@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/home/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Strategy.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="139" column="20" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="20" />
+            <state relative-caret-position="328">
+              <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -272,12 +271,12 @@
       <workItem from="1560475265427" duration="4086000" />
       <workItem from="1560769782509" duration="3219000" />
       <workItem from="1560825300160" duration="2450000" />
-      <workItem from="1562650746541" duration="1317000" />
+      <workItem from="1562650746541" duration="1413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49816000" />
+    <option name="totallyTimeSpent" value="49912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -617,8 +616,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="139" column="20" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="20" />
+        <state relative-caret-position="328">
+          <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
         </state>
       </provider>
     </entry>
