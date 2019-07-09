@@ -152,7 +152,7 @@ class Strategy extends BaseMall
             }
             $results = [];
             $results['strategy_id'] = $strategy_id;
-            $results['periods_dates'] = array_column($result, 'periods_date');
+            $results['periods_date'] = array_column($result, 'periods_date');
 
             ds_json_encode(10000, '数据获取成功', $results);
         } else {
