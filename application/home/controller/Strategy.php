@@ -74,7 +74,8 @@ class Strategy extends BaseMall
             $condition = ['strategy_id' => $strategy_id];
             $fields = 'trading_date,net_value,index_value';
             $result = $strategyNetValue->getStrategyNetValueList($condition, null, $fields);
-            $result['strategy_id'] = $strategy_id;
+            $results['strategy_id'] = $strategy_id;
+            $results['data'] = $result;
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
             ds_json_encode(10000, '请求方式不正确，或策略id未传递');
