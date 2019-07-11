@@ -4,6 +4,7 @@
  * 首页相关基本调用
  */
 namespace app\home\controller;
+use app\common\model\UserFocus;
 use think\Db;
 use think\Log;
 
@@ -24,8 +25,13 @@ class Strategy extends BaseMall
     {
         $code = input('code');
         $review_status = input('review_status');
+        $strategy_type = input('strategy_type');
         if (request()->isPost()) {
             $model_strategy = model('strategyInfo');
+            if ($strategy_type != '') {
+                $model_strategy = $model_strategy
+                    ->where('strategy_type', 'eq', $strategy_type);
+            }
             if ($review_status != '') {
                 $model_strategy = $model_strategy
                     ->where('review_status', 'eq', $review_status);
@@ -285,5 +291,55 @@ class Strategy extends BaseMall
         }
 
         ds_json_encode(10000, '存储成功');
+    }
+
+    /**
+     * 更新用户关注信息
+     */
+    public function updateFocusStatus()
+    {
+        $phone_num      = input('phone_num');       // 用户手机号
+        $strategy_id    = input('strategy_id');     // 策略ID
+        $focus_status   = input('focus_status');    // 关注状态[0-已关注;1-未关注]
+        $focus_date     = input('focus_date');      // 操作日期
+        if(!$phone_num || !$strategy_id) {
+            ds_json_encode(10000, '内容有参数不正确');
+        }
+        $condition = [
+            'phone_num' => $phone_num,
+            'strategy_id' => $strategy_id,
+        ];
+        $editData = [
+            'phone_num'     => $phone_num,
+            'strategy_id'   => $strategy_id,
+            'focus_status'  => $focus_status,
+            'focus_date'    => $focus_date,
+        ];
+        $userFocus = new UserFocus();
+        $userFOcusInfo = $userFocus->getOneUserFocusInfo($condition);
+        if ($userFOcusInfo) {
+            $userFocus->editUserFocus($condition, $editData);
+        } else {
+            $userFocus->addUserFocus($editData);
+        }
+        ds_json_encode(10000, '存储成功');
+    }
+    /**
+     * 获取用户关注（取消列表）
+     */
+    public function getFocusList()
+    {
+        $phone_num      = input('phone_num');       // 用户手机号
+        $focus_status   = input('focus_status');    // 关注状态[0-已关注;1-未关注]
+        if(!$phone_num) {
+            ds_json_encode(10000, '内容有参数不正确');
+        }
+        $condition = [
+            'phone_num'     => $phone_num,
+            'focus_status'  => $focus_status,
+        ];
+        $userFocus = new UserFocus();
+        $userFOcusList = $userFocus->getUserFocusList($condition);
+        ds_json_encode(10000, '数据获取成功', $userFOcusList);
     }
 }
