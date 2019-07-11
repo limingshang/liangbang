@@ -31,10 +31,16 @@ class Strategy extends BaseMall
             if ($strategy_type != '') {
                 $model_strategy = $model_strategy
                     ->where('strategy_type', 'eq', $strategy_type);
+            } else {
+                $model_strategy = $model_strategy
+                    ->where('strategy_type', 'eq', 1);
             }
             if ($review_status != '') {
                 $model_strategy = $model_strategy
                     ->where('review_status', 'eq', $review_status);
+            } else {
+                $model_strategy = $model_strategy
+                    ->where('review_status', 'eq', 0);
             }
             $result = $model_strategy
                 ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio')
