@@ -36,14 +36,18 @@ class UserFocus extends Model
     /**
      * 取列表
      */
-    public function getUserFocusList($condition = array(),$limit='', $field = '*', $page = '', $order = 'id desc')
+    public function getUserFocusList($condition = array(),$limit='', $field = '*', $page = '', $order = 'u.id desc')
     {
         if ($page) {
-            $res = db('user_focus')->where($condition)->field($field)->order($order)->paginate($page);
+            $res = db('user_focus')->alias('u')
+                ->join('ds_strategy_info', "user_focus.strategy_id = ds_strategy_info.strategy_id")
+                ->where($condition)->field($field)->order($order)->paginate($page);
             $this->page_info = $res;
             return $res->items();
         } else {
-            return db('user_focus')->where($condition)->field($field)->order($order)->limit($limit)->select();
+            return db('user_focus')->alias('u')
+                ->join('ds_strategy_info', "u.strategy_id = ds_strategy_info.strategy_id", 'left')
+                ->where($condition)->field($field)->order($order)->limit($limit)->select();
         }
     }
 

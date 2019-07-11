@@ -344,8 +344,34 @@ class Strategy extends BaseMall
             'phone_num'     => $phone_num,
             'focus_status'  => $focus_status,
         ];
+        $fields = 'focus_status,focus_date,ds_strategy_info.strategy_name,ds_strategy_info.strategy_id,ds_strategy_info.sharpe_ratio,ds_strategy_info.net_value,ds_strategy_info.daily_ratio';
         $userFocus = new UserFocus();
-        $userFOcusList = $userFocus->getUserFocusList($condition);
-        ds_json_encode(10000, '数据获取成功', $userFOcusList);
+        $userFOcusList = $userFocus->getUserFocusList($condition, '', $fields);
+        $result['phone_num']  = $phone_num;
+        $result['focus_info'] = $userFOcusList;
+        ds_json_encode(10000, '数据获取成功', $result);
+    }
+
+    /**
+     * 获取用户策略关注状态
+     */
+    public function getFocusStatus()
+    {
+        $phone_num      = input('phone_num');       // 用户手机号
+        $strategy_id    = input('strategy_id');     // 关注状态[0-已关注;1-未关注]
+        if (!$phone_num || !$strategy_id) {
+            ds_json_encode(10000, '内容有参数不正确');
+        }
+        $condition = [
+            'phone_num'     => $phone_num,
+            'strategy_id'   => $strategy_id,
+        ];
+        $field = "phone_num, strategy_id, focus_status, focus_date";
+        $userFocus = new UserFocus();
+        $userFocusInfo = $userFocus->getOneUserFocusInfo($condition, $field);
+        ds_json_encode(10000, '数据获取成功', $userFocusInfo);
+    }
+    public function getUserAdjustList(){
+        
     }
 }
