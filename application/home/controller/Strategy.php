@@ -4,6 +4,8 @@
  * 首页相关基本调用
  */
 namespace app\home\controller;
+use app\common\model\StrategyHold;
+use app\common\model\StrategyInfo;
 use app\common\model\UserFocus;
 use think\Db;
 use think\Log;
@@ -371,7 +373,56 @@ class Strategy extends BaseMall
         $userFocusInfo = $userFocus->getOneUserFocusInfo($condition, $field);
         ds_json_encode(10000, '数据获取成功', $userFocusInfo);
     }
-    public function getUserAdjustList(){
-        
+    public function getUserAdjustList()
+    {
+        $oper_type      = input('oper_type');       // 操作类型[0-启动;1-调仓;2-停止;]
+        $strategy_id    = input('strategy_id');     // 关注状态[0-已关注;1-未关注]
+        if (!$strategy_id) {
+            ds_json_encode(10000, '内容有参数不正确');
+        }
+        $result = [];
+        $strategyHold = new StrategyHold();
+        $strategyHoldInfo = $strategyHold
+            ->where('strategy_id', 'eq', $strategy_id)
+            ->field('periods_date')
+            ->order('periods_date', 'desc')
+            ->find();
+        if($strategyHoldInfo) {
+            $periods_date = $strategyHoldInfo['periods_date'];
+            switch($oper_type) {
+                case 0:             // 就把所有买入和持有的数据返出来
+                    $result = $strategyHold
+                        ->where('periods_date = '.$periods_date .' and trade_direction = "买入"')
+                        ->whereOr('periods_date = '.$periods_date .' and trade_direction = "持有"')
+                        ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->select();
+                    break;
+                case 1:             // 就把买入和卖出的数据返回出来
+                    $result = $strategyHold
+                        ->where('periods_date = '.$periods_date .' and trade_direction = "买入"')
+                        ->whereOr('periods_date = '.$periods_date .' and trade_direction = "卖出"')
+                        ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->select();
+                    break;
+                case 2:             // 就把所有买入和持有的也返出来
+                    $result = $strategyHold
+                        ->where('periods_date = '.$periods_date .'and trade_direction = "买入"')
+                        ->whereOr('periods_date = '.$periods_date .'and trade_direction = "持有"')
+                        ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->select();
+                    break;
+            }
+        }
+
+        $condition  = ['strategy_id' => $strategy_id];
+        $fidlds = ['strategy_name', 'strategy_id'];
+        $strategyInfo = new StrategyInfo();
+        $strategyInfoRes = $strategyInfo->getOneStrategyInfo($condition, $fidlds);
+        if(!$strategyInfoRes) {
+            ds_json_encode(10000, '内容有参数不正确');
+        }
+        $strategyInfoRes['periods_date'] = $periods_date;
+        $strategyInfoRes['adjustInfo'] = $result;
+        ds_json_encode(10000, '数据获取成功', $strategyInfoRes);
     }
 }
