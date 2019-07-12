@@ -35,7 +35,7 @@ class StrategyNetValue extends Model
     /**
      * 取列表
      */
-    public function getStrategyNetValueList($condition = array(),$limit='', $field = '*', $page = '', $order = 'trading_date desc')
+    public function getStrategyNetValueList($condition = array(),$limit='', $field = '*', $page = '', $order = 'trading_date asc')
     {
         if ($page) {
             $res = db('strategy_net_value')->where($condition)->field($field)->order($order)->paginate($page);
