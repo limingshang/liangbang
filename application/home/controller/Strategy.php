@@ -406,8 +406,8 @@ class Strategy extends BaseMall
                     break;
                 case 2:             // 就把所有买入和持有的也返出来
                     $result = $strategyHold
-                        ->where('strategy_id = "'.$strategy_id.'" and periods_date = '.$periods_date .'and trade_direction = "买入"')
-                        ->whereOr('strategy_id = "'.$strategy_id.'" and periods_date = '.$periods_date .'and trade_direction = "持有"')
+                        ->where('strategy_id = "'.$strategy_id.'" and periods_date = '.$periods_date .' and trade_direction = "买入"')
+                        ->whereOr('strategy_id = "'.$strategy_id.'" and periods_date = '.$periods_date .' and trade_direction = "持有"')
                         ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
                         ->select();
                     break;

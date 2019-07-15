@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/home/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Strategy.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="394" column="65" selection-start-line="394" selection-start-column="65" selection-end-line="394" selection-end-column="65" />
+            <state relative-caret-position="375">
+              <caret line="408" column="104" selection-start-line="408" selection-start-column="104" selection-end-line="408" selection-end-column="104" />
               <folding>
                 <element signature="e#57#91#0#PHP" expanded="true" />
               </folding>
@@ -221,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,6 +264,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,18 +312,19 @@
       <workItem from="1562650746541" duration="3729000" />
       <workItem from="1562824579037" duration="9545000" />
       <workItem from="1563090735457" duration="209000" />
-      <workItem from="1563173305620" duration="1424000" />
+      <workItem from="1563173305620" duration="1511000" />
+      <workItem from="1563176567928" duration="222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63406000" />
+    <option name="totallyTimeSpent" value="63715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30048466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30533117" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -335,7 +337,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4234694" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.4234694" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -601,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="394" column="65" selection-start-line="394" selection-start-column="65" selection-end-line="394" selection-end-column="65" />
+        <state relative-caret-position="375">
+          <caret line="408" column="104" selection-start-line="408" selection-start-column="104" selection-end-line="408" selection-end-column="104" />
           <folding>
             <element signature="e#57#91#0#PHP" expanded="true" />
           </folding>
