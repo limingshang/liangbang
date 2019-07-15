@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="410" column="46" selection-start-line="410" selection-start-column="46" selection-end-line="410" selection-end-column="46" />
+            <state relative-caret-position="135">
+              <caret line="410" column="109" selection-start-line="410" selection-start-column="109" selection-end-line="410" selection-end-column="109" />
               <folding>
                 <element signature="e#57#91#0#PHP" expanded="true" />
               </folding>
@@ -311,12 +311,12 @@
       <workItem from="1562650746541" duration="3729000" />
       <workItem from="1562824579037" duration="9545000" />
       <workItem from="1563090735457" duration="209000" />
-      <workItem from="1563173305620" duration="1049000" />
+      <workItem from="1563173305620" duration="1177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63031000" />
+    <option name="totallyTimeSpent" value="63159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -335,7 +335,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.05102041" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4234694" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -601,8 +601,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="410" column="46" selection-start-line="410" selection-start-column="46" selection-end-line="410" selection-end-column="46" />
+        <state relative-caret-position="135">
+          <caret line="410" column="109" selection-start-line="410" selection-start-column="109" selection-end-line="410" selection-end-column="109" />
           <folding>
             <element signature="e#57#91#0#PHP" expanded="true" />
           </folding>
