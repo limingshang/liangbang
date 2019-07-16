@@ -201,7 +201,7 @@ class Strategy extends BaseMall
             'review_status'         => input('review_status') ? input('review_status') : 0,
             'strategy_status'       => input('strategy_status'),
             'strategy_describe'     => input('strategy_describe'),
-            'update_time'           => date("Y-m-d H:i:s"),
+            'update_time'           => input('update_time'),
         ];
         if (!input('strategy_id')) {
             ds_json_encode(10000, '策略id参数错误');
