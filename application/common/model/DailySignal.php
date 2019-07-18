@@ -36,15 +36,19 @@ class DailySignal extends Model
     /**
      * 取列表
      */
-    public function getDailySignalList($condition = array(),$limit='', $field = '*', $page = '', $order = 'id desc')
+    public function getDailySignalList($condition = array(),$limit='', $field = '*', $page = '', $order = 'ds_daily_signal.strategy_id desc, signal_time desc')
     {
         if ($page) {
-            $res = db('daily_signal');
-            $res = $res->where($condition)->field($field)->order($order)->paginate($page);
+            $res = db('daily_signal')
+                ->join('ds_strategy_info', "ds_daily_signal.strategy_id = ds_strategy_info.strategy_id")
+                ->where($condition)
+                ->field($field)->order($order)->paginate($page);
             $this->page_info = $res;
             return $res->items();
         } else {
-            return db('daily_signal')->where($condition)->field($field)->order($order)->limit($limit)->select();
+            return db('daily_signal')
+                ->join('ds_strategy_info', "ds_daily_signal.strategy_id = ds_strategy_info.strategy_id")
+                ->where($condition)->field($field)->order($order)->limit($limit)->select();
         }
     }
 

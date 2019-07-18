@@ -2,6 +2,7 @@
 
 namespace app\admin\controller;
 
+use app\common\model\DailySignal;
 use think\Log;
 use think\View;
 use think\Lang;
@@ -15,10 +16,15 @@ class Monitor extends AdminControl {
     }
 
     /**
-     * 审核首页
+     * 全自动信号监控
      * @return mixed
      */
     public function index() {
-        echo '';die;
+        $dailySignalModel = new DailySignal();
+        $dailySignalList = $dailySignalModel->getDailySignalList();
+
+        $this->assign('dailySignalList', $dailySignalList);
+        $this->setAdminCurItem('index');
+        return $this->fetch();
     }
 }

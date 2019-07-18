@@ -1,0 +1,46 @@
+{extend name="layout:home" /}
+{block name="container"}
+<div class="layui-tab layui-tab-card">
+    {include file="monitor/index_title" /}
+    <div>
+
+    </div>
+    <div class="layui-tab-content page-tab-content">
+        <table class="layui-table lay-even myTable">
+            <colgroup>
+                <col width="150">
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>策略id</th>
+                <th>策略名称</th>
+                <th>策略代码</th>
+                <th>买卖方向</th>
+                <th>抵消</th>
+                <th>价格</th>
+                <th>信号时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="dailySignalList" id="strategy" key='key'}
+            <tr>
+                <td>{$strategy.strategy_id}</td>
+                <td>{$strategy.strategy_name}</td>
+                <td>{$strategy.secu_code}</td>
+                <td>{$strategy.direction}</td>
+                <td>{$strategy.offset}</td>
+                <td>{$strategy.price}</td>
+                <td>{$strategy.signal_time}</td>
+
+                <!--<a href="{:url('strategy/info',['id'=>$strategy.id])}">查看</a>-->
+                </td>
+
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="{$Think.ADMIN_SITE_ROOT}/js/jquery.edit.js"></script>
+{/block}
