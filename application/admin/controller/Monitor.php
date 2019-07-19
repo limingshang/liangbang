@@ -20,11 +20,24 @@ class Monitor extends AdminControl {
      * @return mixed
      */
     public function index() {
-        $dailySignalModel = new DailySignal();
-        $dailySignalList = $dailySignalModel->getDailySignalList();
 
-        $this->assign('dailySignalList', $dailySignalList);
         $this->setAdminCurItem('index');
         return $this->fetch();
+    }
+
+    /**
+     * 传递数据
+     */
+    public function getDailySignalList()
+    {
+        $dailySignalModel = new DailySignal();
+        $dailySignalList = $dailySignalModel->getDailySignalList();
+        $data = [];
+        foreach($dailySignalList as $key => $value) {
+            $value['id'] = $key;
+            $data[] = $value;
+        }
+        $data = ['code' => 0, 'data' => $dailySignalList, 'count' => count($dailySignalList)];
+        return $data;
     }
 }

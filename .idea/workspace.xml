@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/admin/view/Monitor/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/admin/view/Monitor/index_title.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/admin/controller/Monitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Monitor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/api/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/Strategy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/common/model/DailySignal.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common/model/DailySignal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/monitor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/monitor/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,28 +18,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/api/controller/Strategy.php">
+        <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index_title.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="177" column="42" selection-start-line="177" selection-start-column="42" selection-end-line="177" selection-end-column="42" />
+            <state relative-caret-position="-73">
+              <caret selection-start-column="4" selection-end-line="40" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
+        <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="38" column="157" selection-start-line="38" selection-start-column="157" selection-end-line="38" selection-end-column="157" />
+            <state relative-caret-position="317">
+              <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -50,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            <state relative-caret-position="358">
+              <caret line="35" column="32" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="32" />
               <folding>
                 <element signature="e#40#73#0#PHP" expanded="true" />
               </folding>
@@ -60,55 +48,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/Monitor/index_title.html">
+        <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-196">
-              <caret selection-start-column="4" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="53">
+              <caret line="86" column="35" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/Monitor/index.html">
+        <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/model/News.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="33" selection-start-line="40" selection-start-column="12" selection-end-line="42" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/strategy.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/handellog/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/index_title.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="365">
+              <caret line="303" column="9" lean-forward="true" selection-start-line="246" selection-end-line="303" selection-end-column="9" />
+              <folding>
+                <element signature="e#9445#9451#0" expanded="true" />
+                <element signature="e#9451#9457#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,8 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>`</find>
-      <find>session_st</find>
       <find>cookie(</find>
       <find>language_list</find>
       <find>$name</find>
@@ -141,12 +95,14 @@
       <find>width: 900px;</find>
       <find>dsLayerOpen</find>
       <find>review_status</find>
-      <find>trade_direction</find>
       <find>getUserAdjustList</find>
       <find>periods_date</find>
       <find>净值</find>
       <find>join</find>
       <find>strategy_id</find>
+      <find>test</find>
+      <find>dailySignalList</find>
+      <find>trade_direction</find>
     </findStrings>
     <replaceStrings>
       <replace>tests</replace>
@@ -202,8 +158,9 @@
         <option value="$PROJECT_DIR$/application/api/controller/Strategy.php" />
         <option value="$PROJECT_DIR$/application/admin/view/Monitor/index_title.html" />
         <option value="$PROJECT_DIR$/application/admin/view/Monitor/index.html" />
-        <option value="$PROJECT_DIR$/application/admin/controller/Monitor.php" />
         <option value="$PROJECT_DIR$/application/common/model/DailySignal.php" />
+        <option value="$PROJECT_DIR$/application/admin/controller/Monitor.php" />
+        <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
       </list>
     </option>
   </component>
@@ -258,7 +215,7 @@
               <item name="dscms" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
@@ -266,7 +223,6 @@
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="Monitor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dscms" type="b2602c69:ProjectViewProjectNode" />
@@ -336,12 +292,12 @@
       <workItem from="1563240440375" duration="250000" />
       <workItem from="1563278411819" duration="2523000" />
       <workItem from="1563335789598" duration="1578000" />
-      <workItem from="1563454726397" duration="3390000" />
+      <workItem from="1563454726397" duration="5124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72204000" />
+    <option name="totallyTimeSpent" value="73938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -372,11 +328,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/view/login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinkphp/tpl/default_index.tpl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -520,28 +471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3315">
-          <caret line="221" column="5" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
-          <folding>
-            <element signature="e#9445#9451#0" expanded="true" />
-            <element signature="e#9451#9457#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/handellog/index_title.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info_title.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -641,17 +574,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/strategy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/handellog/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/Monitor/info.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/Strategy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="38" column="157" selection-start-line="38" selection-start-column="157" selection-end-line="38" selection-end-column="157" />
         </state>
       </provider>
     </entry>
@@ -662,51 +605,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/Monitor/info.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
+    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/strategy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="177" column="42" selection-start-line="177" selection-start-column="42" selection-end-line="177" selection-end-column="42" />
+        <state relative-caret-position="165">
+          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/Monitor/index.html">
+    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info_title.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/Monitor/index_title.html">
+    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
+        <state relative-caret-position="-184" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index_title.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
           <caret selection-start-column="4" selection-end-line="40" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/api/controller/Strategy.php">
+    <entry file="file://$PROJECT_DIR$/application/admin/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="46" />
+        <state relative-caret-position="53">
+          <caret line="86" column="35" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="303" column="9" lean-forward="true" selection-start-line="246" selection-end-line="303" selection-end-column="9" />
+          <folding>
+            <element signature="e#9445#9451#0" expanded="true" />
+            <element signature="e#9451#9457#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        <state relative-caret-position="358">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="32" />
           <folding>
             <element signature="e#40#73#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
+    <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="38" column="157" selection-start-line="38" selection-start-column="157" selection-end-line="38" selection-end-column="157" />
+        <state relative-caret-position="317">
+          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
         </state>
       </provider>
     </entry>
