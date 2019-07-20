@@ -41,14 +41,14 @@ class DailySignal extends Model
         if ($page) {
             $res = db('daily_signal')
                 ->join('ds_strategy_info', "ds_daily_signal.strategy_id = ds_strategy_info.strategy_id")
-                ->where($condition)
+                ->whereBetween($condition['key'], $condition['value'])
                 ->field($field)->order($order)->paginate($page);
             $this->page_info = $res;
             return $res->items();
         } else {
             return db('daily_signal')
                 ->join('ds_strategy_info', "ds_daily_signal.strategy_id = ds_strategy_info.strategy_id")
-                ->where($condition)->field($field)->order($order)->limit($limit)->select();
+                ->whereBetween($condition['key'], $condition['value'])->field($field)->order($order)->limit($limit)->select();
         }
     }
 

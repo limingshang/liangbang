@@ -31,6 +31,47 @@
 </div>
 <script type="text/javascript" src="{$Think.ADMIN_SITE_ROOT}/js/jquery.edit.js"></script>
 
+
+<script>
+    /**
+     * Layer 通用ifram弹出窗口
+     */
+    function dsLayerOpen(url, title,width,height) {
+        if (!width)	width = '500px';
+        if (!height) height = '345px';
+        layer.open({
+            type: 2,
+            title: title,
+            area: [width,height],
+            fixed: false, //不固定
+            maxmin: true,
+            content: url
+        });
+    }
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#news_addtime' //指定元素
+        });
+    });
+</script>
+
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+    });
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#news_addtime'
+        });
+    });
+
+
+</script>
 <script>
     layui.use('table', function(){
         var table = layui.table;
@@ -55,25 +96,20 @@
 
         var $ = layui.$, active = {
             reload: function(){
-                var dataReload = $('#dataReload');
-                if(dataReload.val()) {
-                    checkIsNew(dataReload.val());
-                    //执行重载
-                    table.reload('test', {
-                        where: {
-                            periods_date:dataReload.val()
-                        }
-                    }, 'data');
-                }
-
+                //执行重载
+                table.reload('test', {
+                    where: {
+                    }
+                }, 'data');
             }
         };
 
-        $('.layui-btn').on('click', function(){
-            var type = $(this).data('type');
+        var t2 = window.setInterval(function() {
+
+            console.log('每隔1秒钟执行一次')
+            var type = 'reload';
             active[type] ? active[type].call(this) : '';
-        });
+        },5000)
     });
 </script>
-
 {/block}

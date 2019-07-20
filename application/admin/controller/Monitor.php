@@ -31,7 +31,11 @@ class Monitor extends AdminControl {
     public function getDailySignalList()
     {
         $dailySignalModel = new DailySignal();
-        $dailySignalList = $dailySignalModel->getDailySignalList();
+        $condition = [
+            'key'   => 'signal_time',
+            'value' => [date("Y-m-d 00:00:00", time()), date("Y-m-d 23:59:59", time())],
+        ];
+        $dailySignalList = $dailySignalModel->getDailySignalList($condition);
         $data = [];
         foreach($dailySignalList as $key => $value) {
             $value['id'] = $key;
