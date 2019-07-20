@@ -43,7 +43,7 @@ class Monitor extends AdminControl {
             $value['id'] = $key;
             $data[] = $value;
         }
-        $data = ['code' => 0, 'data' => $dailySignalList, 'count' => count($dailySignalList)];
+        $data = ['code' => 0, 'data' => $data, 'count' => count($data)];
         return $data;
     }
 }
