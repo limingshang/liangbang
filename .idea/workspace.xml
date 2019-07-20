@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/common/model/DailySignal.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common/model/DailySignal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/monitor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/monitor/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
+            <state relative-caret-position="246">
               <caret line="52" column="31" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="31" />
             </state>
           </provider>
@@ -64,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
+            <state relative-caret-position="270">
+              <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -77,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
               <folding>
                 <element signature="e#40#73#0#PHP" expanded="true" />
               </folding>
@@ -196,9 +195,9 @@
         <option value="$PROJECT_DIR$/application/api/controller/Strategy.php" />
         <option value="$PROJECT_DIR$/application/admin/view/Monitor/index_title.html" />
         <option value="$PROJECT_DIR$/application/admin/view/Monitor/index.html" />
-        <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Monitor.php" />
         <option value="$PROJECT_DIR$/application/common/model/DailySignal.php" />
+        <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
       </list>
     </option>
   </component>
@@ -333,12 +332,12 @@
       <workItem from="1563335789598" duration="1578000" />
       <workItem from="1563454726397" duration="5282000" />
       <workItem from="1563515710921" duration="245000" />
-      <workItem from="1563626953640" duration="2232000" />
+      <workItem from="1563626953640" duration="2395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76573000" />
+    <option name="totallyTimeSpent" value="76736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -651,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -692,7 +684,7 @@
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
           <folding>
             <element signature="e#40#73#0#PHP" expanded="true" />
           </folding>
@@ -701,8 +693,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="246">
           <caret line="52" column="31" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
         </state>
       </provider>
     </entry>
