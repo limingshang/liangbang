@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Monitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Monitor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/view/monitor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/monitor/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/common/model/DailySignal.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common/model/DailySignal.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+            <state relative-caret-position="199">
+              <caret line="52" column="31" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -51,8 +49,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thinkphp/library/think/db/Query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="1093" column="32" selection-start-line="1093" selection-start-column="20" selection-end-line="1093" selection-end-column="32" />
+            <state relative-caret-position="126">
+              <caret line="681" column="65" selection-start-line="681" selection-start-column="60" selection-end-line="681" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -66,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="153">
+              <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
               <folding>
                 <element signature="e#40#73#0#PHP" expanded="true" />
               </folding>
@@ -104,7 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>内容管理</find>
       <find>.admincp-header .navbar li</find>
       <find>.admincp-header .navbar .fr li&gt;a</find>
       <find>安全退出</find>
@@ -134,6 +140,7 @@
       <find>active</find>
       <find>layui-btn</find>
       <find>checkIsNew</find>
+      <find>$type</find>
     </findStrings>
     <replaceStrings>
       <replace>tests</replace>
@@ -190,8 +197,8 @@
         <option value="$PROJECT_DIR$/application/admin/view/Monitor/index_title.html" />
         <option value="$PROJECT_DIR$/application/admin/view/Monitor/index.html" />
         <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
-        <option value="$PROJECT_DIR$/application/common/model/DailySignal.php" />
         <option value="$PROJECT_DIR$/application/admin/controller/Monitor.php" />
+        <option value="$PROJECT_DIR$/application/common/model/DailySignal.php" />
       </list>
     </option>
   </component>
@@ -326,18 +333,18 @@
       <workItem from="1563335789598" duration="1578000" />
       <workItem from="1563454726397" duration="5282000" />
       <workItem from="1563515710921" duration="245000" />
-      <workItem from="1563626953640" duration="1440000" />
+      <workItem from="1563626953640" duration="2232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75781000" />
+    <option name="totallyTimeSpent" value="76573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26332796" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -350,7 +357,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30612245" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30612245" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -362,16 +369,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/view/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="123" column="97" selection-start-line="123" selection-start-column="97" selection-end-line="123" selection-end-column="97" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinkphp/helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -654,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thinkphp/library/think/db/Query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="1093" column="32" selection-start-line="1093" selection-start-column="20" selection-end-line="1093" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -668,10 +658,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+        <state relative-caret-position="122">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/library/think/db/Query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="681" column="65" selection-start-line="681" selection-start-column="60" selection-end-line="681" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -694,11 +691,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="153">
+          <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
           <folding>
             <element signature="e#40#73#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/model/DailySignal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="31" />
         </state>
       </provider>
     </entry>
