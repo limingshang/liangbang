@@ -45,7 +45,7 @@ class Strategy extends BaseMall
                     ->where('review_status', 'eq', 0);
             }
             $result = $model_strategy
-                ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio')
+                ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio, strategy_status')
                 ->select()->toArray();
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
