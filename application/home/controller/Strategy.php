@@ -38,7 +38,7 @@ class Strategy extends BaseMall
                 $model_strategy = $model_strategy
                     ->where('strategy_type', 'eq', 1);
             }
-            if($strategy_status) {
+            if($strategy_status != '') {
                 $model_strategy = $model_strategy
                     ->where('strategy_status', 'eq', $strategy_status);
             }
