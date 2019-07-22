@@ -26,6 +26,7 @@ class Strategy extends BaseMall
     public function getStrategyList()
     {
         $code = input('code');
+        $strategy_status = input('strategy_status');
         $review_status = input('review_status');
         $strategy_type = input('strategy_type');
         if (request()->isPost()) {
@@ -37,6 +38,10 @@ class Strategy extends BaseMall
                 $model_strategy = $model_strategy
                     ->where('strategy_type', 'eq', 1);
             }
+            if($strategy_status) {
+                $model_strategy = $model_strategy
+                    ->where('strategy_status', 'eq', $strategy_status);
+            }
             if ($review_status != '') {
                 $model_strategy = $model_strategy
                     ->where('review_status', 'eq', $review_status);
@@ -45,7 +50,7 @@ class Strategy extends BaseMall
                     ->where('review_status', 'eq', 0);
             }
             $result = $model_strategy
-                ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio, strategy_status')
+                ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio')
                 ->select()->toArray();
             ds_json_encode(10000, '数据获取成功', $result);
         } else {
