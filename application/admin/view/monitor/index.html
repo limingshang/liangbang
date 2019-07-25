@@ -81,7 +81,7 @@
             elem: '#test'
             ,url: "{:url('monitor/getDailySignalList')}"
             ,cols: [[
-                {field: 'id', title: '序号', style:'text-align: center;'}
+                {field: 'id', title: '序号', style:'text-align: center;', width:80}
                 , {field: 'strategy_name', title: '策略名称', style:'text-align: center;'}
                 , {field: 'secu_code', title: '证券代码', style:'text-align: center;'}
                 , {field: 'direction', title: '买卖', templet: '#direction', style:'text-align: center;'}
@@ -111,7 +111,7 @@
                 //请求的媒体类型
                 contentType: "application/json;charset=UTF-8",
                 //请求地址
-                url : "{:url('monitor/getDailySignalList')}",
+                url : "{:url('monitor/getCount')}",
                 //数据，json字符串
                 data : {},
                 //请求成功

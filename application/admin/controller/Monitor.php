@@ -58,5 +58,20 @@ class Monitor extends AdminControl {
         }
         $data = ['code' => 0, 'data' => $data, 'count' => $count];
         return $data;
+    } /**
+     * 传递数据
+     */
+    public function getCount()
+    {
+        $dailySignalModel = new DailySignal();
+        $condition = [
+            'key'   => 'signal_time',
+            'value' => [date("Y-m-d 00:00:00", time()), date("Y-m-d 23:59:59", time())],
+        ];
+        $count = $dailySignalModel->getCount($condition);
+        $data = [];
+
+        $data = ['code' => 0, 'data' => $data, 'count' => $count];
+        return $data;
     }
 }
