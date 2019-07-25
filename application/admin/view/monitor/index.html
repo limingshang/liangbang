@@ -17,13 +17,13 @@
                 {{ d.direction }}
                 {{#  } }}
             </script>
-            <script type="text/html" id="adjust_num">
-                {{#  if(d.direction == '买入'){ }}
-                <span style="color: red;">{{ d.adjust_num }}</span>
-                {{#  } else if(d.direction == '卖出') { }}
-                <span style="color: green;">{{ d.adjust_num }}</span>
+            <script type="text/html" id="offset">
+                {{#  if(d.offset == '平仓'){ }}
+                <span style="color: red;">{{ d.offset }}</span>
+                {{#  } else if(d.offset == '开仓') { }}
+                <span style="color: green;">{{ d.offset }}</span>
                 {{#  } else{ }}
-                {{ d.adjust_num }}
+                {{ d.offset }}
                 {{#  } }}
             </script>
         </div>
@@ -73,6 +73,7 @@
 
 </script>
 <script>
+    var counts = 0;
     layui.use('table', function(){
         var table = layui.table;
         //方法级渲染
@@ -81,17 +82,16 @@
             ,url: "{:url('monitor/getDailySignalList')}"
             ,cols: [[
                 {field: 'id', title: '序号', style:'text-align: center;'}
-                , {field: 'strategy_id', title: '策略ID', style:'text-align: center;'}
                 , {field: 'strategy_name', title: '策略名称', style:'text-align: center;'}
                 , {field: 'secu_code', title: '证券代码', style:'text-align: center;'}
-                , {field: 'offset', title: '开平仓', style:'text-align: center;'}
-                , {field: 'direction', title: '买卖方向', templet: '#direction', style:'text-align: center;'}
+                , {field: 'direction', title: '买卖', templet: '#direction', style:'text-align: center;'}
+                , {field: 'offset', title: '开平仓',  templet: '#offset', style:'text-align: center;'}
                 , {field: 'price', title: '价格', style:'text-align: center;'}
                 , {field: 'signal_time', title: '信号时间', style:'text-align: center;'}
             ]]
             ,id: 'test'
-            ,page: false
-            ,height:500
+            ,page: true
+            ,height:300
         });
 
         var $ = layui.$, active = {
@@ -105,11 +105,30 @@
         };
 
         var t2 = window.setInterval(function() {
-
-            console.log('每隔1秒钟执行一次')
-            var type = 'reload';
-            active[type] ? active[type].call(this) : '';
+            $.ajax({
+                //请求方式
+                type : "POST",
+                //请求的媒体类型
+                contentType: "application/json;charset=UTF-8",
+                //请求地址
+                url : "{:url('monitor/getDailySignalList')}",
+                //数据，json字符串
+                data : {},
+                //请求成功
+                success : function(result) {
+                    if(counts != result.count) {
+                        var type = 'reload';
+                        active[type] ? active[type].call(this) : '';
+                        counts = result.count;
+                    }
+                },
+            });
+            // console.log('每隔1秒钟执行一次')
+            // var type = 'reload';
+            // active[type] ? active[type].call(this) : '';
         },5000)
     });
+
+
 </script>
 {/block}

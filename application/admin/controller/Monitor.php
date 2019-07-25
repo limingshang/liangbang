@@ -30,6 +30,8 @@ class Monitor extends AdminControl {
      */
     public function getDailySignalList()
     {
+        $limit = input('limit');
+        $page = input('page');
         $dailySignalModel = new DailySignal();
         $condition = [
             'key'   => 'signal_time',
@@ -37,13 +39,24 @@ class Monitor extends AdminControl {
         ];
         $fields = 'ds_daily_signal.strategy_id,ds_daily_signal.secu_code,
             ds_daily_signal.direction,ds_daily_signal.offset,ds_daily_signal.price,ds_daily_signal.signal_time,strategy_name';
-        $dailySignalList = $dailySignalModel->getDailySignalList($condition, null, $fields);
+        $dailySignalList = $dailySignalModel->getDailySignalList($condition, $limit, $fields, $page);
+        $count = $dailySignalModel->getCount($condition);
         $data = [];
         foreach($dailySignalList as $key => $value) {
+            if ($value['direction'] == 0) {
+                $value['direction'] = '买入';
+            } else {
+                $value['direction'] = '卖出';
+            }
+            if ($value['offset'] == 0) {
+                $value['offset'] = '开仓';
+            } else {
+                $value['offset'] = '平仓';
+            }
             $value['id'] = $key;
             $data[] = $value;
         }
-        $data = ['code' => 0, 'data' => $data, 'count' => count($data)];
+        $data = ['code' => 0, 'data' => $data, 'count' => $count];
         return $data;
     }
 }
