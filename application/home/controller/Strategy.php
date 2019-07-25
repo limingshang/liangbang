@@ -27,7 +27,7 @@ class Strategy extends BaseMall
     {
         $code = input('code');
         $strategy_status = input('strategy_status');
-        $review_status = input('review_status');
+        // $review_status = input('review_status');
         $strategy_type = input('strategy_type');
         if (request()->isPost()) {
             $model_strategy = model('strategyInfo');
@@ -42,13 +42,13 @@ class Strategy extends BaseMall
                 $model_strategy = $model_strategy
                     ->where('strategy_status', 'eq', $strategy_status);
             }
-            if ($review_status != '') {
-                $model_strategy = $model_strategy
-                    ->where('review_status', 'eq', $review_status);
-            } else {
-                $model_strategy = $model_strategy
-                    ->where('review_status', 'eq', 0);
-            }
+//            if ($review_status != '') {
+//                $model_strategy = $model_strategy
+//                    ->where('review_status', 'eq', $review_status);
+//            } else {
+//                $model_strategy = $model_strategy
+//                    ->where('review_status', 'eq', 0);
+//            }
             $result = $model_strategy
                 ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio')
                 ->select()->toArray();
