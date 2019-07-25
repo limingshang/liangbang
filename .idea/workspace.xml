@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Monitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Monitor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/admin/view/monitor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/monitor/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="82">
@@ -49,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="113" column="46" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="46" />
+            <state relative-caret-position="135">
+              <caret line="85" column="82" lean-forward="true" selection-start-line="85" selection-start-column="82" selection-end-line="85" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -207,8 +206,8 @@
         <option value="$PROJECT_DIR$/application/home/controller/Strategy.php" />
         <option value="$PROJECT_DIR$/application/common/model/DailySignal.php" />
         <option value="$PROJECT_DIR$/application/admin/view/strategy/index.html" />
-        <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Monitor.php" />
+        <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
       </list>
     </option>
   </component>
@@ -335,12 +334,12 @@
       <workItem from="1563335789598" duration="1578000" />
       <workItem from="1563454726397" duration="5282000" />
       <workItem from="1563515710921" duration="245000" />
-      <workItem from="1563626953640" duration="10775000" />
+      <workItem from="1563626953640" duration="10972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85116000" />
+    <option name="totallyTimeSpent" value="85313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -695,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="113" column="46" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Monitor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -709,6 +701,13 @@
           <folding>
             <element signature="e#40#73#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="85" column="82" lean-forward="true" selection-start-line="85" selection-start-column="82" selection-end-line="85" selection-end-column="82" />
         </state>
       </provider>
     </entry>
