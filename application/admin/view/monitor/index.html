@@ -116,6 +116,9 @@
                 data : {},
                 //请求成功
                 success : function(result) {
+                    if(counts == 0) {
+                        counts = result.count;
+                    }
                     if(counts != result.count) {
                         var type = 'reload';
                         active[type] ? active[type].call(this) : '';
