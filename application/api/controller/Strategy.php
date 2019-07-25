@@ -21,6 +21,10 @@ class Strategy extends BaseApi
     public function AcceptDailySignal()
     {
         $strategy_id    = input('strategy_id');
+        if(!$strategy_id) {
+            ds_json_encode(10000, '存储失败，数据错误');
+        }
+        $strategy_id = substr($strategy_id, 0, -7);
 //        $secu_code      = input('secu_code');
 //        $direction      = input('direction');
 //        $offset         = input('offset');
