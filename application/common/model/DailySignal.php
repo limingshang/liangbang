@@ -41,14 +41,14 @@ class DailySignal extends Model
         if ($page) {
             $res = db('daily_signal')
                 ->join('ds_strategy_info', "ds_daily_signal.strategy_id = ds_strategy_info.strategy_id",'left')
-                // ->whereBetween($condition['key'], $condition['value'])
+                ->whereBetween($condition['key'], $condition['value'])
                 ->field($field)->order($order)->paginate($limit, $page);
             $this->page_info = $res;
             return $res->items();
         } else {
             return db('daily_signal')
                 ->join('ds_strategy_info', "ds_daily_signal.strategy_id = ds_strategy_info.strategy_id",'left')
-                //->whereBetween($condition['key'], $condition['value'])
+                ->whereBetween($condition['key'], $condition['value'])
                 ->field($field)->order($order)
                 ->limit($limit)->select();
         }
@@ -68,7 +68,7 @@ class DailySignal extends Model
     public function getCount($condition, $field = '*')
     {
         return db('daily_signal')->field($field)
-            // ->whereBetween($condition['key'], $condition['value'])
+            ->whereBetween($condition['key'], $condition['value'])
             ->count();
     }
 }
