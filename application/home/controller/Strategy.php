@@ -52,7 +52,7 @@ class Strategy extends BaseMall
             $result = $model_strategy
                 ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio')
                 ->select()->toArray();
-            ds_json_encode(10000, '数据获取成功', $result);
+            ds_json_encode(10000, '数据获取成功共：'.(string)count($result), $result);
         } else {
             ds_json_encode(10000, '请求方式不正确');
         }

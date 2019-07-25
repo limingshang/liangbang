@@ -28,19 +28,19 @@ class Login extends Controller
 
             $admin_name = input('post.admin_name');
             $admin_password = input('post.admin_password');
-            $captcha = input('post.captcha');
+            //$captcha = input('post.captcha');
 
             $data = array(
                 'admin_name' => $admin_name,
                 'admin_password' => $admin_password,
-                'captcha' => $captcha,
+                //'captcha' => $captcha,
             );
 
             //验证数据  BEGIN
             $rule = [
                 ['admin_name', 'require|min:5', '帐号为必填|帐号长度至少为5位'],
                 ['admin_password', 'require|min:6', '密码为必填|帐号长度至少为6位'],
-                ['captcha', 'require|min:3', '验证码为必填|帐号长度至少为3位'],
+                // ['captcha', 'require|min:3', '验证码为必填|帐号长度至少为3位'],
             ];
             $validate = new Validate($rule);
             $validate_result = $validate->check($data);
@@ -48,11 +48,11 @@ class Login extends Controller
             if (!$validate_result) {
                 $this->error($validate->getError());
             }
-            //验证数据  END
-            if (!captcha_check(input('post.captcha'))) {
-                //验证失败
-                $this->error('验证码错误');
-            }
+//            //验证数据  END
+//            if (!captcha_check(input('post.captcha'))) {
+//                //验证失败
+//                $this->error('验证码错误');
+//            }
 
             $condition['admin_name'] = $admin_name;
             $condition['admin_password'] = md5($admin_password);

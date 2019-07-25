@@ -34,10 +34,6 @@
                     <input type="password" name="admin_password" placeholder="{:lang('login_admin_password')}" required class="text">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="captcha" placeholder="{:lang('login_captcha')}" required class="text" style="width:60%;float:left;">
-                    <img src="{:captcha_src()}" style="width:30%;height:38px;" id="change_captcha"/>
-                </div>
-                <div class="form-group">
                     <input type="submit" class="layui-btn" value="{:lang('login_sumbit')}" lay-submit lay-filter="login"/>
                 </div>
             </form>
