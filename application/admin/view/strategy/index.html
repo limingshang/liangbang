@@ -13,7 +13,7 @@
             </colgroup>
             <thead>
             <tr>
-                <th>{$Think.lang.policy_id}</th>
+                <th style="text-align: center">{$Think.lang.policy_id}</th>
                 <th style="text-align: center">{$Think.lang.policy_title}</th>
                 <th>{$Think.lang.policy_period}</th>
                 <th>{$Think.lang.policy_type}</th>
@@ -25,7 +25,7 @@
             <tbody>
             {volist name="strategy_list" id="strategy" key='key'}
             <tr>
-                <td>{$key}</td>
+                <td style="text-align: center">{$key}</td>
                 <td style="text-align: center">{$strategy.strategy_name}</td>
                 <td>{$strategy.periods_date|default = '--'}</td>
                 <td>
