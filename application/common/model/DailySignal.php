@@ -36,7 +36,7 @@ class DailySignal extends Model
     /**
      * 取列表
      */
-    public function getDailySignalList($condition = array(),$limit='', $field = '*', $page = '', $order = 'ds_daily_signal.strategy_id desc, signal_time desc')
+    public function getDailySignalList($condition = array(),$limit='', $field = '*', $page = '', $order = 'ds_daily_signal.id desc, signal_time desc')
     {
         if ($page) {
             $res = db('daily_signal')
