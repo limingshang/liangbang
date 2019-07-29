@@ -1,17 +1,18 @@
 {extend name="layout:home" /}
 
 {block name="container"}
-<form class="layui-form layui-form-pane" method="post">
+<form class="layui-form layui-form-pane" id="formSubmit" method="post">
     <div class="layui-tab layui-tab-card">
         <div class="layui-tab-content page-tab-content">
                 <div class="layui-tab-item layui-show ">
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">审核结果：</label>
-                        <div class="layui-input-block">
-                            <input type="radio" name="review_status" value="0" title="审核通过" checked="">
-                            <input type="radio" name="review_status" value="2" title="驳回">
-                        </div>
-                    </div>
+                    <!--<div class="layui-form-item">-->
+                        <!--<label class="layui-form-label">审核结果：</label>-->
+                        <!--<div class="layui-input-block">-->
+                            <!--<input type="radio" name="review_status" value="0" title="审核通过" checked="">-->
+                            <!--<input type="radio" name="review_status" value="2" title="驳回">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <input type="hidden" name="review_status" id = 'review_status' value="0">
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">备注</label>
                         <div class="layui-input-block">
@@ -20,7 +21,8 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <input type="submit" class="layui-btn layui-btn-normal" lay-submit value="{:lang('ds_submit')}" />
+                            <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(0)" lay-submit value="审核通过" />
+                            <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" lay-submit value="驳回" />
                         </div>
                     </div>
                 </div>
@@ -28,6 +30,11 @@
     </div>
 </form>
 <script>
+    function submitForm(review_status)
+    {
+        $("#review_status").val(review_status);
+        $("#formSubmit").submit();
+    }
     layui.use('form', function() {
         var form = layui.form;
     });
