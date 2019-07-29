@@ -195,6 +195,15 @@ h6 { font-size:12px;}
 
 .admincp-container-right{width:1080px;background-color: #FFF; position: absolute; z-index: 1; top:61px; bottom: 0;    margin-left: 200px;}
 
+
+@media screen and (min-width: 1400px) {
+    .admincp-container-right {width: 1200px}
+}
+
+
+
+
+
 /* 全屏 */
 .tool-btns{position:absolute;right:15px;top:11px;font-size:18px;color:#888}
 .tool-btnss{position: absolute;right: 15px;font-size: 18px;color: #888;height: 41px;line-height: 41px;}
