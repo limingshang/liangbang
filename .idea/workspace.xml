@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/home/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Strategy.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="431" column="49" selection-start-line="431" selection-start-column="41" selection-end-line="431" selection-end-column="49" />
+            <state relative-caret-position="208">
+              <caret line="427" column="40" selection-start-line="427" selection-start-column="40" selection-end-line="427" selection-end-column="40" />
               <folding>
                 <element signature="e#57#91#0#PHP" expanded="true" />
               </folding>
@@ -269,12 +268,12 @@
       <workItem from="1563515710921" duration="245000" />
       <workItem from="1563626953640" duration="12191000" />
       <workItem from="1564067640012" duration="1824000" />
-      <workItem from="1564366660162" duration="5447000" />
+      <workItem from="1564366660162" duration="5670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93803000" />
+    <option name="totallyTimeSpent" value="94026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -642,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="431" column="49" selection-start-line="431" selection-start-column="41" selection-end-line="431" selection-end-column="49" />
+        <state relative-caret-position="208">
+          <caret line="427" column="40" selection-start-line="427" selection-start-column="40" selection-end-line="427" selection-end-column="40" />
           <folding>
             <element signature="e#57#91#0#PHP" expanded="true" />
           </folding>
