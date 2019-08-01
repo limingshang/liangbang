@@ -424,8 +424,12 @@ class Strategy extends BaseMall
         if(!$strategyInfoRes) {
             ds_json_encode(10000, '内容有参数不正确');
         }
+        $results = [];
+        foreach ($result as $key => $value) {
+            $results[$key] = $value;
+        }
         $strategyInfoRes['periods_date'] = $periods_date;
-        $strategyInfoRes['adjustInfo'] = $result;
+        $strategyInfoRes['adjustInfo'] = $results;
         ds_json_encode(10000, '数据获取成功', $strategyInfoRes);
     }
 }
