@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DsMall(php)B2B2C商城系统后台</title>
+    <title>审核管理系统</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="{$Think.PLUGINS_SITE_ROOT}/layui/css/layui.css">
@@ -44,6 +44,10 @@
     $('#change_captcha').click(function () {
         $(this).attr('src', '{:captcha_src()}?'+(new Date().getTime()));
     });
+    //判断是否在iframe中
+    if(self!=top){
+        parent.window.location.replace(window.location.href);
+    }
 </script>
 </body>
 </html>
