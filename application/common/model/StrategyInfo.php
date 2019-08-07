@@ -47,7 +47,7 @@ class StrategyInfo extends Model
             }
             if(isset($condition['strategy_status'])) {
                 $res = $res
-                    ->where('strategy_status', 'eq', $condition['review_status']);
+                    ->where('strategy_status', 'eq', $condition['strategy_status']);
             }
             if(isset($condition['strategy_info'])) {
                 $res = $res
