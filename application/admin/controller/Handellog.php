@@ -2,6 +2,7 @@
 
 namespace app\admin\controller;
 
+use app\common\model\StrategyInfo;
 use think\Log;
 use think\View;
 use think\Lang;
@@ -22,6 +23,23 @@ class Handellog extends AdminControl {
         $handelLog = model('handelLog');
         $condition = [];
         $handelLogList = $handelLog->getHandelLogValueList($condition, '', '*', 20);
+        $strategy_ids = array_column($handelLogList, 'strategy_id');
+        $strategyInfo = new StrategyInfo();
+        $strategyList = $strategyInfo->whereIn('strategy_id', $strategy_ids)->select();
+        if(!$strategyList) {
+            $this->assign('handelLogList', []);
+            $this->assign('show_page', []);
+            $this->setAdminCurItem('index');
+            return $this->fetch();
+
+        }
+        $strategyList = $strategyList->toArray();
+        $strategyList = array_column($strategyList, null, 'strategy_id');
+        // 处理数据
+        foreach ($handelLogList as $key => $value) {
+            $handelLogList[$key] = array_merge($value, $strategyList[$value['strategy_id']]);
+
+        }
         $this->assign('handelLogList', $handelLogList);
         $this->assign('show_page', $handelLog->page_info->render());
         $this->setAdminCurItem('index');

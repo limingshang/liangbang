@@ -130,31 +130,30 @@ class Strategy extends AdminControl {
             } else {
                 $review_status     = input('param.review_status', null);
                 $review_describe     = input('param.review_describe');
-                $text = '管理员将：'.$strategyInfo['strategy_id'];
+                $text = '';
                 switch ($strategyInfo['review_status']) {
                     case 0:
-                        $text.='，历史状态为：通过';
+                        $text.='通过 -> ';
                         break;
                     case 2:
-                        $text.='，历史状态为：驳回';
+                        $text.='驳回 -> ';
                         break;
                     default:
-                        $text.='，历史状态为：审核中';
+                        $text.='审核中 -> ';
                         break;
                 }
-                $text.='。处理为：';
                 switch ($review_status) {
                     case 0:
                         $policyStatus = 0;
-                        $text.='通过状态';
+                        $text.='通过';
                         break;
                     case 2:
                         $policyStatus = 2;
-                        $text.='驳回状态';
+                        $text.='驳回';
                         break;
                     default:
                         $policyStatus = 1;
-                        $text.='审核中状态';
+                        $text.='审核中';
                         break;
                 }
                 $url = self::GET_URL."Grit/ReceiveVerifyStatus.ashx";
