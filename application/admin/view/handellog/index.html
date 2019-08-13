@@ -12,10 +12,10 @@
                 <th style="width: 49px; text-align: center">序号</th>
                 <th style="width: 270px; text-align: center;">策略名称</th>
                 <th width="8%"  style="text-align: center">操作者</th>
-                <th>操作日志</th>
+                <th style="text-align: center">操作日志</th>
                 <th width="10%" style="text-align: center">操作备注</th>
                 <!--<th>请求返回结果</th>-->
-                <th>操作时间</th>
+                <th style="text-align: center; width: 120px;">操作时间</th>
             </tr>
             </thead>
             <tbody>
@@ -24,10 +24,10 @@
                 <td style="text-align: center;">{$key}</td>
                 <td style="text-align: center;">{$handelInfo.strategy_name}</td>
                 <td style="text-align: center;">{$handelInfo.user_name}</td>
-                <td>{$handelInfo.content}</td>
-                <td>{$handelInfo.review_describe}</td>
+                <td style="text-align: center">{$handelInfo.content}</td>
+                <td style="text-align: center">{$handelInfo.review_describe}</td>
                 <!--<td>{$handelInfo.result}</td>-->
-                <td>{$handelInfo.create_time}</td>
+                <td style="text-align: center">{$handelInfo.create_time}</td>
             </tr>
             {/volist}
             </tbody>
