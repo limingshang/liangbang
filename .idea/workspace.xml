@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/log/201908/13.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201908/13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/a97ee6f0b6cde88a0b86dc06941b1fa9.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/a97ee6f0b6cde88a0b86dc06941b1fa9.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/b2c030e2cd13f78ce26859dc5346e973.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/b2c030e2cd13f78ce26859dc5346e973.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
+            <state relative-caret-position="244">
+              <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
               <folding>
                 <element signature="e#9445#9451#0" expanded="true" />
                 <element signature="e#9451#9457#0" expanded="true" />
@@ -52,7 +51,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/plugins/layer/mobile/layer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="2506" selection-start-line="1" selection-start-column="2506" selection-end-line="1" selection-end-column="2506" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/plugins/layui/layui.all.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="23190" selection-start-line="4" selection-start-column="23190" selection-end-line="4" selection-end-column="23190" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/plugins/layer/layer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="21707" selection-start-line="1" selection-start-column="21707" selection-end-line="1" selection-end-column="21707" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/strategy.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
@@ -191,8 +217,8 @@
         <option value="$PROJECT_DIR$/thinkphp/library/traits/controller/Jump.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Strategy.php" />
         <option value="$PROJECT_DIR$/application/admin/controller/Strategy.php" />
-        <option value="$PROJECT_DIR$/application/admin/view/strategy/info.html" />
         <option value="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" />
+        <option value="$PROJECT_DIR$/application/admin/view/strategy/info.html" />
       </list>
     </option>
   </component>
@@ -318,12 +344,12 @@
       <workItem from="1564738078656" duration="1618000" />
       <workItem from="1565095748918" duration="2469000" />
       <workItem from="1565264453064" duration="4369000" />
-      <workItem from="1565675298573" duration="6579000" />
+      <workItem from="1565675298573" duration="7071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109105000" />
+    <option name="totallyTimeSpent" value="109597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -343,7 +369,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.15476191" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17176871" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -354,26 +380,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/admin/lang/zh-cn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/temp/cd0e2c27973b688e305624ecf274a9fe.php" />
-    <entry file="file://$PROJECT_DIR$/application/common/model/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-201" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Admingroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="188" column="48" selection-start-line="188" selection-start-column="48" selection-end-line="188" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/handelLog/info.html" />
     <entry file="file://$PROJECT_DIR$/application/admin/view/handellog/index_title.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -686,17 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
-          <folding>
-            <element signature="e#9445#9451#0" expanded="true" />
-            <element signature="e#9451#9457#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/strategy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -708,6 +703,45 @@
             <element signature="n#style#0;n#input#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#4;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#5;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/plugins/layer/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21707" selection-start-line="1" selection-start-column="21707" selection-end-line="1" selection-end-column="21707" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/plugins/layui/layui.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23190" selection-start-line="4" selection-start-column="23190" selection-end-line="4" selection-end-column="23190" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/plugins/layer/mobile/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="2506" selection-start-line="1" selection-start-column="2506" selection-end-line="1" selection-end-column="2506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/plugins/layui/lay/modules/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21681" selection-start-line="1" selection-start-column="21681" selection-end-line="1" selection-end-column="21681" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
+          <folding>
+            <element signature="e#9445#9451#0" expanded="true" />
+            <element signature="e#9451#9457#0" expanded="true" />
           </folding>
         </state>
       </provider>
