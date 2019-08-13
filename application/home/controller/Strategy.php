@@ -414,6 +414,7 @@ class Strategy extends BaseMall
                         ->where('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "买入"')
                         ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "持有"')
                         ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->order("FIELD(trade_direction,  '买入',   '卖出',   '持有')   ASC")
                         ->select();
                     break;
                 case 1:             // 就把买入和卖出的数据返回出来
@@ -421,6 +422,7 @@ class Strategy extends BaseMall
                         ->where('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "买入"')
                         ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "卖出"')
                         ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->order("FIELD(trade_direction,  '买入',   '卖出',   '持有')   ASC")
                         ->select();
                     break;
                 case 2:             // 就把所有买入和持有的也返出来
@@ -428,6 +430,7 @@ class Strategy extends BaseMall
                         ->where('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "买入"')
                         ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "持有"')
                         ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->order("FIELD(trade_direction,  '买入',   '卖出',   '持有')   ASC")
                         ->select();
                     break;
             }

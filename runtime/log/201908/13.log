@@ -829,3 +829,1297 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.003742s ]
 [ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.084624s ]
 [ sql ] [ SQL ] select version() as ver [ RunTime:0.000257s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:47:59+08:00 ] 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:8083/admin [运行时间：0.122143s][吞吐率：8.19req/s] [内存消耗：406.27kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048436s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.006957s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.044662s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:47:59+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] 127.0.0.1:8083/admin/index/welcome.html [运行时间：0.061798s][吞吐率：16.18req/s] [内存消耗：403.95kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->welCome[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'statistics',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042863s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.005769s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.003609s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000451s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:49:00+08:00 ] 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:8083/admin [运行时间：0.087101s][吞吐率：11.48req/s] [内存消耗：405.59kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042598s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.003403s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.004938s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:49:00+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] 127.0.0.1:8083/admin/index/welcome.html [运行时间：0.020608s][吞吐率：48.52req/s] [内存消耗：403.04kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->welCome[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'statistics',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001971s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.002861s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.004568s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000458s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:55:54+08:00 ] 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:8083/admin [运行时间：0.156405s][吞吐率：6.39req/s] [内存消耗：405.18kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047273s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.006859s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.083334s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:55:55+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] 127.0.0.1:8083/admin/index/welcome.html [运行时间：0.018317s][吞吐率：54.59req/s] [内存消耗：403.04kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->welCome[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'statistics',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001028s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.004080s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.004818s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000338s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:56:36+08:00 ] 127.0.0.1 GET /admin/strategy/index.html
+[ info ] 127.0.0.1:8083/admin/strategy/index.html [运行时间：0.379458s][吞吐率：2.64req/s] [内存消耗：661.14kb] [文件加载：66]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->index[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'strategy_list',
+  3 => 'show_page',
+  4 => 'admin_item',
+  5 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040958s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.004390s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.003200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.002539s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ds_strategy_info` WHERE  `strategy_status` = 1 LIMIT 1 [ RunTime:0.050431s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_info` WHERE  `strategy_status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.041996s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.002262s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.052276s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005946s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005660s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005610s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.006893s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec41545f-2c23-4883-9554-7957456fe438' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005431s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'b488530d-64be-446a-bddd-b806282babc5' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005657s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'f1b3b446-88eb-4a20-99eb-5205b3ad79a6' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005909s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'd0d5c034-d7d6-4113-a2fd-7b22f1be44ff' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005098s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '7ce24387-beb7-44f4-892b-310893101491' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005809s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'c08fe45e-c876-420b-b434-4f14ffdc791b' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.007446s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'a08dfc45-9dcc-43f8-b54f-7951080f643f' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005496s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '7fb68d2f-d135-4e4e-886a-8a182a486f94' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.006089s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'dc1fa4ed-d922-4e32-be24-8daf38235ca0' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.007023s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005685s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'd516ff5f-7c2d-4ac6-a70d-b8cb64392c1c' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.006068s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '31ecf48a-28aa-4fb3-92b7-bff9ee68d523' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005701s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '50db00b1-c8e8-4775-86a8-ec6ca72a7efb' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005285s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '5e3262c0-12fd-4bdd-943d-df8bca21cece' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005497s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '71f02c6f-4f21-492b-a5bd-ce0622b27db8' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.007760s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:56:37+08:00 ] 127.0.0.1 GET /admin/strategy/info/id/50.html
+[ info ] 127.0.0.1:8083/admin/strategy/info/id/50.html [运行时间：0.079780s][吞吐率：12.53req/s] [内存消耗：625.94kb] [文件加载：64]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '50',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->info[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/info.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'periods_date_list',
+  3 => 'strategy_info',
+  4 => 'admin_item',
+  5 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000677s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.002592s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.040208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.003694s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_info` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.005180s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.003243s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc [ RunTime:0.013853s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:56:38+08:00 ] 127.0.0.1 GET /admin/strategy/getstrategyhold/strategy_id/ec18b34c-9a6c-41c8-b908-bf8fc9f4da16.html?page=1&limit=10
+[ info ] 127.0.0.1:8083/admin/strategy/getstrategyhold/strategy_id/ec18b34c-9a6c-41c8-b908-bf8fc9f4da16.html?page=1&limit=10 [运行时间：0.043974s][吞吐率：22.74req/s] [内存消耗：446.72kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'getstrategyhold',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/info/id/50.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'strategy_id' => 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->getStrategyHold[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000590s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.003054s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.005598s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.002208s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.011851s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16'  AND `periods_date` = '20190722' ORDER BY periods_date desc, FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc [ RunTime:0.013264s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:56:40+08:00 ] 127.0.0.1 GET /admin/strategy/strategy/id/50.html
+[ info ] 127.0.0.1:8083/admin/strategy/strategy/id/50.html [运行时间：0.092443s][吞吐率：10.82req/s] [内存消耗：425.65kb] [文件加载：60]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'strategy',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/info/id/50.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '50',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->strategy[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/strategy.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_item',
+  3 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045604s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.015262s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.009102s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:52+08:00 ] 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:8083/admin [运行时间：0.068013s][吞吐率：14.70req/s] [内存消耗：405.59kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042958s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.005370s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.011406s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:52+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] 127.0.0.1:8083/admin/index/welcome.html [运行时间：0.173060s][吞吐率：5.78req/s] [内存消耗：403.04kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->welCome[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'statistics',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.055046s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.065727s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.040805s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.002030s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:52+08:00 ] 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:8083/admin [运行时间：0.035433s][吞吐率：28.22req/s] [内存消耗：405.59kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002100s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.017694s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.010998s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:52+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] 127.0.0.1:8083/admin/index/welcome.html [运行时间：0.022765s][吞吐率：43.93req/s] [内存消耗：403.04kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->welCome[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'statistics',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006167s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.008295s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.002090s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000279s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:54+08:00 ] 127.0.0.1 GET /admin/strategy/index.html
+[ info ] 127.0.0.1:8083/admin/strategy/index.html [运行时间：0.252990s][吞吐率：3.95req/s] [内存消耗：615.45kb] [文件加载：63]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->index[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'strategy_list',
+  3 => 'show_page',
+  4 => 'admin_item',
+  5 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001212s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.004859s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.002041s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ds_strategy_info` WHERE  `strategy_status` = 1 LIMIT 1 [ RunTime:0.050193s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_info` WHERE  `strategy_status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.005965s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.002111s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.016038s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.006232s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010551s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005527s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010222s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec41545f-2c23-4883-9554-7957456fe438' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005306s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'b488530d-64be-446a-bddd-b806282babc5' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.009798s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'f1b3b446-88eb-4a20-99eb-5205b3ad79a6' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005346s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'd0d5c034-d7d6-4113-a2fd-7b22f1be44ff' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.009703s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '7ce24387-beb7-44f4-892b-310893101491' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005393s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'c08fe45e-c876-420b-b434-4f14ffdc791b' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.011401s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'a08dfc45-9dcc-43f8-b54f-7951080f643f' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005079s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '7fb68d2f-d135-4e4e-886a-8a182a486f94' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010612s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'dc1fa4ed-d922-4e32-be24-8daf38235ca0' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005843s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.006033s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'd516ff5f-7c2d-4ac6-a70d-b8cb64392c1c' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.009620s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '31ecf48a-28aa-4fb3-92b7-bff9ee68d523' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.007869s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '50db00b1-c8e8-4775-86a8-ec6ca72a7efb' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005922s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '5e3262c0-12fd-4bdd-943d-df8bca21cece' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005475s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '71f02c6f-4f21-492b-a5bd-ce0622b27db8' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.008087s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:55+08:00 ] 127.0.0.1 GET /admin/strategy/info/id/50.html
+[ info ] 127.0.0.1:8083/admin/strategy/info/id/50.html [运行时间：0.055184s][吞吐率：18.12req/s] [内存消耗：480.65kb] [文件加载：61]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '50',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->info[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/info.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'periods_date_list',
+  3 => 'strategy_info',
+  4 => 'admin_item',
+  5 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010859s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.003256s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.002076s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_info` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.006259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.001972s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc [ RunTime:0.012986s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:56+08:00 ] 127.0.0.1 GET /admin/strategy/getstrategyhold/strategy_id/ec18b34c-9a6c-41c8-b908-bf8fc9f4da16.html?page=1&limit=10
+[ info ] 127.0.0.1:8083/admin/strategy/getstrategyhold/strategy_id/ec18b34c-9a6c-41c8-b908-bf8fc9f4da16.html?page=1&limit=10 [运行时间：0.062860s][吞吐率：15.91req/s] [内存消耗：445.64kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'getstrategyhold',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/info/id/50.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'strategy_id' => 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->getStrategyHold[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017063s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.008465s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.002491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.001866s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.013437s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16'  AND `periods_date` = '20190722' ORDER BY periods_date desc, FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc [ RunTime:0.014942s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:57:57+08:00 ] 127.0.0.1 GET /admin/strategy/strategy/id/50.html
+[ info ] 127.0.0.1:8083/admin/strategy/strategy/id/50.html [运行时间：0.103762s][吞吐率：9.64req/s] [内存消耗：406.95kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'strategy',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/info/id/50.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '50',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->strategy[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/strategy.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_item',
+  3 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.053366s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.017852s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.005318s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:58:21+08:00 ] 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:8083/admin [运行时间：0.080004s][吞吐率：12.50req/s] [内存消耗：405.59kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054021s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.012285s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.005270s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:58:21+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] 127.0.0.1:8083/admin/index/welcome.html [运行时间：0.085206s][吞吐率：11.74req/s] [内存消耗：403.04kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->welCome[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'statistics',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016216s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.016068s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.005035s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.040403s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:58:22+08:00 ] 127.0.0.1 GET /admin/strategy/index.html
+[ info ] 127.0.0.1:8083/admin/strategy/index.html [运行时间：0.213878s][吞吐率：4.68req/s] [内存消耗：614.36kb] [文件加载：63]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->index[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'strategy_list',
+  3 => 'show_page',
+  4 => 'admin_item',
+  5 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000794s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.004486s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.009746s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.004111s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ds_strategy_info` WHERE  `strategy_status` = 1 LIMIT 1 [ RunTime:0.005495s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_info` WHERE  `strategy_status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.003898s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.003265s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.008095s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010320s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005380s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.012433s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005782s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec41545f-2c23-4883-9554-7957456fe438' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.009536s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'b488530d-64be-446a-bddd-b806282babc5' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005463s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'f1b3b446-88eb-4a20-99eb-5205b3ad79a6' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010099s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'd0d5c034-d7d6-4113-a2fd-7b22f1be44ff' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005063s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '7ce24387-beb7-44f4-892b-310893101491' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010315s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'c08fe45e-c876-420b-b434-4f14ffdc791b' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.007340s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'a08dfc45-9dcc-43f8-b54f-7951080f643f' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010436s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '7fb68d2f-d135-4e4e-886a-8a182a486f94' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.012513s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'dc1fa4ed-d922-4e32-be24-8daf38235ca0' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.006991s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010622s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'd516ff5f-7c2d-4ac6-a70d-b8cb64392c1c' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005900s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '31ecf48a-28aa-4fb3-92b7-bff9ee68d523' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010569s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '50db00b1-c8e8-4775-86a8-ec6ca72a7efb' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.005508s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '5e3262c0-12fd-4bdd-943d-df8bca21cece' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.010565s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '71f02c6f-4f21-492b-a5bd-ce0622b27db8' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.006326s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:58:28+08:00 ] 127.0.0.1 GET /admin/strategy/info/id/50.html
+[ info ] 127.0.0.1:8083/admin/strategy/info/id/50.html [运行时间：0.033443s][吞吐率：29.90req/s] [内存消耗：479.55kb] [文件加载：61]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '50',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->info[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/info.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'periods_date_list',
+  3 => 'strategy_info',
+  4 => 'admin_item',
+  5 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009698s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.004022s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.003487s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_info` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.001977s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.001844s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc [ RunTime:0.006155s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:58:28+08:00 ] 127.0.0.1 GET /admin/strategy/getstrategyhold/strategy_id/ec18b34c-9a6c-41c8-b908-bf8fc9f4da16.html?page=1&limit=10
+[ info ] 127.0.0.1:8083/admin/strategy/getstrategyhold/strategy_id/ec18b34c-9a6c-41c8-b908-bf8fc9f4da16.html?page=1&limit=10 [运行时间：0.044298s][吞吐率：22.57req/s] [内存消耗：445.64kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'getstrategyhold',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/info/id/50.html',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'strategy_id' => 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->getStrategyHold[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002156s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.002274s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.002241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.005058s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.011826s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_strategy_hold` WHERE  `strategy_id` = 'ec18b34c-9a6c-41c8-b908-bf8fc9f4da16'  AND `periods_date` = '20190722' ORDER BY periods_date desc, FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc [ RunTime:0.016528s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:58:34+08:00 ] 127.0.0.1 GET /admin/strategy/strategy/id/50.html
+[ info ] 127.0.0.1:8083/admin/strategy/strategy/id/50.html [运行时间：0.076769s][吞吐率：13.03req/s] [内存消耗：406.55kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'strategy',
+    2 => 'strategy',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/admin/strategy/info/id/50.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '50',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/strategy.lang.php
+[ info ] [ RUN ] app\admin\controller\Strategy->strategy[ /web/ztcl/application/admin/controller/Strategy.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/strategy/strategy.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_item',
+  3 => 'curitem',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004597s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.044047s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.001536s ]
