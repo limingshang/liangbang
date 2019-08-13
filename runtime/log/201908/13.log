@@ -524,3 +524,43 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.016261s ]
 [ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.006353s ]
 [ sql ] [ SQL ] UPDATE `ds_user_confirm`  SET `user_account`='1',`phone_num`='222',`fund_code`='333',`risk_level`='444',`confirm_status`='2',`create_time`='2019-10-1'  WHERE  `fund_code` = '333' [ RunTime:0.001050s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:51:34+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.077581s][吞吐率：12.89req/s] [内存消耗：420.61kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------275352260717609291977911',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '71dd3c8c-3049-40de-9321-ce81712c19ef',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047720s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.009892s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.007992s ]
+[ sql ] [ SQL ] UPDATE `ds_user_confirm`  SET `user_account`='1',`phone_num`='222',`fund_code`='333',`risk_level`='444',`confirm_status`='2',`create_time`='2019-10-1'  WHERE  `fund_code` = '333' [ RunTime:0.001687s ]
