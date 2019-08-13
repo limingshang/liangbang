@@ -1,0 +1,526 @@
+---------------------------------------------------------------
+[ 2019-08-13T15:14:27+08:00 ] 127.0.0.1 POST /home/strategy/getStrategyHoldList
+[ info ] 127.0.0.1:8083/home/strategy/getStrategyHoldList [运行时间：0.253928s][吞吐率：3.94req/s] [内存消耗：662.38kb] [文件加载：58]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'strategy',
+    2 => 'getStrategyHoldList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '541',
+  'content-type' => 'multipart/form-data; boundary=--------------------------874402084979073510153462',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => 'a51df2a7-bfd1-4e3c-b2c4-6e5e0eac8dba',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'isTest' => '',
+  'strategy_id' => '1b77eb8a-ed82-4d97-80b3-98a1374a2fca',
+  'start_date' => '2018-10-1',
+  'end_date' => '2019-10-1',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/home/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Strategy->getStrategyHoldList[ /web/ztcl/application/home/controller/Strategy.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048826s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_config` [ RunTime:0.008765s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_config` [ RunTime:0.006097s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_nav` [ RunTime:0.006531s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_nav` WHERE  `nav_display` = 1  AND `nav_location` = 'header'  AND `nav_is_show` = 1 ORDER BY nav_order asc, nav_id desc [ RunTime:0.033315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_link` [ RunTime:0.050703s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_link` WHERE  `link_show_ok` = 1 ORDER BY link_order asc, link_id desc [ RunTime:0.002421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.051491s ]
+[ sql ] [ SQL ] SELECT `strategy_id`,`strategy_name` FROM `ds_strategy_info` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' LIMIT 1 [ RunTime:0.002172s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.008244s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.008593s ]
+[ sql ] [ SQL ] SELECT id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca'  AND `periods_date` BETWEEN '2018-10-1' AND '2019-10-1' ORDER BY periods_date desc, FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc [ RunTime:0.014101s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:15:24+08:00 ] 127.0.0.1 POST /home/strategy/getStrategyHoldList
+[ info ] 127.0.0.1:8083/home/strategy/getStrategyHoldList [运行时间：0.107690s][吞吐率：9.29req/s] [内存消耗：615.20kb] [文件加载：55]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'strategy',
+    2 => 'getStrategyHoldList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '541',
+  'content-type' => 'multipart/form-data; boundary=--------------------------526298295651136377787560',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => 'aa55e0bf-b974-44bf-90f0-5cc6065f3794',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'isTest' => '',
+  'strategy_id' => '1b77eb8a-ed82-4d97-80b3-98a1374a2fca',
+  'start_date' => '2018-10-1',
+  'end_date' => '2019-10-1',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/home/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Strategy->getStrategyHoldList[ /web/ztcl/application/home/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043540s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.015941s ]
+[ sql ] [ SQL ] SELECT `strategy_id`,`strategy_name` FROM `ds_strategy_info` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' LIMIT 1 [ RunTime:0.006814s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.002228s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.015294s ]
+[ sql ] [ SQL ] SELECT id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca'  AND `periods_date` BETWEEN '2018-10-1' AND '2019-10-1' ORDER BY periods_date desc, FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc [ RunTime:0.012373s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:38:25+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.299511s][吞吐率：3.34req/s] [内存消耗：492.20kb] [文件加载：63]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '737',
+  'content-type' => 'multipart/form-data; boundary=--------------------------301940952745790078374576',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '02186bd4-a476-4475-ac98-1c26a1893324',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '555',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.055376s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_nav` [ RunTime:0.042151s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_nav` WHERE  `nav_display` = 1  AND `nav_location` = 'header'  AND `nav_is_show` = 1 ORDER BY nav_order asc, nav_id desc [ RunTime:0.008458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_link` [ RunTime:0.047515s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_link` WHERE  `link_show_ok` = 1 ORDER BY link_order asc, link_id desc [ RunTime:0.001410s ]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ds_cms.ds_user_confirm' doesn't exist[/web/ztcl/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2019-08-13T15:39:42+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.132864s][吞吐率：7.53req/s] [内存消耗：465.02kb] [文件加载：61]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '737',
+  'content-type' => 'multipart/form-data; boundary=--------------------------075723060057861145794308',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '2e107a54-6d36-4d21-be4d-10170b9bcd02',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '555',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043111s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.050444s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.009398s ]
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'confirm_status' at row 1[/web/ztcl/thinkphp/library/think/db/Connection.php:456]
+---------------------------------------------------------------
+[ 2019-08-13T15:40:04+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.121868s][吞吐率：8.21req/s] [内存消耗：419.04kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------309702065954850040819724',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '972a18f6-4446-48fb-951f-5e8a49289d9f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '1',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005064s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.054786s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.000951s ]
+[ sql ] [ SQL ] INSERT INTO `ds_user_confirm` (`user_account` , `phone_num` , `fund_code` , `risk_level` , `confirm_status` , `create_time`) VALUES ('1' , '222' , '333' , '444' , '1' , '2019-10-1') [ RunTime:0.043055s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:40:38+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.059055s][吞吐率：16.93req/s] [内存消耗：420.61kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------379396356733740651026599',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => 'c634a847-f13e-44ed-975b-e652e00844b3',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027953s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.006741s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.002122s ]
+[ sql ] [ SQL ] UPDATE `ds_user_confirm`  SET `user_account`='1',`phone_num`='222',`fund_code`='333',`risk_level`='444',`confirm_status`='2',`create_time`='2019-10-1'  WHERE  `fund_code` = '333' [ RunTime:0.015516s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:42:13+08:00 ] 127.0.0.1 POST /api/strategy/getUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/getUserConfirm [运行时间：0.072530s][吞吐率：13.79req/s] [内存消耗：455.84kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'getUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------269565954374100338590374',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '93b58d0b-2481-4a22-a404-c49af529d10f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->getUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046202s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.008836s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.002187s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:45:12+08:00 ] 127.0.0.1 POST /api/strategy/getUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/getUserConfirm [运行时间：0.098534s][吞吐率：10.15req/s] [内存消耗：455.84kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'getUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------250314004870855922328676',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => 'feb41eb3-d118-4ab4-a204-8df0116c1605',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->getUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047042s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.016591s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.002163s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:45:22+08:00 ] 127.0.0.1 POST /api/strategy/getUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/getUserConfirm [运行时间：0.063781s][吞吐率：15.68req/s] [内存消耗：469.45kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'getUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------810661989046963850261047',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '29f2f3b3-5ccf-4a2c-ab58-abf834236931',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->getUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040721s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.005761s ]
+[ sql ] [ SQL ] SELECT `user_account`,`phone_num`,`fund_code`,`risk_level`,`confirm_status`,`create_time` FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.000827s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:47:31+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.095255s][吞吐率：10.50req/s] [内存消耗：421.69kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------615760988310566359395464',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '88c0d5dd-c2cc-46da-a845-c18686ef736d',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042036s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.013714s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.011546s ]
+[ sql ] [ SQL ] UPDATE `ds_user_confirm`  SET `user_account`='1',`phone_num`='222',`fund_code`='333',`risk_level`='444',`confirm_status`='2',`create_time`='2019-10-1'  WHERE  `fund_code` = '333' [ RunTime:0.006924s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:48:05+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.084032s][吞吐率：11.90req/s] [内存消耗：421.69kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------340750833960162038443102',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => 'e7a05221-e318-4962-a839-fabc86385968',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000743s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.068691s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.005009s ]
+[ sql ] [ SQL ] UPDATE `ds_user_confirm`  SET `user_account`='1',`phone_num`='222',`fund_code`='333',`risk_level`='444',`confirm_status`='2',`create_time`='2019-10-1'  WHERE  `fund_code` = '333' [ RunTime:0.004280s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:48:16+08:00 ] 127.0.0.1 POST /api/strategy/getUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/getUserConfirm [运行时间：0.262278s][吞吐率：3.81req/s] [内存消耗：453.95kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'getUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------575189276307568662943299',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => 'ae34b72e-b186-4191-a841-ee590bd66677',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->getUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.236766s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.017162s ]
+[ sql ] [ SQL ] SELECT `user_account`,`phone_num`,`fund_code`,`risk_level`,`confirm_status`,`create_time` FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.002513s ]
+---------------------------------------------------------------
+[ 2019-08-13T15:48:27+08:00 ] 127.0.0.1 POST /api/strategy/saveUserConfirm
+[ info ] 127.0.0.1:8083/api/strategy/saveUserConfirm [运行时间：0.068568s][吞吐率：14.58req/s] [内存消耗：420.61kb] [文件加载：52]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'strategy',
+    2 => 'saveUserConfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '735',
+  'content-type' => 'multipart/form-data; boundary=--------------------------444988691270000776496092',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '3f0bc798-b90e-4cb5-ae9e-f8cc9c6a6462',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'user_account' => '1',
+  'phone_num' => '222',
+  'fund_code' => '333',
+  'risk_level' => '444',
+  'confirm_status' => '2',
+  'create_time' => '2019-10-1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\api\controller\Strategy->saveUserConfirm[ /web/ztcl/application/api/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041062s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.016261s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.006353s ]
+[ sql ] [ SQL ] UPDATE `ds_user_confirm`  SET `user_account`='1',`phone_num`='222',`fund_code`='333',`risk_level`='444',`confirm_status`='2',`create_time`='2019-10-1'  WHERE  `fund_code` = '333' [ RunTime:0.001050s ]
