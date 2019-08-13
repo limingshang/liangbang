@@ -25,10 +25,10 @@
                                 <input type="button" class="layui-btn layui-btn-disabled" disabled = 'true' lay-submit value="审核通过" style="width: 110px" />
                                 <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" style="width: 110px" lay-submit value="驳回" />
                                 {elseif condition="$strategyInfo['review_status'] eq 2" /}
-                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" style="width: 110px" lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(0)" style="width: 110px" lay-submit value="审核通过" />
                                 <input type="button" class="layui-btn layui-btn-disabled" disabled="true" style="width: 110px"layui-layer layui-layer-iframe lay-submit value="驳回" />
                                 {else /}
-                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" style="width: 110px" lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(0)" style="width: 110px" lay-submit value="审核通过" />
                                 <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" style="width: 110px" lay-submit value="驳回" />
 
                             {/if}
