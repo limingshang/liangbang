@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/home/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Strategy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/log/201908/13.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201908/13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/library/think/exception/Handle.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/library/think/exception/Handle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,59 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="86" column="39" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/model/HandelLog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/model/StrategyHold.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/model/StrategyInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/controller/Handellog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+            <state relative-caret-position="277">
+              <caret line="157" column="22" lean-forward="true" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
               <folding>
-                <element signature="e#40#74#0#PHP" expanded="true" />
+                <element signature="e#59#93#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/admin/view/monitor/index.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+            <state relative-caret-position="280">
+              <caret line="620" column="8" selection-start-line="620" selection-start-column="4" selection-end-line="620" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -77,7 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>layui-btn</find>
       <find>$type</find>
       <find>checkIsNew</find>
       <find>getStr</find>
@@ -107,10 +71,12 @@
       <find>between</find>
       <find>getStrategyHoldList</find>
       <find>500</find>
+      <find>10000</find>
     </findStrings>
     <replaceStrings>
       <replace>tests</replace>
       <replace>HandelLog</replace>
+      <replace>200</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/application/common/model</dir>
@@ -171,8 +137,8 @@
         <option value="$PROJECT_DIR$/application/admin/controller/Handellog.php" />
         <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
         <option value="$PROJECT_DIR$/application/common/model/StrategyHold.php" />
-        <option value="$PROJECT_DIR$/application/home/controller/Strategy.php" />
         <option value="$PROJECT_DIR$/thinkphp/library/think/exception/Handle.php" />
+        <option value="$PROJECT_DIR$/application/home/controller/Strategy.php" />
       </list>
     </option>
   </component>
@@ -280,17 +246,18 @@
       <workItem from="1564738078656" duration="1618000" />
       <workItem from="1565095748918" duration="2469000" />
       <workItem from="1565264453064" duration="4369000" />
-      <workItem from="1565675298573" duration="1553000" />
+      <workItem from="1565675298573" duration="1987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104079000" />
+    <option name="totallyTimeSpent" value="104513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28756058" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28756058" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -304,7 +271,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.05102041" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.05102041" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -376,13 +343,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/Api/lang/zh-cn.php" />
     <entry file="file://$PROJECT_DIR$/application/Api/controller/BaseMall.php" />
-    <entry file="file://$PROJECT_DIR$/application/home/controller/BaseMall.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/Job.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -444,13 +404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="259" column="20" selection-start-line="259" selection-start-column="20" selection-end-line="259" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10230">
-          <caret line="682" column="9" selection-start-line="682" selection-start-column="9" selection-end-line="682" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -648,10 +601,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/BaseMall.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="86" column="39" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="39" />
+        <state relative-caret-position="277">
+          <caret line="157" column="22" lean-forward="true" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
+          <folding>
+            <element signature="e#59#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="620" column="8" selection-start-line="620" selection-start-column="4" selection-end-line="620" selection-end-column="8" />
         </state>
       </provider>
     </entry>

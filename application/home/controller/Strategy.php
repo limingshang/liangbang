@@ -51,9 +51,9 @@ class Strategy extends BaseMall
             $result = $model_strategy
                 ->field('strategy_id, strategy_name, sharpe_ratio, net_value, daily_ratio')
                 ->select()->toArray();
-            ds_json_encode(10000, '数据获取成功共：' . (string)count($result), $result);
+            ds_json_encode(200, '数据获取成功共：' . (string)count($result), $result);
         } else {
-            ds_json_encode(10000, '请求方式不正确');
+            ds_json_encode(200, '请求方式不正确');
         }
     }
 
@@ -75,9 +75,9 @@ class Strategy extends BaseMall
             } else {
                 $result = [];
             }
-            ds_json_encode(10000, '数据获取成功', $result);
+            ds_json_encode(200, '数据获取成功', $result);
         } else {
-            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
+            ds_json_encode(200, '请求方式不正确，或策略id未传递');
         }
     }
 
@@ -95,9 +95,9 @@ class Strategy extends BaseMall
             $result                 = $strategyNetValue->getStrategyNetValueList($condition, null, $fields);
             $results['strategy_id'] = $strategy_id;
             $results['value_info']  = $result;
-            ds_json_encode(10000, '数据获取成功', $results);
+            ds_json_encode(200, '数据获取成功', $results);
         } else {
-            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
+            ds_json_encode(200, '请求方式不正确，或策略id未传递');
         }
     }
 
@@ -137,7 +137,7 @@ class Strategy extends BaseMall
                         $fields           = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                         $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                     } else {
-                        ds_json_encode(10000, '未查询到任何调仓数据');
+                        ds_json_encode(200, '未查询到任何调仓数据');
                     }
                 } else {
                     $condition        = [
@@ -150,12 +150,12 @@ class Strategy extends BaseMall
                 $strategyInfo['periods_date'] = $periods_date;
                 $strategyInfo['adjust_info']  = $strategyHoldList;
 
-                ds_json_encode(10000, '数据获取成功', $strategyInfo);
+                ds_json_encode(200, '数据获取成功', $strategyInfo);
             } else {
-                ds_json_encode(10000, '未查询到此策略数据');
+                ds_json_encode(200, '未查询到此策略数据');
             }
         } else {
-            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
+            ds_json_encode(200, '请求方式不正确，或策略id未传递');
         }
     }
 
@@ -182,9 +182,9 @@ class Strategy extends BaseMall
             $results['strategy_id']  = $strategy_id;
             $results['periods_date'] = array_column($result, 'periods_date');
 
-            ds_json_encode(10000, '数据获取成功', $results);
+            ds_json_encode(200, '数据获取成功', $results);
         } else {
-            ds_json_encode(10000, '请求方式不正确，或策略id未传递');
+            ds_json_encode(200, '请求方式不正确，或策略id未传递');
         }
     }
 
@@ -218,7 +218,7 @@ class Strategy extends BaseMall
             'update_time'           => input('update_time'),
         ];
         if (!input('strategy_id')) {
-            ds_json_encode(10000, '策略id参数错误');
+            ds_json_encode(200, '策略id参数错误');
         }
         $condition         = ['strategy_id' => input('strategy_id')];
         $strategyInfoModel = model('strategyInfo');
@@ -231,7 +231,7 @@ class Strategy extends BaseMall
             $strategyInfoModel = model('strategyInfo');
             $strategyInfoModel->addStrategy($data);
         }
-        ds_json_encode(10000, '存储成功');
+        ds_json_encode(200, '存储成功');
     }
 
     /**
@@ -245,7 +245,7 @@ class Strategy extends BaseMall
         // $strategyInfoModel = model('strategyInfo');
         // $strategyInfo = $strategyInfoModel->getOneStrategyInfo($condition);
         if (!input('strategy_id')) {
-            ds_json_encode(10000, '策略id参数错误');
+            ds_json_encode(200, '策略id参数错误');
         }
         // if($strategyInfo) {
         $data = json_decode($data, true);
@@ -278,7 +278,7 @@ class Strategy extends BaseMall
         }
         // }
 
-        ds_json_encode(10000, '存储成功');
+        ds_json_encode(200, '存储成功');
     }
 
     /**
@@ -315,7 +315,7 @@ class Strategy extends BaseMall
 
         }
 
-        ds_json_encode(10000, '存储成功');
+        ds_json_encode(200, '存储成功');
     }
 
     /**
@@ -328,7 +328,7 @@ class Strategy extends BaseMall
         $focus_status = input('focus_status');    // 关注状态[0-已关注;1-未关注]
         $focus_date   = input('focus_date');      // 操作日期
         if (!$phone_num || !$strategy_id) {
-            ds_json_encode(10000, '内容有参数不正确');
+            ds_json_encode(200, '内容有参数不正确');
         }
         $condition     = [
             'phone_num'   => $phone_num,
@@ -347,7 +347,7 @@ class Strategy extends BaseMall
         } else {
             $userFocus->addUserFocus($editData);
         }
-        ds_json_encode(10000, '存储成功');
+        ds_json_encode(200, '存储成功');
     }
 
     /**
@@ -358,7 +358,7 @@ class Strategy extends BaseMall
         $phone_num    = input('phone_num');       // 用户手机号
         $focus_status = input('focus_status');    // 关注状态[0-已关注;1-未关注]
         if (!$phone_num) {
-            ds_json_encode(10000, '内容有参数不正确');
+            ds_json_encode(200, '内容有参数不正确');
         }
         $condition            = [
             'phone_num'    => $phone_num,
@@ -369,7 +369,7 @@ class Strategy extends BaseMall
         $userFOcusList        = $userFocus->getUserFocusList($condition, '', $fields);
         $result['phone_num']  = $phone_num;
         $result['focus_info'] = $userFOcusList;
-        ds_json_encode(10000, '数据获取成功', $result);
+        ds_json_encode(200, '数据获取成功', $result);
     }
 
     /**
@@ -380,7 +380,7 @@ class Strategy extends BaseMall
         $phone_num   = input('phone_num');       // 用户手机号
         $strategy_id = input('strategy_id');     // 关注状态[0-已关注;1-未关注]
         if (!$phone_num || !$strategy_id) {
-            ds_json_encode(10000, '内容有参数不正确');
+            ds_json_encode(200, '内容有参数不正确');
         }
         $condition     = [
             'phone_num'   => $phone_num,
@@ -389,7 +389,7 @@ class Strategy extends BaseMall
         $field         = "phone_num, strategy_id, focus_status, focus_date";
         $userFocus     = new UserFocus();
         $userFocusInfo = $userFocus->getOneUserFocusInfo($condition, $field);
-        ds_json_encode(10000, '数据获取成功', $userFocusInfo);
+        ds_json_encode(200, '数据获取成功', $userFocusInfo);
     }
 
     public function getUserAdjustList()
@@ -397,7 +397,7 @@ class Strategy extends BaseMall
         $oper_type   = input('oper_type');       // 操作类型[0-启动;1-调仓;2-停止;]
         $strategy_id = input('strategy_id');     // 关注状态[0-已关注;1-未关注]
         if (!$strategy_id) {
-            ds_json_encode(10000, '内容有参数不正确');
+            ds_json_encode(200, '内容有参数不正确');
         }
         $result           = [];
         $strategyHold     = new StrategyHold();
@@ -438,7 +438,7 @@ class Strategy extends BaseMall
         $strategyInfo    = new StrategyInfo();
         $strategyInfoRes = $strategyInfo->getOneStrategyInfo($condition, $fidlds);
         if (!$strategyInfoRes) {
-            ds_json_encode(10000, '内容有参数不正确');
+            ds_json_encode(200, '内容有参数不正确');
         }
         foreach ($result as $key => $value) {
             $result[$key]['id'] = $key + 1;
@@ -446,6 +446,6 @@ class Strategy extends BaseMall
 
         $strategyInfoRes['periods_date'] = $periods_date;
         $strategyInfoRes['adjustInfo']   = $result;
-        ds_json_encode(10000, '数据获取成功', $strategyInfoRes);
+        ds_json_encode(200, '数据获取成功', $strategyInfoRes);
     }
 }
