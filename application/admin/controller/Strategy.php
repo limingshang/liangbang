@@ -130,7 +130,7 @@ class Strategy extends AdminControl {
             } else {
                 $review_status     = input('param.review_status', null);
                 $review_describe     = input('param.review_describe');
-                $text = $this->admin_info['admin_name'].'将'.$strategyInfo['strategy_name'].'状态置为';
+                $text = $this->admin_info['admin_name'].'，将'.$strategyInfo['strategy_name'].'状态置为：';
                 switch ($review_status) {
                     case 0:
                         $policyStatus = 0;
