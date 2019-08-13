@@ -7,17 +7,13 @@
     </div>
     <div class="layui-tab-content page-tab-content">
         <table class="layui-table lay-even">
-            <colgroup>
-                <col width="150">
-                <col>
-            </colgroup>
             <thead>
             <tr>
-                <th width="6%">编号</th>
-                <th width="8%">操作者</th>
-                <th width="20%">策略id</th>
+                <th style="width: 49px; text-align: center">编号</th>
+                <th width="8%"  style="text-align: center">操作者</th>
+                <th width="20%">策略</th>
                 <th>操作日志</th>
-                <th width="10%">操作备注</th>
+                <th width="10%" style="text-align: center">操作备注</th>
                 <!--<th>请求返回结果</th>-->
                 <th>操作时间</th>
             </tr>
@@ -25,8 +21,8 @@
             <tbody>
             {volist name="handelLogList" id="handelInfo" key='key'}
             <tr>
-                <td style="text-align: center">{$key}</td>
-                <td>{$handelInfo.user_name}</td>
+                <td style="text-align: center;">{$key}</td>
+                <td style="text-align: center;">{$handelInfo.user_name}</td>
                 <td>{$handelInfo.strategy_name}</td>
                 <td>{$handelInfo.content}</td>
                 <td>{$handelInfo.review_describe}</td>
