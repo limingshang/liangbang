@@ -237,11 +237,10 @@ h6 { font-size:12px;}
 .layui-tab-title .myInput{border-color: rgb(166, 166, 166); width: 200px;height: 22px;bottom: 5px;left: 120px; position: absolute; border:1px solid;border-radius:5px;-moz-border-radius:25px; /* Old Firefox */padding: 2px 10px;}
 .layui-tab-title .myButton{ bottom: 5px;left: 350px;position: absolute;height: 28px;line-height: 28px;}
 .tool-btnss .layui-btn{    width: 70px;height: 30px;line-height: 30px;font-size: 14px}
-.myTable tr th, .myTable tr td{width:10%;}
-.myTable tr th:nth-child(1), .myTable tr td:nth-child(1){width:5%;}
-.myTable tr th:nth-child(2), .myTable tr td:nth-child(2){width:18%;}
-.myTable tr th:nth-child(4), .myTable tr td:nth-child(4){width:8%;}
-.myTable tr th:nth-child(5), .myTable tr td:nth-child(5){width:10%;}
+.myTable tr th:nth-child(1), .myTable tr td:nth-child(1){width:20px;}
+/*.myTable tr th:nth-child(2), .myTable tr td:nth-child(2){width:18%;}*/
+/*.myTable tr th:nth-child(4), .myTable tr td:nth-child(4){width:8%;}*/
+/*.myTable tr th:nth-child(5), .myTable tr td:nth-child(5){width:10%;}*/
 .myH2 span{float: right; height: 42px;}
 .myH2 select{display: inline; float:right;margin-top: 11px;background-color: rgb(248, 248, 248);border-width: 1px;border-style: solid;border-color: rgb(166, 166, 166);width: 100px;font-size: 14px;border-image: initial;}
 .myDqtc{height: 42px;line-height: 42px;padding: 0 15px 0 15px;color: #333;background-color: #f2f2f2;cursor: pointer;font-size: 14px;}
