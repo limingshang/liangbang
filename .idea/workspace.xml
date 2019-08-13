@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thinkphp/library/traits/controller/Jump.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
+            <state relative-caret-position="406">
+              <caret line="63" column="53" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="63" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -306,12 +306,12 @@
       <workItem from="1564738078656" duration="1618000" />
       <workItem from="1565095748918" duration="2469000" />
       <workItem from="1565264453064" duration="4369000" />
-      <workItem from="1565675298573" duration="4677000" />
+      <workItem from="1565675298573" duration="4772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107203000" />
+    <option name="totallyTimeSpent" value="107298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -690,8 +690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thinkphp/library/traits/controller/Jump.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="77" column="74" selection-start-line="77" selection-start-column="74" selection-end-line="77" selection-end-column="74" />
+        <state relative-caret-position="406">
+          <caret line="63" column="53" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="63" selection-end-column="53" />
         </state>
       </provider>
     </entry>

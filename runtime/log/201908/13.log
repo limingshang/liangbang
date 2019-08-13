@@ -604,3 +604,228 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `ds_user_confirm` [ RunTime:0.024651s ]
 [ sql ] [ SQL ] SELECT * FROM `ds_user_confirm` WHERE  `fund_code` = '333' LIMIT 1 [ RunTime:0.000901s ]
 [ sql ] [ SQL ] UPDATE `ds_user_confirm`  SET `user_account`='1',`phone_num`='222',`fund_code`='333',`risk_level`='444',`confirm_status`='2',`create_time`='2019-10-1'  WHERE  `fund_code` = '333' [ RunTime:0.002782s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:46:35+08:00 ] 127.0.0.1 GET /admin
+[ info ] 127.0.0.1:8083/admin [运行时间：0.075574s][吞吐率：13.23req/s] [内存消耗：235.99kb] [文件加载：47]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-13T16:46:35+08:00 ] 127.0.0.1 GET /Admin/login/index
+[ info ] 127.0.0.1:8083/Admin/login/index [运行时间：0.016561s][吞吐率：60.38req/s] [内存消耗：247.55kb] [文件加载：53]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/login.lang.php
+[ info ] [ RUN ] app\admin\controller\Login->index[ /web/ztcl/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-13T16:46:39+08:00 ] 127.0.0.1 POST /Admin/login/index
+[ info ] 127.0.0.1:8083/Admin/login/index [运行时间：0.082553s][吞吐率：12.11req/s] [内存消耗：365.27kb] [文件加载：57]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/Admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://127.0.0.1:8083',
+  'cache-control' => 'max-age=0',
+  'content-length' => '40',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+)
+[ info ] [ PARAM ] array (
+  'admin_name' => 'admin',
+  'admin_password' => 'admin123',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/login.lang.php
+[ info ] [ RUN ] app\admin\controller\Login->index[ /web/ztcl/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043952s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_admin` [ RunTime:0.015711s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_admin` WHERE  `admin_name` = 'admin'  AND `admin_password` = '0192023a7bbd73250516f069df18b500' LIMIT 1 [ RunTime:0.006815s ]
+[ sql ] [ SQL ] UPDATE `ds_admin`  SET `admin_login_num`=38,`admin_login_time`=1565685999  WHERE  `admin_id` = 1 [ RunTime:0.006157s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:46:39+08:00 ] 127.0.0.1 GET /Admin/index/index.html
+[ info ] 127.0.0.1:8083/Admin/index/index.html [运行时间：0.095450s][吞吐率：10.48req/s] [内存消耗：501.09kb] [文件加载：60]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/Admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/index.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'admin_info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000903s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.048909s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.006065s ]
+---------------------------------------------------------------
+[ 2019-08-13T16:46:39+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] 127.0.0.1:8083/admin/index/welcome.html [运行时间：0.105395s][吞吐率：9.49req/s] [内存消耗：425.60kb] [文件加载：60]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=ll725gd000o192tiq8i25jltge',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:8083/Admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => '127.0.0.1:8083',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /web/ztcl/public/../application/admin/lang/zh-cn/index.lang.php
+[ info ] [ RUN ] app\admin\controller\Index->welCome[ /web/ztcl/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /web/ztcl/public/../application/admin/view/index/welcome.html [ array (
+  0 => 'menu_list',
+  1 => 'language_list',
+  2 => 'statistics',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000859s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_lang` [ RunTime:0.003742s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_lang` WHERE  `lang_useok` = 1 [ RunTime:0.084624s ]
+[ sql ] [ SQL ] select version() as ver [ RunTime:0.000257s ]

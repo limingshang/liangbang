@@ -41,27 +41,27 @@ trait Jump
         } elseif ('' !== $url && !strpos($url, '://') && 0 !== strpos($url, '/')) {
             $url = Url::build($url);
         }
-
-        $type = $this->getResponseType();
-        $result = [
-            'code' => 1,
-            'msg'  => $msg,
-            'data' => $data,
-            'url'  => $url,
-            'wait' => $wait,
-        ];
-
-        if ('html' == strtolower($type)) {
-            $template = Config::get('template');
-            $view = Config::get('view_replace_str');
-
-            $result = ViewTemplate::instance($template, $view)
-                ->fetch(Config::get('dispatch_success_tmpl'), $result);
-        }
-
-        $response = Response::create($result, $type)->header($header);
-
-        throw new HttpResponseException($response);
+        $this->redirect($url);
+//        $type = $this->getResponseType();
+//        $result = [
+//            'code' => 1,
+//            'msg'  => $msg,
+//            'data' => $data,
+//            'url'  => $url,
+//            'wait' => $wait,
+//        ];
+//
+//        if ('html' == strtolower($type)) {
+//            $template = Config::get('template');
+//            $view = Config::get('view_replace_str');
+//
+//            $result = ViewTemplate::instance($template, $view)
+//                ->fetch(Config::get('dispatch_success_tmpl'), $result);
+//        }
+//
+//        $response = Response::create($result, $type)->header($header);
+//
+//        throw new HttpResponseException($response);
     }
 
     /**
@@ -82,27 +82,27 @@ trait Jump
         } elseif ('' !== $url && !strpos($url, '://') && 0 !== strpos($url, '/')) {
             $url = Url::build($url);
         }
-
-        $type = $this->getResponseType();
-        $result = [
-            'code' => 0,
-            'msg'  => $msg,
-            'data' => $data,
-            'url'  => $url,
-            'wait' => $wait,
-        ];
-
-        if ('html' == strtolower($type)) {
-            $template = Config::get('template');
-            $view = Config::get('view_replace_str');
-
-            $result = ViewTemplate::instance($template, $view)
-                ->fetch(Config::get('dispatch_error_tmpl'), $result);
-        }
-
-        $response = Response::create($result, $type)->header($header);
-
-        throw new HttpResponseException($response);
+        $this->redirect($url);
+//        $type = $this->getResponseType();
+//        $result = [
+//            'code' => 0,
+//            'msg'  => $msg,
+//            'data' => $data,
+//            'url'  => $url,
+//            'wait' => $wait,
+//        ];
+//
+//        if ('html' == strtolower($type)) {
+//            $template = Config::get('template');
+//            $view = Config::get('view_replace_str');
+//
+//            $result = ViewTemplate::instance($template, $view)
+//                ->fetch(Config::get('dispatch_error_tmpl'), $result);
+//        }
+//
+//        $response = Response::create($result, $type)->header($header);
+//
+//        throw new HttpResponseException($response);
     }
 
     /**
