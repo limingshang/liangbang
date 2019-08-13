@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/view/strategy/strategy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/log/201908/13.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201908/13.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/a97ee6f0b6cde88a0b86dc06941b1fa9.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/a97ee6f0b6cde88a0b86dc06941b1fa9.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/b2c030e2cd13f78ce26859dc5346e973.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/b2c030e2cd13f78ce26859dc5346e973.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,21 +44,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
+            <state relative-caret-position="198">
+              <caret line="219" column="31" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
               <folding>
                 <element signature="e#9445#9451#0" expanded="true" />
                 <element signature="e#9451#9457#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static/plugins/layer/mobile/layer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="2506" selection-start-line="1" selection-start-column="2506" selection-end-line="1" selection-end-column="2506" />
             </state>
           </provider>
         </entry>
@@ -81,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/strategy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="28" column="126" selection-start-line="28" selection-start-column="126" selection-end-line="28" selection-end-column="126" />
+            <state relative-caret-position="419">
+              <caret line="28" column="156" selection-start-line="28" selection-start-column="156" selection-end-line="28" selection-end-column="156" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -120,7 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>paginate(</find>
       <find>$limit</find>
       <find>strategy_type</find>
       <find>$dailySignalModel</find>
@@ -150,6 +143,7 @@
       <find>500</find>
       <find>fields</find>
       <find>field</find>
+      <find>layui-layer-iframe</find>
     </findStrings>
     <replaceStrings>
       <replace>tests</replace>
@@ -344,12 +338,12 @@
       <workItem from="1564738078656" duration="1618000" />
       <workItem from="1565095748918" duration="2469000" />
       <workItem from="1565264453064" duration="4369000" />
-      <workItem from="1565675298573" duration="7071000" />
+      <workItem from="1565675298573" duration="7788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109597000" />
+    <option name="totallyTimeSpent" value="110314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
@@ -692,10 +686,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/plugins/layer/mobile/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="2506" selection-start-line="1" selection-start-column="2506" selection-end-line="1" selection-end-column="2506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/plugins/layui/lay/modules/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21681" selection-start-line="1" selection-start-column="21681" selection-end-line="1" selection-end-column="21681" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/strategy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="28" column="126" selection-start-line="28" selection-start-column="126" selection-end-line="28" selection-end-column="126" />
+        <state relative-caret-position="419">
+          <caret line="28" column="156" selection-start-line="28" selection-start-column="156" selection-end-line="28" selection-end-column="156" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -721,24 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/plugins/layer/mobile/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2506" selection-start-line="1" selection-start-column="2506" selection-end-line="1" selection-end-column="2506" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/plugins/layui/lay/modules/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21681" selection-start-line="1" selection-start-column="21681" selection-end-line="1" selection-end-column="21681" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/strategy/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
+        <state relative-caret-position="198">
+          <caret line="219" column="31" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
           <folding>
             <element signature="e#9445#9451#0" expanded="true" />
             <element signature="e#9451#9457#0" expanded="true" />

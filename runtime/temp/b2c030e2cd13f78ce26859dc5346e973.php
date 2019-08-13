@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:61:"/web/ztcl/public/../application/admin/view/strategy/info.html";i:1565688890;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;s:57:"/web/ztcl/application/admin/view/strategy/info_title.html";i:1560820498;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:61:"/web/ztcl/public/../application/admin/view/strategy/info.html";i:1565689725;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;s:57:"/web/ztcl/application/admin/view/strategy/info_title.html";i:1560820498;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -244,7 +244,7 @@
             area: [width,height],
             fixed: true, //不固定
             content: url,
-            left:"200px"
+            offset:['200px', '200px']
         });
     }
     layui.use('laydate', function () {

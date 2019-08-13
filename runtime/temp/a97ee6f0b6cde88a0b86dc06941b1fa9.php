@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/web/ztcl/public/../application/admin/view/strategy/strategy.html";i:1565688403;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/web/ztcl/public/../application/admin/view/strategy/strategy.html";i:1565689081;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,7 +51,7 @@
                                 <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" style="width: 110px" lay-submit value="驳回" />
                                 <?php elseif($strategyInfo['review_status'] == 2): ?>
                                 <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" style="width: 110px" lay-submit value="审核通过" />
-                                <input type="button" class="layui-btn layui-btn-disabled" disabled="true" style="width: 110px" lay-submit value="驳回" />
+                                <input type="button" class="layui-btn layui-btn-disabled" disabled="true" style="width: 110px"layui-layer layui-layer-iframe lay-submit value="驳回" />
                                 <?php else: ?>
                                 <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" style="width: 110px" lay-submit value="审核通过" />
                                 <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" style="width: 110px" lay-submit value="驳回" />
