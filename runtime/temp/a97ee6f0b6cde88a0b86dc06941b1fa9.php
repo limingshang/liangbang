@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/web/ztcl/public/../application/admin/view/strategy/strategy.html";i:1564402310;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/web/ztcl/public/../application/admin/view/strategy/strategy.html";i:1565687801;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -46,8 +46,19 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(0)" lay-submit value="审核通过" />
-                            <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" lay-submit value="驳回" />
+                            <?php if(($strategyInfo['review_status'] == 0)): ?>
+                                <input type="button" class="layui-btn layui-btn-disabled" disabled = 'true' lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" lay-submit value="驳回" />
+                                <?php elseif($strategyInfo['review_status'] == 2): ?>
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-disabled" disabled="true" lay-submit value="驳回" />
+                                <?php else: ?>
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" lay-submit value="驳回" />
+
+                            <?php endif; ?>
+
+
                         </div>
                     </div>
                 </div>

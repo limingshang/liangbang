@@ -209,14 +209,13 @@
      * Layer 通用ifram弹出窗口
      */
     function dsLayerOpen(url, title,width,height) {
-        if (!width)	width = '500px';
-        if (!height) height = '290px';
+        if (!width)	width = '50%';
+        if (!height) height = '40%';
         layer.open({
             type: 2,
             title: title,
             area: [width,height],
-            fixed: false, //不固定
-            maxmin: true,
+            fixed: true, //不固定
             content: url
         });
     }

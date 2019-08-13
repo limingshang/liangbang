@@ -21,8 +21,19 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(0)" lay-submit value="审核通过" />
-                            <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" lay-submit value="驳回" />
+                            {if condition="($strategyInfo['review_status'] eq 0) "}
+                                <input type="button" class="layui-btn layui-btn-disabled" disabled = 'true' lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" lay-submit value="驳回" />
+                                {elseif condition="$strategyInfo['review_status'] eq 2" /}
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-disabled" disabled="true" lay-submit value="驳回" />
+                                {else /}
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(1)" lay-submit value="审核通过" />
+                                <input type="button" class="layui-btn layui-btn-normal" onclick="submitForm(2)" lay-submit value="驳回" />
+
+                            {/if}
+
+
                         </div>
                     </div>
                 </div>

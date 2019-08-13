@@ -120,11 +120,11 @@ class Strategy extends AdminControl {
      * @return mixed
      */
     public function strategy(){
+        $id     = input('param.id');
+        $condition = ['id' => $id];
+        $model_strategy = model('strategyInfo');
+        $strategyInfo = $model_strategy->getOneStrategyInfo($condition);
         if (request()->isPost()) {
-            $id     = input('param.id');
-            $condition = ['id' => $id];
-            $model_strategy = model('strategyInfo');
-            $strategyInfo = $model_strategy->getOneStrategyInfo($condition);
             if (!$strategyInfo) {
                 dsLayerOpenSuccess('数据不存在');
             } else {
@@ -186,6 +186,8 @@ class Strategy extends AdminControl {
             }
 
         } else {
+
+            $this->assign('strategyInfo', $strategyInfo);
             $this->setAdminCurItem('strategy');
             return $this->fetch();
         }

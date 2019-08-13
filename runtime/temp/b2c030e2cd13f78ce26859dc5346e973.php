@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:61:"/web/ztcl/public/../application/admin/view/strategy/info.html";i:1565140116;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;s:57:"/web/ztcl/application/admin/view/strategy/info_title.html";i:1560820498;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:61:"/web/ztcl/public/../application/admin/view/strategy/info.html";i:1565687853;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;s:57:"/web/ztcl/application/admin/view/strategy/info_title.html";i:1560820498;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -236,14 +236,13 @@
      * Layer 通用ifram弹出窗口
      */
     function dsLayerOpen(url, title,width,height) {
-        if (!width)	width = '500px';
-        if (!height) height = '290px';
+        if (!width)	width = '50%';
+        if (!height) height = '40%';
         layer.open({
             type: 2,
             title: title,
             area: [width,height],
-            fixed: false, //不固定
-            maxmin: true,
+            fixed: true, //不固定
             content: url
         });
     }
