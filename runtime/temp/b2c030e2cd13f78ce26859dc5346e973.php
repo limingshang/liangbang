@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:61:"/web/ztcl/public/../application/admin/view/strategy/info.html";i:1565687853;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;s:57:"/web/ztcl/application/admin/view/strategy/info_title.html";i:1560820498;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:61:"/web/ztcl/public/../application/admin/view/strategy/info.html";i:1565688085;s:49:"/web/ztcl/application/admin/view/layout/home.html";i:1560673080;s:57:"/web/ztcl/application/admin/view/strategy/info_title.html";i:1560820498;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -237,7 +237,7 @@
      */
     function dsLayerOpen(url, title,width,height) {
         if (!width)	width = '50%';
-        if (!height) height = '40%';
+        if (!height) height = '300px';
         layer.open({
             type: 2,
             title: title,
