@@ -4,28 +4,25 @@
       <!--<a href="/demo/">演示</a>-->
       <!--<a><cite>导航元素</cite></a>-->
     </span>
-    <div class="tool-btns">
-        <a href="javascript:location.reload();" title="刷新当前页面" class="iconfont icon-reload"></i></a>
-    </div>
-</div>
-<div class="layui-tab-title">
-    <form method="get" action="{:url('strategy/index')}">
-        <select name="review_status" id="review_status" class="mySelect" lay-filter="aihao">
-            <option value="null">全部状态(3)</option>
-            <option value="0">审核通过</option>
-            <option value="1">待审核</option>
-            <option value="2">被驳回</option>
-        </select>
-        <input type="text" name="strategy_info" class="myInput" value="{:input('strategy_info')}" placeholder = '策略名称/策略分类'>
-        <button type="submit" class="layui-btn layui-btn-normal myButton">搜索</button>
+    <div class="tool-btns-index">
+        <form method="get" action="{:url('strategy/index')}">
+            <select name="review_status" id="review_status" class="mySelect" lay-filter="aihao">
+                <option value="null">全部状态</option>
+                <option value="0">审核通过</option>
+                <option value="1">待审核</option>
+                <option value="2">被驳回</option>
+            </select>
+            <input type="text" name="strategy_info" class="myInput" value="{:input('strategy_info')}" placeholder = '策略名称/策略分类'>
+            <button type="submit" class="layui-btn layui-btn-normal myButton">搜索</button>
 
-        <!--<select class="rightSelect" lay-filter="aihao">-->
+            <!--<select class="rightSelect" lay-filter="aihao">-->
             <!--<option>默认排序</option>-->
             <!--<option value="0">排序条件1</option>-->
             <!--<option value="1">排序条件2</option>-->
             <!--<option value="2">排序条件3</option>-->
-        <!--</select>-->
-    </form>
+            <!--</select>-->
+        </form>
+    </div>
 </div>
 <script>
     function set_select_checked(selectId, checkValue){
