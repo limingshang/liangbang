@@ -630,7 +630,8 @@ function dsLayerOpenSuccess($msg = '',$url='') {
     $url_js = empty($url)?"parent.location.reload();":"parent.location.href='".$url."';";
             
     $str = "<script>";
-    $str .= "parent.layer.alert('".$msg."',{yes:function(index, layero){".$url_js."},cancel:function(index, layero){".$url_js."}});";
+    // $str .= "parent.layer.alert('".$msg."',{yes:function(index, layero){".$url_js."},cancel:function(index, layero){".$url_js."}});";
+    $str .= "$url_js;";
     $str .= "</script>";
     echo $str;
     exit;
