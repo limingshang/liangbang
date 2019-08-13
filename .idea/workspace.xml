@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218893bc-4b88-45eb-b34d-8b0129c5773d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/common/model/StrategyHold.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common/model/StrategyHold.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/home/controller/Strategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/home/controller/Strategy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_cms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ds_cms.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201908/13.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201908/13.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkphp/library/think/exception/Handle.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/library/think/exception/Handle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="149" column="32" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
+            <state relative-caret-position="316">
+              <caret line="86" column="39" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -81,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>active</find>
       <find>layui-btn</find>
       <find>$type</find>
       <find>checkIsNew</find>
@@ -111,6 +106,7 @@
       <find>betweenPeriodsDate</find>
       <find>between</find>
       <find>getStrategyHoldList</find>
+      <find>500</find>
     </findStrings>
     <replaceStrings>
       <replace>tests</replace>
@@ -176,6 +172,7 @@
         <option value="$PROJECT_DIR$/application/admin/view/monitor/index.html" />
         <option value="$PROJECT_DIR$/application/common/model/StrategyHold.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Strategy.php" />
+        <option value="$PROJECT_DIR$/thinkphp/library/think/exception/Handle.php" />
       </list>
     </option>
   </component>
@@ -213,11 +210,6 @@
             <path>
               <item name="ztcl" type="b2602c69:ProjectViewProjectNode" />
               <item name="ztcl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ztcl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ztcl" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -288,18 +280,17 @@
       <workItem from="1564738078656" duration="1618000" />
       <workItem from="1565095748918" duration="2469000" />
       <workItem from="1565264453064" duration="4369000" />
-      <workItem from="1565675298573" duration="813000" />
+      <workItem from="1565675298573" duration="1553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103339000" />
+    <option name="totallyTimeSpent" value="104079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="703" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28756058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28756058" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -313,7 +304,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.1632653" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.05102041" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -659,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Strategy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="149" column="32" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
+        <state relative-caret-position="316">
+          <caret line="86" column="39" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="39" />
         </state>
       </provider>
     </entry>

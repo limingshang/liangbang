@@ -186,7 +186,7 @@ class Handle
         }
 
         if (!isset($statusCode)) {
-            $statusCode = 500;
+            $statusCode = 200;
         }
         $response->code($statusCode);
         return $response;
