@@ -1,0 +1,129 @@
+---------------------------------------------------------------
+[ 2019-08-13T14:38:32+08:00 ] 127.0.0.1 POST /home/strategy/getStrategyHoldList
+[ info ] 127.0.0.1:8083/home/strategy/getStrategyHoldList [运行时间：0.740143s][吞吐率：1.35req/s] [内存消耗：732.33kb] [文件加载：67]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'strategy',
+    2 => 'getStrategyHoldList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '541',
+  'content-type' => 'multipart/form-data; boundary=--------------------------889105747035421785851269',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '7bdd9412-a166-4601-9e1a-0178acb6e9ef',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'isTest' => '',
+  'strategy_id' => '1b77eb8a-ed82-4d97-80b3-98a1374a2fca',
+  'start_date' => '2018-10-1',
+  'end_date' => '2019-10-1',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/home/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Strategy->getStrategyHoldList[ /web/ztcl/application/home/controller/Strategy.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049428s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_config` [ RunTime:0.067290s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_config` [ RunTime:0.009225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_nav` [ RunTime:0.002800s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_nav` WHERE  `nav_display` = 1  AND `nav_location` = 'header'  AND `nav_is_show` = 1 ORDER BY nav_order asc, nav_id desc [ RunTime:0.042679s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_link` [ RunTime:0.045468s ]
+[ sql ] [ SQL ] SELECT * FROM `ds_link` WHERE  `link_show_ok` = 1 ORDER BY link_order asc, link_id desc [ RunTime:0.023622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.045182s ]
+[ sql ] [ SQL ] SELECT `strategy_id`,`strategy_name` FROM `ds_strategy_info` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' LIMIT 1 [ RunTime:0.003458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.046622s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.021410s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descFIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc' at line 1[/web/ztcl/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2019-08-13T14:38:53+08:00 ] 127.0.0.1 POST /home/strategy/getStrategyHoldList
+[ info ] 127.0.0.1:8083/home/strategy/getStrategyHoldList [运行时间：0.412323s][吞吐率：2.43req/s] [内存消耗：605.09kb] [文件加载：55]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'strategy',
+    2 => 'getStrategyHoldList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '541',
+  'content-type' => 'multipart/form-data; boundary=--------------------------431299342514881377762723',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => 'b33f34d8-8a7f-47ac-8b61-8800df3ce865',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'isTest' => '',
+  'strategy_id' => '1b77eb8a-ed82-4d97-80b3-98a1374a2fca',
+  'start_date' => '2018-10-1',
+  'end_date' => '2019-10-1',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/home/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Strategy->getStrategyHoldList[ /web/ztcl/application/home/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086853s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.206355s ]
+[ sql ] [ SQL ] SELECT `strategy_id`,`strategy_name` FROM `ds_strategy_info` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' LIMIT 1 [ RunTime:0.032690s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.036913s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.015548s ]
+[ sql ] [ SQL ] SELECT id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca'  AND `periods_date` BETWEEN '2018-10-1' AND '2019-10-1' ORDER BY periods_date desc, FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc [ RunTime:0.015465s ]
+---------------------------------------------------------------
+[ 2019-08-13T14:39:07+08:00 ] 127.0.0.1 POST /home/strategy/getStrategyHoldList
+[ info ] 127.0.0.1:8083/home/strategy/getStrategyHoldList [运行时间：0.234131s][吞吐率：4.27req/s] [内存消耗：616.36kb] [文件加载：55]
+[ info ] [ LANG ] /web/ztcl/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'strategy',
+    2 => 'getStrategyHoldList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '541',
+  'content-type' => 'multipart/form-data; boundary=--------------------------160950108149616730989876',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => '127.0.0.1:8083',
+  'postman-token' => '078579c9-e52e-4176-ac24-2e74b786f578',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'isTest' => '',
+  'strategy_id' => '1b77eb8a-ed82-4d97-80b3-98a1374a2fca',
+  'start_date' => '2018-10-1',
+  'end_date' => '2019-10-1',
+)
+[ info ] [ LANG ] /web/ztcl/public/../application/home/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\home\controller\Strategy->getStrategyHoldList[ /web/ztcl/application/home/controller/Strategy.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043123s ] mysql:host=127.0.0.1;port=3306;dbname=ds_cms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_info` [ RunTime:0.019688s ]
+[ sql ] [ SQL ] SELECT `strategy_id`,`strategy_name` FROM `ds_strategy_info` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' LIMIT 1 [ RunTime:0.043008s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ds_strategy_hold` [ RunTime:0.047016s ]
+[ sql ] [ SQL ] SELECT `periods_date` FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca' ORDER BY `periods_date`  desc LIMIT 1 [ RunTime:0.018164s ]
+[ sql ] [ SQL ] SELECT id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold FROM `ds_strategy_hold` WHERE  `strategy_id` = '1b77eb8a-ed82-4d97-80b3-98a1374a2fca'  AND `periods_date` BETWEEN '2018-10-1' AND '2019-10-1' ORDER BY periods_date desc, FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc [ RunTime:0.013115s ]

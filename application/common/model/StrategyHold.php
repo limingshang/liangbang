@@ -37,6 +37,7 @@ class StrategyHold extends Model
      */
     public function getStrategyHoldList($condition = array(),$limit='', $field = '*', $page = '', $order = 'periods_date desc')
     {
+        $order.= ", FIELD(trade_direction,  '买入',   '卖出',   '持有') ASC, secu_code asc";
         if ($page) {
             $res = db('strategy_hold')->where($condition)->field($field)->order($order)->paginate($page);
             $this->page_info = $res;

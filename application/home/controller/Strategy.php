@@ -136,7 +136,6 @@ class Strategy extends BaseMall
                         }
                         $fields           = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                         $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
-                        echo $strategyHold->getLastSql();die;
                     } else {
                         ds_json_encode(10000, '未查询到任何调仓数据');
                     }

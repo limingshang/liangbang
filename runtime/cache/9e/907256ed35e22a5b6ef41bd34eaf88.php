@@ -1,0 +1,4 @@
+<?php
+//000000003600
+ exit();?>
+a:2:{i:0;a:9:{s:6:"nav_id";i:2;s:9:"nav_title";s:17:"DSCMS使用手册";s:7:"nav_url";s:54:"http://www.csdeshang.com/home/help/article/id/202.html";s:12:"nav_location";s:6:"header";s:12:"nav_new_open";s:15:"target="_blank"";s:9:"nav_order";i:1;s:11:"nav_is_show";i:1;s:11:"nav_display";i:1;s:4:"lang";s:5:"zh-cn";}i:1;a:9:{s:6:"nav_id";i:1;s:9:"nav_title";s:12:"官方网站";s:7:"nav_url";s:46:"http://www.csdeshang.com/home/dscms/index.html";s:12:"nav_location";s:6:"header";s:12:"nav_new_open";s:15:"target="_blank"";s:9:"nav_order";i:1;s:11:"nav_is_show";i:1;s:11:"nav_display";i:1;s:4:"lang";s:5:"zh-cn";}}
