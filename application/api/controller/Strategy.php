@@ -63,7 +63,7 @@ class Strategy extends BaseApi
         $data['fund_code']      = input('fund_code');
         $data['risk_level']     = input('risk_level');
         $data['confirm_status'] = input('confirm_status');
-        $data['create_time']    = input('create_time');
+        $data['updatetime']    = input('updatetime');
         $userConfirm = new UserConfirm();
         $condition = ['fund_code' => input('fund_code')];
         $userConfirmInfo = $userConfirm->getOneUserConfimInfo($condition);
@@ -85,7 +85,7 @@ class Strategy extends BaseApi
         $data['fund_code']      = input('fund_code');
         $userConfirm = new UserConfirm();
         $condition = ['fund_code' => input('fund_code')];
-        $fields = 'fund_code, risk_level, confirm_status, create_time';
+        $fields = 'fund_code, risk_level, confirm_status, updatetime';
         $userConfirmInfo = $userConfirm->getOneUserConfimInfo($condition, $fields);
         if ($userConfirmInfo) {
             ds_json_encode(200, '数据获取成功', $userConfirmInfo);
