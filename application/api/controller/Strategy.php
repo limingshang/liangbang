@@ -90,7 +90,7 @@ class Strategy extends BaseApi
         if ($userConfirmInfo) {
             ds_json_encode(200, '数据获取成功', $userConfirmInfo);
         } else {
-            ds_json_encode(200, '数据获取成功', []);
+            ds_json_encode(201, '数据获取为空', (object)[]);
         }
     }
 }
