@@ -433,8 +433,10 @@ class Strategy extends BaseMall
                         ->where('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "买入"')
                         ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "持有"')
                         ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and adjust_hold > 0')
                         ->order("FIELD(trade_direction,  '买入',   '卖出',   '持有')   ASC")
                         ->select();
+                        $trade_direction = '卖出';
                     break;
             }
         }
@@ -453,6 +455,10 @@ class Strategy extends BaseMall
                     $result[$key]['adjust_num'] = $value['adjust_hold'];
                 }
                 $result[$key]['trade_direction'] = '买入';
+            } elseif($trade_direction == '卖出') {
+                if($value['adjust_hold'] > 0){
+                    $result[$key]['adjust_num'] = $value['adjust_hold'];
+                }
             }
         }
 
