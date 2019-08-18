@@ -459,6 +459,7 @@ class Strategy extends BaseMall
                 if($value['adjust_hold'] > 0){
                     $result[$key]['adjust_num'] = $value['adjust_hold'];
                 }
+                $result[$key]['trade_direction'] = '卖出';
             }
         }
 
