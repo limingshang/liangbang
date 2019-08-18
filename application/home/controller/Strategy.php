@@ -449,6 +449,9 @@ class Strategy extends BaseMall
         foreach ($result as $key => $value) {
             $result[$key]['id'] = $key + 1;
             if($trade_direction == '买入') {
+                if($value['trade_direction'] == '卖出') {
+                    $result[$key]['adjust_num'] = $value['adjust_hold'];
+                }
                 $result[$key]['trade_direction'] = '买入';
             }
         }
