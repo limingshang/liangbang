@@ -80,7 +80,7 @@ class Strategy extends BaseApi
     public function getUserConfirm()
     {
         if(!input('fund_code')) {
-            ds_json_encode(200, '数据获取成功', []);
+            ds_json_encode(200, '数据获取成功', (object)[]);
         }
         $data['fund_code']      = input('fund_code');
         $userConfirm = new UserConfirm();

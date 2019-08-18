@@ -406,16 +406,19 @@ class Strategy extends BaseMall
             ->field('periods_date')
             ->order('periods_date', 'desc')
             ->find();
+        $trade_direction = '';
         if ($strategyHoldInfo) {
             $periods_date = $strategyHoldInfo['periods_date'];
             switch ($oper_type) {
-                case 0:             // 就把所有买入和持有的数据返出来
+                case 0:             // 就把所有买入和持有的数据返出来+与现在是卖出状态并且目标持仓不为0的状态变为：买入
                     $result = $strategyHold
                         ->where('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "买入"')
                         ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "持有"')
+                        ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "卖出" and adjust_hold > 0')
                         ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
                         ->order("FIELD(trade_direction,  '买入',   '卖出',   '持有')   ASC")
                         ->select();
+                    $trade_direction = '买入';
                     break;
                 case 1:             // 就把买入和卖出的数据返回出来
                     $result = $strategyHold
@@ -445,6 +448,9 @@ class Strategy extends BaseMall
         }
         foreach ($result as $key => $value) {
             $result[$key]['id'] = $key + 1;
+            if($trade_direction == '买入') {
+                $result[$key]['trade_direction'] = '买入';
+            }
         }
 
         $strategyInfoRes['periods_date'] = $periods_date;
