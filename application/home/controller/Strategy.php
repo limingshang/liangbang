@@ -175,6 +175,7 @@ class Strategy extends BaseMall
                 $strategyInfo = $strategyInfo->toArray();
                 foreach($strategyHoldList as $key => $value) {
                     $strategyInfo[$value['periods_date']]['periods_date'] = $periods_date;
+                    unset($value['periods_date']);
                     $strategyInfo[$value['periods_date']]['adjust_info'][]  = $value;
                 }
                 ds_json_encode(200, '数据获取成功', $strategyInfo);
