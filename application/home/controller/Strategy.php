@@ -153,7 +153,7 @@ class Strategy extends BaseMall
 
                         }
 
-                        $fields           = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
+                        $fields           = ['id, secu_name, periods_date,secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                         $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                     } else {
                         ds_json_encode(200, '未查询到任何调仓数据');
@@ -169,12 +169,14 @@ class Strategy extends BaseMall
                             ['neq', $newstrategyHoldInfo['periods_date']],
                         ];
                     }
-                    $fields           = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
+                    $fields           = ['id, secu_name, periods_date, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                     $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                 }
-                $strategyInfo['periods_date'] = $periods_date;
-                $strategyInfo['adjust_info']  = $strategyHoldList;
-
+                $strategyInfo = $strategyInfo->toArray();
+                foreach($strategyHoldList as $key => $value) {
+                    $strategyInfo[$value['periods_date']]['periods_date'] = $periods_date;
+                    $strategyInfo[$value['periods_date']]['adjust_info'][]  = $value;
+                }
                 ds_json_encode(200, '数据获取成功', $strategyInfo);
             } else {
                 ds_json_encode(200, '未查询到此策略数据');
