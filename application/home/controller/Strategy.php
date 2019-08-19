@@ -200,7 +200,7 @@ class Strategy extends BaseMall
             $model_strategy = model('strategyInfo');
             $strategyInfo   = $model_strategy
                 ->where('strategy_id', 'eq', $strategy_id)
-                ->field('strategy_id, strategy_name')
+                ->field('strategy_id, strategy_name,review_status')
                 ->find();
             if($strategyInfo['review_status'] != 0) {
                 unset($result[0]);
