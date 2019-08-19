@@ -115,14 +115,24 @@ class Strategy extends BaseMall
             $model_strategy = model('strategyInfo');
             $strategyInfo   = $model_strategy
                 ->where('strategy_id', 'eq', $strategy_id)
-                ->field('strategy_id, strategy_name')
+                ->field('strategy_id, strategy_name, review_status')
+                ->find();
+            // 获取最新的一期
+            $strategyHold = model('strategyHold');
+            $newstrategyHoldInfo = $strategyHold
+                ->where('strategy_id', 'eq', $strategy_id)
+                ->field('periods_date')
+                ->order('periods_date', 'desc')
                 ->find();
             if ($strategyInfo) {
                 $strategyHold = model('strategyHold');
                 if (!$periods_date) {
                     $strategyHoldInfo = $strategyHold
-                        ->where('strategy_id', 'eq', $strategy_id)
-                        ->field('periods_date')
+                        ->where('strategy_id', 'eq', $strategy_id);
+                    if($strategyInfo['review_status'] != 0) {
+                        $strategyHoldInfo = $strategyHoldInfo->where('periods_date', 'neq', $newstrategyHoldInfo['periods_date']);
+                    }
+                    $strategyHoldInfo = $strategyHoldInfo->field('periods_date')
                         ->order('periods_date', 'desc')
                         ->find();
                     if ($strategyHoldInfo) {
@@ -147,6 +157,12 @@ class Strategy extends BaseMall
                         'strategy_id'  => $strategy_id,
                         'periods_date' => $periods_date,
                     ];
+                    if($strategyInfo['review_status'] != 0) {
+                        $condition['periods_date'] = [
+                            ['eq', $periods_date],
+                            ['neq', $newstrategyHoldInfo['periods_date']],
+                        ];
+                    }
                     $fields           = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                     $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                 }
