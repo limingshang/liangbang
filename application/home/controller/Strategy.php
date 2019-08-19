@@ -134,6 +134,9 @@ class Strategy extends BaseMall
                         if ($start_date && $end_date) {
                             $condition['periods_date'] = array('between', array($start_date, $end_date));
                         }
+                        if($strategyInfo['review_status'] != 0) {
+                            $condition['periods_date'] = array('neq', $periods_date);
+                        }
                         $fields           = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                         $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                     } else {
@@ -177,6 +180,14 @@ class Strategy extends BaseMall
                 $result = $result->toArray();
             } else {
                 $result = [];
+            }
+            $model_strategy = model('strategyInfo');
+            $strategyInfo   = $model_strategy
+                ->where('strategy_id', 'eq', $strategy_id)
+                ->field('strategy_id, strategy_name')
+                ->find();
+            if($strategyInfo['review_status'] != 0) {
+                unset($result[0]);
             }
             $results                 = [];
             $results['strategy_id']  = $strategy_id;
