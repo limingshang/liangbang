@@ -142,11 +142,17 @@ class Strategy extends BaseMall
                             'periods_date' => $periods_date,
                         ];
                         if ($start_date && $end_date) {
-                            $condition['periods_date'] = array('between', array($start_date, $end_date));
+                            if($strategyInfo['review_status'] != 0) {
+                                $condition['periods_date'] = [
+                                    ['neq', $newstrategyHoldInfo['periods_date']],
+                                    ['between', array($start_date, $end_date)]
+                                ];
+                            } else{
+                                $condition['periods_date'] = ['between', array($start_date, $end_date)];
+                            }
+
                         }
-                        if($strategyInfo['review_status'] != 0) {
-                            $condition['periods_date'] = array('neq', $periods_date);
-                        }
+
                         $fields           = ['id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold'];
                         $strategyHoldList = $strategyHold->getStrategyHoldList($condition, null, $fields);
                     } else {
