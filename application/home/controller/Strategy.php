@@ -173,12 +173,12 @@ class Strategy extends BaseMall
                 }
                 $holdListInfo = [];
                 foreach($strategyHoldList as $key => $value) {
-                    $holdListInfo['adjust_info'][] = [
+                    $holdListInfo[$value['periods_date']][] = [
                         'periods_date' => $value['periods_date'],
                         'adjust_secu'  => $strategyHoldList,
                     ];
                 }
-                $strategyInfo = array_merge($strategyInfo, $holdListInfo);
+                $strategyInfo['adjust_info'] = array_values($holdListInfo);
                 ds_json_encode(200, '数据获取成功', $strategyInfo);
             } else {
                 ds_json_encode(200, '未查询到此策略数据');
