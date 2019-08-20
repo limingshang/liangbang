@@ -178,6 +178,7 @@ class Strategy extends BaseMall
                         'adjust_secu'  => $value,
                     ];
                 }
+                $strategyInfo['adjust_info'] = [];
                 foreach($holdListInfo as $keys => $values) {
                     $strategyInfo['adjust_info'][] = $values;
                 }
