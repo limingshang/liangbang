@@ -178,6 +178,7 @@ class Strategy extends BaseMall
                         'adjust_secu'  => $value,
                     ];
                 }
+                print_r($holdListInfo);
                 $strategyInfo['adjust_info'] = array_values($holdListInfo);
                 ds_json_encode(200, '数据获取成功', $strategyInfo);
             } else {
