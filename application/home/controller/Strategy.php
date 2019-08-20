@@ -175,7 +175,7 @@ class Strategy extends BaseMall
                 foreach($strategyHoldList as $key => $value) {
                     $holdListInfo[$value['periods_date']][] = [
                         'periods_date' => $value['periods_date'],
-                        'adjust_secu'  => $strategyHoldList,
+                        'adjust_secu'  => $value,
                     ];
                 }
                 $strategyInfo['adjust_info'] = array_values($holdListInfo);
