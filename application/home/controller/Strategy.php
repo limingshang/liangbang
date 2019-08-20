@@ -181,7 +181,8 @@ class Strategy extends BaseMall
                     ];
                 }
                 foreach($holdListInfo as $key => $value) {
-                    $strategyHoldList[] = $value[0];
+                    print_r($value);
+                    $strategyHoldList[] = $value;
                 }
                 $strategyInfo['adjust_info'] = $strategyHoldList;
                 ds_json_encode(200, '数据获取成功', $strategyInfo);
