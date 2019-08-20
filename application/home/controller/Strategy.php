@@ -178,7 +178,10 @@ class Strategy extends BaseMall
                         'adjust_secu'  => $value,
                     ];
                 }
-                $strategyInfo['adjust_info'] = ($holdListInfo);
+                foreach($holdListInfo as $keys => $values) {
+                    $strategyInfo['adjust_info'][] = $values;
+                }
+
                 ds_json_encode(200, '数据获取成功', $strategyInfo);
             } else {
                 ds_json_encode(200, '未查询到此策略数据');
