@@ -36,7 +36,7 @@ class StrategyInfo extends Model
     /**
      * 取列表
      */
-    public function getStrategyList($condition = array(),$limit='', $field = '*', $page = '', $order = 'id desc')
+    public function getStrategyList($condition = array(),$limit='', $field = '*', $page = '', $order = 'FIELD(review_status,1,0,2) asc, adjust_cycle desc')
     {
         if ($page) {
             $res = db('strategy_info');
