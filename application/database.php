@@ -3,14 +3,14 @@
 return [
     // 数据库类型
     'type'           => 'mysql',
-    // 服务器地址
-    'hostname'       => '127.0.0.1',
+    // 服务器地址p
+    'hostname'       => '100.18.2.53',
     // 数据库名
-    'database'       => 'ds_cms',
+    'database'       => 'ryzt',
     // 用户名
-    'username'       => 'root',
+    'username'       => 'tdadmin',
     // 密码
-    'password'       => 'root',
+    'password'       => 'Ryzt.admin123',
     // 端口
     'hostport'       => '3306',
     // 连接dsn
