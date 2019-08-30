@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>策略详情</title>
+	<meta name="description" content="天鼎">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Your title">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" href="/css/Mdate.77b5f25c.css">
+	<link rel="stylesheet" href="/css/index.7d977763.css">
+	<script src="/flexible/flexible-css.js"></script>
+	<script src="/flexible/flexible.js"></script>
+	<script src="https://cdn.bootcss.com/vConsole/3.3.3/vconsole.min.js	"></script>
+</head>
+
+<body>
+	<div id="app" class="detail">
+		<div v-cloak>
+			<!-- <header class="title">
+				<a @click.stop="goBack" class="back"></a>
+				<h2>{{viewData.strategy_name}}</h2>
+			</header> -->
+			<section class="detail-a">
+				<span>
+					<label
+						:class="{'green': parseFloat(viewData.profit_ratio_monthly) < 0 }">{{viewData.profit_ratio_monthly}}%</label><em>当月收益率</em>
+				</span>
+				<span>
+					<label
+						:class="{'green': parseFloat(viewData.daily_ratio) < 0 }">{{viewData.daily_ratio}}%</label><em>昨日收益率</em>
+				</span>
+				<span>
+					<label>{{viewData.hold_secu_num}}</label><em>股票数目</em>
+				</span>
+			</section>
+			<section class="detail-b">
+				<ul>
+					<li><span>{{viewData.annualized_ratio}}%</span>
+						<p>年化收益率</p>
+					</li>
+					<li><span>{{viewData.annualized_volatility}}%</span>
+						<p>年化波动率</p>
+					</li>
+					<li><span>{{viewData.max_drawdown}}%</span>
+						<p>回撤</p>
+					</li>
+					<li class="tips"><span>{{viewData.run_num}}天</span>
+						<p>运行天数</p>
+						<i @click.stop="showTips"></i>
+					</li>
+					<li><span>{{viewData.net_value_date}}</span>
+						<p>最新净值日期</p>
+					</li>
+					<li><span>{{viewData.net_value}}</span>
+						<p>当前净值</p>
+					</li>
+					<li><span>{{viewData.sub_index_value}}</span>
+						<p>指数净值</p>
+					</li>
+					<li><span>{{viewData.sharpe_ratio}}%</span>
+						<p>年化超额收益</p>
+					</li>
+				</ul>
+			</section>
+			<section class="detail-c">
+				<h4 class="detail-c-t"><label class="detail-switch" for="switch">收藏<input
+							id="switch" type='checkbox' @click="changeFocusStatus" v-model="checked" /></label>策略简介</h4>
+				<p>{{viewData.strategy_describe}}</p>
+			</section>
+			<section class="detail-d">
+				<!-- 获取调仓日期 -->
+				<h4 class="detail-d-t"><a @click="showDateModal" v-if="hasBuyPermission && hasLogin && parseInt(confirmData.confirm_status) === 0 && level >= 4">历史调仓</a>本期调仓<span
+						v-show="hasLogin && hasBuyPermission">{{periods_date}}</span></h4>
+				<div class="detail-d-price">
+					<span class="code">代码</span>
+					<span class="name">名称</span>
+					<span class="num">调整股数</span>
+					<span class="duration">操作方向</span>
+					<span class="hold">调整后持仓</span>
+				</div>
+				<!-- 
+					有手机号，先判断是否有权限，无手机号，显示未登录 
+					天鼎策略购买用户 → 未登录资金账号 → 隐藏历史调仓，在本期调仓下方显示”登录资金账号查看本期调仓信息“。
+					天鼎策略购买用户 → 已登录资金账号 → 风险等级不匹配 → 隐藏历史调仓、在本期调仓下方提示”该产品风险等级高于您的风险承受能力，根据我司适当性规定，您当前不事宜使用此功能。
+					天鼎策略购买用户 → 已登录资金账号 → 风险等级匹配  → 签署风险协议  → 可使用全部功能
+					非天鼎策略购买用户 → 隐藏历史调仓，在本期调仓下方显示”尊敬的客户，此功能暂未开放，敬请期待“。
+				-->
+				<template v-if="mobile">
+					<template v-if="hasBuyPermission">
+						<template v-if="hasLogin">
+							<template v-if="level >= 4">
+								<!-- 已签署协议且分险等级足够 -->
+								<ul class="detail-d-con" v-if="parseInt(confirmData.confirm_status) === 0">
+									<li v-for="data in list">
+										<span class="code">{{data.secu_code}}</span>
+										<span class="name">{{data.secu_name}}</span><span
+											:class="data.trade_direction === '买入' ? 'num red' : data.trade_direction === '卖出' ? 'num green' : 'num'">{{data.adjust_num}}</span><span
+											:class="data.trade_direction === '买入' ? 'duration red' : data.trade_direction === '卖出' ? 'duration green' : 'duration'">{{data.trade_direction}}</span><span
+											class="hold">{{data.adjust_hold}}</span>
+									</li>
+								</ul>
+								<!-- 分险等级足够，但未签署协议 -->
+								<div class="detail-d-con" v-else>
+									<p class="tips">请先阅读并确认<span @click.stop="showServiceModal">《适当性匹配意见及投资者确认书》</span></p>
+								</div>
+							</template>
+							<!-- 分险等级不足够-->
+							<div class="detail-d-con" v-else>
+								<p class="tips">该产品风险等级高于您的风险承受能力，根据我司适当性规定，您当前不事宜使用此功能</p>
+							</div>
+						</template>
+						<div class="detail-d-con" v-else>
+							<p class="tips"><span @click.stop="showLoginModal">登录资金账号</span>查看本期调仓信息</p>
+						</div>
+					</template>
+					<div class="detail-d-con" v-else>
+						<p class="tips">尊敬的客户，您尚未拥有本策略权限</p>
+					</div>
+				</template>
+				<div class="detail-d-con" v-else>
+					<p class="tips"><span @click.stop="showLoginModal">登录资金账号</span>查看本期调仓信息</p>
+				</div>
+			</section>
+			<section class="detail-e">
+				<h4 class="detail-e-t">净值走势</h4>
+				<div class="highChart" id="lineChart_PortfolioBenchmark"></div>
+			</section>
+			<section class="detail-f">
+				<h4 class="detail-f-t">风险提示</h4>
+				<p>策略收益根据调仓结果模拟操盘计算，不代表客户的实际投资收益。</p>
+			</section>
+			<div class="btns">
+				<a @click.stop="getOrder">一键跟单</a>
+				<a @click.stop="goRnjj">日内掘金</a>
+			</div>
+			<div class="modal" v-if="loginModalFlag">
+				<h3>提醒信息</h3>
+				<div class="modal-confirm-body">
+					您尚未登录五矿证券资金账号
+				</div>
+				<div class="modal-btn">
+					<a class="cancel" @click.stop="closeModal">取消</a>
+					<a @click.stop="login">登录</a></div>
+			</div>
+			<div class="bj" @touchmove.prevent v-if="bjFlag"></div>
+			<div class="modal" v-if="modalFlag" @touchmove.prevent>
+				<h3>{{modalMsg.title}}</h3>
+				<div class="modal-body">{{modalMsg.body}}</div>
+				<div class="modal-btn"><a @click.stop="closeModal">确定</a></div>
+			</div>
+			<div class="modal-tips" v-if="tipsModalFlag" @touchmove.prevent>
+				<h3>注释</h3>
+				<div class="modal-tips-body">
+					年化收益率=(策略净值-1)/天数x250<br />
+					年化波动率=日收益的波动率x250^(1/2)<br />
+					年化超额收益=(策略净值-对标净值)/天数x250<br />
+					策略净值=上一交易日策略净值x(策略日收益率+1)<br />
+					回撤=策略净值/策略最高净值-1
+				</div>
+				<div class="modal-tips-btn"><a @click.stop="closeModal">确定</a></div>
+			</div>
+			<div class="modal-order" v-if="orderModalFlag" @touchmove.prevent>
+				<p>
+					请阅读后操作：<br />1.如果您是首次使用或重新启用该策略，请点击启动按钮进入下单界面。<br />2.如果您上一期已运行该策略，本期想继续跟随操作，请点击调仓按钮进入下单界面。<br />3.如果您不再使用该策略，并准备对策略个股进行清仓，请点击停止按钮，进入下单界面。<br />4.以上指令均针对最新一期持仓。
+				</p>
+				<a class="close" @click.stop="closeModal"></a>
+				<div class="modal-order-list">
+					<a class="start" @click.stop="sureGoOrder(0)">启动</a>
+					<a class="cang" @click.stop="sureGoOrder(1)">调仓</a>
+					<a class="stop" @click.stop="sureGoOrder(2)">停止</a>
+				</div>
+			</div>
+			<!-- <div class="modal-date" v-if="dateModalFlag">
+				<a v-for="date in dateList" @click.stop="goHistory(date)">{{date}}</a>
+			</div> -->
+			<div class="modal-date" v-if="dateModalFlag">
+				<a class="close" @click.stop="closeModal"></a>
+				<h2 class="modal-date-title">日期选择</h2>
+				<div class="modal-date-inputs">
+					<span><input type="text" id="dateSelectorOne" placeholder=""></span>
+					<span @click.sop="selectEndDate"><input type="text" id="dateSelectorTwo" placeholder=""></span>
+					<a @click.stop="goHistory">确定</a>
+				</div>
+			</div>
+			<div class="modal-service" v-if="serviceModalFlag">
+				<h3 class="modal-service-title">{{step === 1 ? '适当性匹配意见及投资者确认书': '睿赢智投投资顾问服务风险揭示书'}}</h3>
+				<div class="modal-service-body">
+					<template v-if="step === 1">
+						<p>尊敬的投资者：</p>
+						<!-- C4：积极型，C5:激进型 -->
+						<p>您的风险承受能力等级为：C{{level}}{{level == 4 ? '（积极型）' : level == 5 ? '（激进型）' : ''}}；</p>
+						<p>您拟接受的睿赢智投服务，风险等级为：中高风险（R4）；</p>
+						<p>本公司已经向您充分揭示了该服务的风险。您的风险承受能力等级该服务风险等级相匹配。本适当性评估意见供您决策参考，并不代表本公司对上述服务的风险或收益作出实质性判断和保证。本公司就上述适当性评估结果与您进行确认，并建议您审慎考察该产品或服务的特征及风险，进行充分风险评估，自行做出投资决定。</p>
+						<p>投资者确认书：</p>
+						<p>本人已认真阅读了贵公司关于睿赢智投投资顾问服务风险揭示书，并已充分了解该服务的特征和风险，签署了风险揭示书。本人在此确认自身风险承受能力等级与该服务风险等级相匹配。本人接受该项服务的决定，系本人独立、自主、真实的意思表示，与贵公司、营业部网点或分支机构及相关从业人员无关。</p>
+					</template>
+					<template v-else-if="step === 2">
+						<p>尊敬的投资者：</p>
+						<p>在您正式使用睿赢智投投资顾问服务之前，为使您更好地了解睿赢智投投资顾问服务的风险，根据国家法律、行政法规、规章及其它规范性文件的规定，特提供本风险揭示书，请认真详细阅读，慎重决定是否接受睿赢智投投资顾问服务。
+						</p>
+						<p>睿赢智投投资顾问服务是五矿证券采购的第三方证券投资顾问服务在互联网情景下的呈现形态，具备个性化财富管理的内涵，其服务形态包括但不限于股票投资建议和资产配置投资建议。</p>
+						<p>您在接受五矿证券（以下称“我司”）采购的第三方证券投资咨询机构的投资顾问服务前，必须了解的事项至少包括：</p>
+						<p>1. 请您充分了解前述我司关于采购的第三方证券投资咨询机构的投资顾问服务的含义，不论是否采纳我司采购的第三方证券投资咨询机构的投资顾问服务所提供的投资建议，均应自主做出投资决策并独立承担投资风险。</p>
+						<p>2. 我司采购的第三方证券投资咨询机构的投资顾问服务提供的投资建议不能确保投资者获得盈利或本金不受损失。</p>
+						<p>3. 我司采购的第三方证券投资咨询机构的投资顾问服务提供的投资建议具有针对性和时效性，不能在任何市场环境下长期有效。</p>
+						<p>4. 作为投资建议依据的数据、证券研究报告和投资分析意见等可能存在不准确、不全面或者被误读的风险，您在做投资决策时应充分考虑上述情形。</p>
+						<p>5. 如您在接受我司采购的第三方证券投资咨询机构的投资顾问服务中发现存在违法违规行为或利益冲突情形，如泄露客户投资决策计划、传播虚假信息、进行关联交易等，您可向我司或向有关部门举报。</p>
+						<p>6. 我司存在因停业、解散、撤销、破产，或者被中国证监会撤销相关业务许可、责令停业整顿等原因导致不能履行职责的风险。</p>
+						<p>7. 我司采购的第三方证券投资咨询机构的投资顾问业务存在下线、撤销、故障等影响服务连续性的风险。</p>
+						<p>8. 我司对您的风险承受能力进行评估，并对不同的风险承受能力等级给出相应的匹配意见，在正常的业务风险警示后，您签署《适当性匹配意见及投资者确认书》将视为您认可该匹配结果，并承受相应风险。
+						</p>
+						<p>9. 我司对您进行风险承受能力等级进行重新评估时，您可能面临因为财务状况、资信等情况被调低风险级别，而被限制部分交易权限的风险。</p>
+						<p>
+							10.在接受我司采购的第三方证券投资咨询机构的投资顾问服务前，您应向我司说明您真实的资产与收入状况、投资经验、投资需求和风险偏好等情况并接受评估，以便于我司根据您的风险承受能力和服务需求，为您提供适当的证券投资顾问服务，否则将导致我司向您提供不适当证券投资顾问服务的风险，其责任当由您自行承担。
+						</p>
+						<p>11. 在接受我司采购的第三方证券投资咨询机构的投资顾问服务前，您应向我司提供真实、有效的联系方式和服务获取方式，如有变动须及时向我司进行说明，如因贵方原因或不可抗力因素导致未能及时获取证券投资顾问服务，责任将由您自行承担。
+						</p>
+						<p>12. 在接受我司采购的第三方证券投资咨询机构的投资顾问服务时，您应保管好您的证券账户、资金账户和相应的密码，不要委托证券投资顾问人员管理您的证券账户、资金账户，代理买卖证券，否则由此导致的风险将由您自行承担。
+						</p>
+						<p>13. 我司采购的第三方证券投资咨询机构的投资顾问服务系以软件工具、终端设备等为载体向您提供投资建议。</p>
+						<p>14. 本软件的功能是通过对公开市场信息、历史交易数据等的运算分析向用户提供关于股票投资组合的投资建议和大类资产配置方案。</p>
+						<p>15. 本软件的固有缺陷和使用风险包括：一，数据运算的有效性可能因为各种市场因素而减弱，使用本软件提供的投资顾问服务可能存在亏损的风险，客户依据本软件建议进行投资可能存在证券品种的实际成交价格和数量与虚拟组合理论成交价格和数量不一致的情况；二，软件存在病毒入侵、黑客攻击的风险，您需管理好自己的设备，选择安全的设备使用本软件。
+						</p>
+						<p>16. 本软件所使用数据均来源于公开市场信息，数据统计方为政府机构、证券交易所、三方资讯等机构，相关数据可能存在真实性、准确性的瑕疵，我方不对数据的真实性和准确性负责。</p>
+						<p>17. 在接受本软件工具、终端设备等前，您应仔细阅读相关说明，了解本揭示书第13-16条中关于本软件的实际功能、信息来源、固有缺陷和使用风险。由于贵方自身原因导致该软件工具、终端设备等使用不当或受到病毒入侵、黑客攻击等不良影响的，由此导致的风险将由您自行承担。
+						</p>
+						<p>18. 本软件工具、终端设备具有选择证券投资品种或者提示买卖时机功能，本软件依据量化模型信号选择证券投资品种或提示买卖时机，但模型的有效性可能因各种市场因素而减弱，依据本软件建议进行实际投资可能存在亏损风险。
+						</p>
+						<p>
+							本风险揭示书的揭示事项仅为针对我司采购的第三方证券投资咨询机构的投资顾问服务的列举性质，未能详尽列明投资者接受我司采购的第三方证券投资咨询机构的投资顾问服务所面临的全部风险和可能导致投资者投资损失的所有因素。投资者在接受我司采购的第三方证券投资咨询机构的投资顾问服务前，应认真阅读并理解相关业务规则，以及本风险揭示书的全部内容。接受我司采购的第三方证券投资咨询机构的投资顾问服务的投资者，应自行承担投资风险，证券公司、证券投资咨询机构不以任何方式向投资者做出不受损失或者取得最低收益的承诺。
+						</p>
+						<p>特别提示：投资者应签署本风险揭示书，表明投资者已经理解并愿意自行承担、接受我司采购的第三方证券投资咨询机构的投资顾问服务的风险和损失。</p>
+					</template>
+				</div>
+				<div class="modal-service-btn">
+					<template v-if="step === 1">
+						<a class="cancel" @click.stop="closeModal">取消</a>
+						<a @click.stop="goStep(2)">下一步</a>
+					</template>
+					<template v-else-if="step === 2">
+						<a @click.stop="goStep(1)">上一步</a>
+						<a @click.stop="createService">我已阅读并确认</a>
+					</template>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var width_char = parseInt(document.body.clientWidth) - 40;
+		var height_char = parseInt(document.body.clientWidth) / 2;
+		var vConsole = new VConsole();
+	</script>
+	<script src="/js/libs/lab.min.js"></script>
+	<script type="text/javascript">
+		$LAB
+			.script('/js/libs/jquery-1.9.1.min.js')
+			.script('/js/libs/iScroll.js')
+			.script('/js/libs/Mdate.js')
+			.script('/js/libs/vue.min.js')
+			.script('/js/libs/vue-resource.js')
+			.script('/js/libs/highstock.js?ver=1.0')
+			.script("/js/detail.js?v=" + (new Date()).getTime())
+	</script>
+</body>
+
+</html>

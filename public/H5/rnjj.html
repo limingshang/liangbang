@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>睿赢智投</title>
+	<meta name="description" content="睿赢智投">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Your title">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" href="/css/index.7d977763.css">
+	<script src="/flexible/flexible-css.js"></script>
+	<script src="/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<div id="app" class="rnjj">
+		<div v-cloak>
+			<!-- <header class="title">
+				<a href="javascript:history.go(-1)" class="back"></a>
+				<h2>日内掘金</h2>
+			</header> -->
+			<section class="cate-box">
+				<span class="cate-box-img"><img src="/images/rnjj.jpg" alt=""></span>
+				<p class="cate-box-text">
+					策略根据量化规则针对已有股票持仓进行日内波段操作。抓住股价上涨与下跌的日内波动，让短期差价机会不会悄悄从指缝溜走，有效降低长期持仓成本。
+				</p>
+			</section>
+			<section class="rnjj-body">
+				<p class="rules"><a @click.stop="showRules">规则说明</a></p>
+				<h2 class="rnjj-body-title">示例</h2>
+				<div class="rnjj-img">
+					<p><img src="/images/chart1.png" alt=""></p>
+					<!-- <p><img src="/images/chart2.png" alt=""></p> -->
+				</div>
+				<h2 class="rnjj-body-title">规则说明</h2>
+				<div class="rnjj-text">
+					<p>1.本栏目仅适用于聪明贝塔中的月度策略，针对策略股票池提供个股日内波段操作信号。</p>
+					<p>2.请在月度策略详情中点击关注按钮，即可收到日内波段信号提示。</p>
+					<p>3.为了信号体验的完整性，请预先跟单对应的月度策略。</p>
+					<p>4.收到信号提示后，请在个股下单界面手动执行。</p>
+					<p>免责声明：本栏目信号提示仅供参考，不构成任何推荐或投资建议与保证</p>
+				</div>
+				<!-- <div class="rnjj-btn">
+					<a href="" class="on">开启</a>
+					<a href="">关闭</a>
+				</div> -->
+			</section>
+			<div class="modal" v-if="modalFlag">
+				<h3>温馨提示</h3>
+				<div class="modal-body">{{modalMsg}}</div>
+				<div class="modal-btn"><a @click.stop="closeModal">确定</a></div>
+			</div>
+			<div class="modal-rules" v-if="rulesModalFlag">
+				<h3 class="modal-rules-title">规则说明</h3>
+				<div class="modal-rules-body">
+					<p>1.本栏目仅适用于聪明贝塔中的月度策略，针对策略股票池提供个股日内波段操作信号。</p>
+					<p>2.请在月度策略详情中点击关注按钮，即可收到日内波段信号提示。</p>
+					<p>3.为了信号体验的完整性，请预先跟单对应的月度策略。</p>
+					<p>4.收到信号提示后，请在个股下单界面手动执行。</p>
+					<p class="red">免责声明：本栏目信号提示仅供参考，不构成任何推荐或投资建议与保证</p>
+				</div>
+				<div class="modal-rules-btn">
+					<a @click.stop="closeModal">确定</a>
+				</div>
+			</div>
+			<div class="modal" v-if="confirmModalFlag">
+				<h3>{{confirmMsg.title}}</h3>
+				<div class="modal-confirm-body" v-html="confirmMsg.body"></div>
+				<div class="modal-btn"><a @click.stop="sureOpen" v-if="openFlag">确定</a><a @click.stop="sureClose"
+						v-else>确定</a><a class="cancel" @click.stop="closeModal">取消</a></div>
+			</div>
+			<div class="bj" @touchmove.prevent v-if="bjFlag"></div>
+		</div>
+	</div>
+
+	<script src="/js/libs/vue.min.js"></script>
+	<script src="/js/libs/vue-resource.js"></script>
+	<script src="/js/rnjj.js?v=1"></script>
+</body>
+
+</html>

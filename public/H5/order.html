@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>睿赢智投</title>
+	<meta name="description" content="睿赢智投">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Your title">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" href="/css/index.7d977763.css">
+	<script src="/flexible/flexible-css.js"></script>
+	<script src="/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<div id="app" class="order">
+		<div v-cloak>
+			<!-- <header class="title">
+				<a href="javascript:history.go(-1)" class="back"></a>
+				<h2>一键跟单</h2>
+			</header> -->
+			<div class="order-a">
+				<h2 class="order-title">股东账号：<i class="tips" @click.stop="showTips"></i></h2>
+				<div class="order-a-text">
+					<p>0000000000(上海A)</p>
+					<p>0000000000(上海A)</p>
+				</div>
+			</div>
+			<div class="order-b">
+				<h2 class="order-title">委托方式</h2>
+				<div class="order-b-body">
+					<a :class="{'on': way === '0'}" @click.stop="changeWay('0')">市价委托</a>
+					<a :class="{'on': way === '1'}" @click.stop="changeWay('1')">限价委托</a>
+				</div>
+			</div>
+			<div class="order-input">
+				<label>跟单份数</label>
+				<div class="amount">
+					<i @click.stop="changeAmount('minus', 'num')">-</i>
+					<input type="number" pattern="\d*" v-model="num" @input.stop="number('num')">
+					<i @click.stop="changeAmount('plus', 'num')">+</i>
+				</div>
+				<em>份</em>
+			</div>
+			<div class="record">
+				<div class="record-item">
+					<i class="del"></i>
+					<div class="record-title"><span class="operation">买入</span><span class="name">创业环保</span><span
+							class="code">600874</span></div>
+					<div class="order-input">
+						<label class="text" v-if="way === '0'">市价</label>
+						<div class="flex" v-else>
+							<div class="amount">
+								<i @click.stop="changeAmount('minus', 'buyPrice')">-</i>
+								<input type="number" pattern="\d*" v-model="buyPrice" @input.stop="number('buyPrice')">
+								<i @click.stop="changeAmount('plus', 'buyPrice')">+</i>
+							</div>
+							<em>元</em>
+						</div>
+						<div class="amount">
+							<i @click.stop="changeAmount('minus', 'buyAmount')">-</i>
+							<input type="number" pattern="\d*" v-model="buyAmount" @input.stop="number('buyAmount')">
+							<i @click.stop="changeAmount('plus', 'buyAmount')">+</i>
+						</div>
+						<em>股</em>
+					</div>
+					<div class="record-text">
+						<p>市值:10000</p>
+						<p>可卖：400</p>
+					</div>
+				</div>
+				<div class="record-item">
+					<i class="del"></i>
+					<div class="record-title"><span class="operation sell">卖出</span><span class="name">创业环保</span><span
+							class="code">600874</span></div>
+					<div class="order-input">
+						<label class="text" v-if="way === '0'">市价</label>
+						<div class="flex" v-else>
+							<div class="amount">
+								<i @click.stop="changeAmount('minus', 'sellPrice')">-</i>
+								<input type="number" pattern="\d*" v-model="sellPrice" @input.stop="number('sellPrice')">
+								<i @click.stop="changeAmount('plus', 'sellPrice')">+</i>
+							</div>
+							<em>元</em>
+						</div>
+						<div class="amount">
+							<i @click.stop="changeAmount('minus', 'sellAmount')">-</i>
+							<input type="number" pattern="\d*" v-model="sellAmount" @input.stop="number('sellAmount')">
+							<i @click.stop="changeAmount('plus', 'sellAmount')">+</i>
+						</div>
+						<em>股</em>
+					</div>
+					<div class="record-text">
+						<p>市值:10000</p>
+						<p>可卖：400</p>
+					</div>
+				</div>
+			</div>
+			<div class="order-footer">
+				<p>总预估<span class="red">30000</span>可用<span>3000</span></p>
+				<a href="" class="order-footer-btn">提交委托</a>
+			</div>
+			<div class="bj" @touchmove.prevent v-if="bjFlag"></div>
+			<div class="modal-tips" v-if="tipsModalFlag">
+				<h3>注释</h3>
+				<div class="modal-tips-body">
+					已跟单用户：本期筛选票池如有与上期重叠个股，<br />
+					可选择继续持仓，不进行加仓处理。<br />
+					新跟单用户：可按照本期筛选股票池及股数进行
+					跟单操作。
+				</div>
+				<div class="modal-tips-btn"><a @click.stop="closeModal">确定</a></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="/js/libs/lab.min.js"></script>
+	<script type="text/javascript">
+		$LAB
+			.script('/js/libs/vue.min.js')
+			.script('/js/libs/vue-resource.js')
+			.script("/js/order.js?v=" + (new Date()).getTime())
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>睿赢智投</title>
+	<meta name="description" content="睿赢智投">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Your title">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" href="/css/index.7d977763.css">
+	<script src="/flexible/flexible-css.js"></script>
+	<script src="/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<div v-cloak>
+			<header id="header">
+				<!-- <a class="back"></a> -->
+				<span :class="{'on': tab === '1'}" @click="changeTab('1')">聪明贝塔</span>
+				<span :class="{'on': tab === '2'}" @click="changeTab('2')">智能管家</span>
+			</header>
+			<ul class="tab">
+				<li><a href="/index.html">指数增强</a></li>
+				<li><a href="/zthy.html">主题行业</a></li>
+				<li class="on">我的策略</li>
+			</ul>
+			<main id="main">
+				<section class="cate-box">
+					<span class="cate-box-img"><img src="/images/my.jpg" alt=""></span>
+					<p class="cate-box-text">
+						在策略详情中点击关注按钮，即可在我的策略中查看该策略。点击关注，若您拥有月度策略权限，还可收到日内掘金信号提示，进行体验。详情请阅读日内掘金规则说明。
+					</p>
+				</section>
+				<section class="list">
+					<a v-for="item in myList" :href="'/detail.html?id=' + item.strategy_id">
+						<div class="text">
+							<p>{{item.strategy_name}}</p>
+						</div>
+						<div class="yesterday">
+							<span>昨日收益率</span>
+							<p :class="{'green': item.daily_ratio < 0 }">{{item.daily_ratio}}%</p>
+						</div>
+						<div class="year">
+							<span>年化超额收益</span>
+							<p :class="{'green': item.sharpe_ratio < 0 }">{{item.sharpe_ratio}}%</p>
+						</div>
+					</a>
+				</section>
+			</main>
+			<div class="modal" v-if="modalFlag" @touchmove.prevent>
+				<h3>温馨提示</h3>
+				<div class="modal-body">{{modalMsg}}</div>
+				<div class="modal-btn"><a @click.stop="closeModal">确定</a></div>
+			</div>
+			<div class="bj" @touchmove.prevent v-if="bjFlag"></div>
+		</div>
+	</div>
+
+	
+	<script src="/js/libs/lab.min.js"></script>
+	<script type="text/javascript">
+		$LAB
+			.script('https://cdn.bootcss.com/store.js/1.3.20/store.min.js')
+			.script('/js/libs/vue.min.js')
+			.script('/js/libs/vue-resource.js')
+			.script("/js/my.js?v=" + (new Date()).getTime())
+	</script>
+</body>
+
+</html>
