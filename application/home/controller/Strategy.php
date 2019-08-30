@@ -455,7 +455,7 @@ class Strategy extends BaseMall
                         ->where('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "买入"')
                         ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "持有"')
                         ->whereOr('strategy_id = "' . $strategy_id . '" and periods_date = ' . $periods_date . ' and trade_direction = "卖出" and adjust_hold > 0')
-                        ->field("id, secu_name, secu_code, pre_hold, adjust_num, trade_direction, adjust_hold")
+                        ->field("id, secu_name, secu_code, pre_hold, adjust_hold as adjust_num, trade_direction, adjust_hold")
                         ->order("FIELD(trade_direction,  '买入',   '卖出',   '持有')   ASC")
                         ->select();
                     $trade_direction = '买入';
