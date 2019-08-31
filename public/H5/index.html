@@ -14,9 +14,9 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta http-equiv="Expires" content="0">
 	<script src="https://cdn.bootcss.com/vConsole/3.3.3/vconsole.min.js	"></script>
-	<link rel="stylesheet" href="/css/index.7d977763.css">
-	<script src="/flexible/flexible-css.js"></script>
-	<script src="/flexible/flexible.js"></script>
+	<link rel="stylesheet" href="./css/index.7d977763.css">
+	<script src="./flexible/flexible-css.js"></script>
+	<script src="./flexible/flexible.js"></script>
 </head>
 
 <body>
@@ -43,13 +43,13 @@
 				<template v-if="tab === '1'">
 					<template v-if="firstTab === '0'">
 						<section class="cate-box">
-							<span class="cate-box-img"><img src="/images/zszq.jpg" alt=""></span>
+							<span class="cate-box-img"><img src="./images/zszq.jpg" alt=""></span>
 							<p class="cate-box-text">
 								指数增强重点关注指数长期收益，利用量化统计方式，精选指数成分股内的优质标的构建股票组合。
 							</p>
 						</section>
 						<section class="list">
-							<a v-for="zszq in zszqList" :href="'/detail.html?id=' + zszq.strategy_id">
+							<a v-for="zszq in zszqList" :href="'detail.html?id=' + zszq.strategy_id">
 								<div class="text">
 									<p>{{zszq.strategy_name}}</p>
 								</div>
@@ -66,13 +66,13 @@
 					</template>
 					<template v-else-if="firstTab === '1'">
 						<section class="cate-box">
-							<span class="cate-box-img"><img src="/images/zthy.jpg" alt=""></span>
+							<span class="cate-box-img"><img src="./images/zthy.jpg" alt=""></span>
 							<p class="cate-box-text">
 								主题行业策略，利用量化统计的方式，筛选各主题或行业板块内优质标的构建股票组合。在紧跟板块整体表现的同时，力求获得更进一步的超额收益。
 							</p>
 						</section>
 						<section class="list">
-							<a v-for="zthy in zthyList" :href="'/detail.html?id=' + zthy.strategy_id">
+							<a v-for="zthy in zthyList" :href="'detail.html?id=' + zthy.strategy_id">
 								<div class="text">
 									<p>{{zthy.strategy_name}}</p>
 								</div>
@@ -89,13 +89,13 @@
 					</template>
 					<template v-else-if="firstTab === '2'">
 						<section class="cate-box">
-							<span class="cate-box-img"><img src="/images/my.jpg" alt=""></span>
+							<span class="cate-box-img"><img src="./images/my.jpg" alt=""></span>
 							<p class="cate-box-text">
 								在策略详情中点击收藏按钮，即可在我的策略中查看该策略。点击收藏，若您拥有月度策略权限，还可收到日内掘金信号提示，进行体验。详情请阅读日内掘金规则说明。
 							</p>
 						</section>
 						<section class="list">
-							<a v-for="item in myList" :href="'/detail.html?id=' + item.strategy_id">
+							<a v-for="item in myList" :href="'detail.html?id=' + item.strategy_id">
 								<div class="text">
 									<p>{{item.strategy_name}}</p>
 								</div>
@@ -114,7 +114,7 @@
 				<template v-else-if="tab === '2'">
 					<template v-if="secondTab === '0'">
 						<section class="cate-box">
-							<span class="cate-box-img"><img src="/images/rax.jpg" alt=""></span>
+							<span class="cate-box-img"><img src="./images/rax.jpg" alt=""></span>
 							<p class="cate-box-text">
 								该策略通过循环投资债券逆回购，借出资金，获得利息收入。起投金额分两档，投资周期为1天，策略在每天收盘前投资于一天期逆回购，资金将于第二天开盘前到账。使用该策略可以有效地提高账户中的资金利用率。
 							</p>
@@ -157,7 +157,7 @@
 					</template>
 					<template v-if="secondTab === '1'">
 						<section class="cate-box">
-							<span class="cate-box-img"><img src="/images/clty.jpg" alt=""></span>
+							<span class="cate-box-img"><img src="./images/clty.jpg" alt=""></span>
 							<p class="cate-box-text">
 								本模块提供智能管家策略的试用体验，请详细阅读各策略的相关规则说明，在登录并确认相关风险揭示后，即可体验试用。
 							</p>
@@ -245,12 +245,12 @@
 	<script>
 		var vConsole = new VConsole();
 	</script>
-	<script src="/js/libs/lab.min.js"></script>
+	<script src="./js/libs/lab.min.js"></script>
 	<script type="text/javascript">
 		$LAB
-			.script('/js/libs/vue.min.js')
-			.script('/js/libs/vue-resource.js')
-			.script("/js/index.js?v=" + (new Date()).getTime())
+			.script('./js/libs/vue.min.js')
+			.script('./js/libs/vue-resource.js')
+			.script("./js/index.js?v=" + (new Date()).getTime())
 	</script>
 </body>
 
