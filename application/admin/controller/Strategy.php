@@ -9,7 +9,7 @@ use think\Validate;
 
 class Strategy extends AdminControl {
 
-    const GET_URL = "http://api.wquant.com/API4/";
+    const GET_URL = "https://api.wquant.com/API4/";
     public function _initialize() {
         parent::_initialize();
         Lang::load(APP_PATH . 'admin/lang/' . config('default_lang') . '/strategy.lang.php');

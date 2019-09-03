@@ -165,7 +165,7 @@ var demo = new Vue ({
     },
     getBuyPermission: function () {
       this.$http
-        .post ('http://api.wquant.com/API4/Grit/getOrderInfo.ashx', {
+        .post ('https://api.wquant.com/API4/Grit/getOrderInfo.ashx', {
           phone_num: sessionStorage.getItem ('flag'),
           strategy_id: this.id,
           broker_id: 'WKPDN',
