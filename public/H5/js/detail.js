@@ -410,7 +410,7 @@ var demo = new Vue ({
       ),
         e = this.filterDate (document.getElementById ('dateSelectorTwo').value);
       window.location.href =
-        '../history.html?id=' + this.id + '&&startDate=' + t + '&&endDate=' + e;
+        './history.html?id=' + this.id + '&&startDate=' + t + '&&endDate=' + e;
     },
     subscribe: function () {
       try {
