@@ -7,9 +7,15 @@
             <div class="layui-tab-item layui-show ">
                 <div class="layui-form-item">
                     <label class="layui-form-label">{$Think.lang.admin_name}</label>
+                    {if condition="$admin.admin_id ?? 2 eq 1"}
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input field-name" readonly="readonly" name="admin_name" id="admin_name" value="{$admin.admin_name|default=''}" lay-verify="admin_name" autocomplete="off" placeholder="{:lang('ds_please_enter')}{:lang('admin_name')}" required />
+                    </div>
+                    {else}
                     <div class="layui-input-block">
                         <input type="text" class="layui-input field-name" name="admin_name" id="admin_name" value="{$admin.admin_name|default=''}" lay-verify="admin_name" autocomplete="off" placeholder="{:lang('ds_please_enter')}{:lang('admin_name')}" required />
                     </div>
+                    {/if}
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">{$Think.lang.admin_password}</label>
